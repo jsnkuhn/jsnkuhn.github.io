@@ -1,49 +1,3 @@
-var canvas = document.getElementById('canvas');
-var context = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-console.log(window.innerHeight)
-var radius = 1;
-var dragging = false;
-var color = "#0070ec"
-
-context.strokeStyle = color;
-context.fillStyle = color;
-
-context.lineWidth = radius*2;
-
-var putPoint = function(e){
-  if( dragging ){
-    context.lineTo(e.offsetX, e.offsetY);
-    context.stroke();
-    context.beginPath();
-    context.arc(e.offsetX, e.offsetY, radius, 0, Math.PI*2);
-    context.fill();
-    context.beginPath();
-    context.moveTo(e.offsetX, e.offsetY);
-  }
-}
-
-var engage = function(e){
-  dragging = true;
-  putPoint(e);
-};
-var disengage = function(){
-  dragging = false;
-  context.beginPath();
-};    
-canvas.addEventListener('mousedown', engage);
-canvas.addEventListener('mousemove', putPoint);
-canvas.addEventListener('mouseup', disengage);
-
-function clearCanvas(){
-  context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-document.getElementById("button-clear-canvas").addEventListener('click', clearCanvas);
-
 // toggle .selected on imgs
 
 $(function(){
@@ -216,6 +170,8 @@ $(function(){
       $("#rbdrop").removeClass("dropmove");
       $('#to-staff, #to-drop').removeClass('rainbow2');
       $('#gg-contain').addClass('gg-hide');
+			$('#n,#s,#w,#e').prop('checked', false);
+			$('#ns-number,#we-number').val('50');
     });
 });
 
@@ -259,9 +215,9 @@ var defaultColor = "#0000ff";
 
 window.addEventListener("load", startup, false);
 function startup() {
-  colorWell = document.querySelector("#colorWell");
-  colorWell.value = defaultColor;
-  colorWell.addEventListener("input", updateFirst, false);
+Â  colorWell = document.querySelector("#colorWell");
+Â  colorWell.value = defaultColor;
+Â  colorWell.addEventListener("input", updateFirst, false);
   colorWell.select();
 }
 
