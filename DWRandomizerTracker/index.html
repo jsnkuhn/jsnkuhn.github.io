@@ -10,80 +10,104 @@
 	<body>
 	
 	<div class="contain">
-  <canvas id="canvas"></canvas>
-  <div id="tracker-contain">
-    <div id="background-lines">
-      <svg style="filter:brightness(1);" width='96' height='192' viewBox='0 0 96 192' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='none' stroke-width='4'>
-        <path id="to-staff" d='M32,32h61'/>
-        <path id="to-drop" d='M36,36h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4'/>
-      </svg>
-    </div>
-    <div id="icons">
-      <div id="icons-items">
-        <img id="staff" class="icon" src="img/staff.png" title="Staff of Rain">
-        <img id="stones" class="icon" src="img/dq3-sunstone.png" title="Stones of Sunlight">
-        <img id="token" class="icon" src="img/token.png" title="Erdrick's Token">
-        <img id="harp" class="icon" src="img/harp.png" title="Silver Harp">
-        <img id="rbdrop" class="icon" src="img/rainbowdrop.png" title="Rainbow Drop">
-        <img id="flute" class="icon" src="img/flute.png" title="Fairy Flute">
-        <img id="key" class="icon" src="img/dq3-key.png" title="Magic Key">
-        <img id="ball" class="icon" src="img/thunderball_th.png" title="Ball of Light">
-        <img id="gps" class="icon" src="img/gwaelin.png" title="Gwaelin's Love">
-      </div>
-      <hr class="spacerv" role="presentational" />
-      <div id="icons-apdp">
-        <img title="Fighter's Ring: +2 AP" id="ring" class="icon" src="img/dq3-ring-sprite.png">
-        <img title="Dragon's Scale: +2 DP" id="scale" class="icon" src="img/dragon_scale.png">
-        <img title="Death Necklace: +10 AP, -25% HP" id="necklace" class="icon" src="img/reckless_necklace_th.png">
-        <img title="Weapon" id="weapon" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/erdricks_sword.png">
-        <img title="Armor" id="armor" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/torso/erdricks_armour.png">
-        <img title="Shield" id="shield" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/shield/silver_shield.png">
-      </div>
-    </div>
-    <hr class="spacerh" role="presentational" />
-    <div id="text-contain">
-      <ul id="spell-contain">
-        <li id="healmore" class="more-spell filter"><span>Heal</span><span>more</span></li>
-        <li id="hurtmore" class="more-spell filter"><span>Hurt</span><span>more</span></li>
-        <li class="single">Sleep</li>
-        <li class="single">Radiant</li>
-        <li class="single" style="font-size: .9em;">Stopspell</li>
-        <li class="single">Outside</li>
-        <li class="single">Return</li>
-        <li class="single">Repel</li>
-      </ul>
-      <hr class="spacerv" role="presentational" />
-      <div id="stats">
-        <svg width='151' height='198' version='1.1' xmlns='http://www.w3.org/2000/svg'>
-					<style>svg{filter: brightness(.2);image-rendering: pixelated;}</style>
-					<image id='dl2' width="152" height="188" xlink:href='img/true-dragonlord.png'/>
-					<image id='loto' x='20' y='145' width='48' height="48" xlink:href='img/hero-up.png'/>
+		<div id="tracker-contain">
+			<div id="background-lines">
+				<svg style="filter:brightness(1);" width='96' height='192' viewBox='0 0 96 192' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='none' stroke-width='4'>
+					<path id="to-staff" d='M32,32h61'/>
+					<path id="to-drop" d='M36,36h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4'/>
 				</svg>
-      </div>
-    </div>
-    <div id="gg-contain" class="gg-hide">
-      <button id="gg-contain-close">&#10006;</button>
-      <div id="gg-element">
-        <h2><span>G</span></h2>
-        <h2><span>G</span></h2>
-      </div>
-    </div>
-  </div>
-  <footer>
-    <p>by <a target="_blank" title="Feel free to send me bugs. Or things you think should be added." href="https://twitter.com/CaptUhu">@Capt_Uhu</a>
-  </footer>
-  <!--div id="options-contain">
-    <h4>Options</h4>
-    <label for="colorWell">Background Color:</label>
-    <input type="color" value="#0000ff" id="colorWell">
-  </div-->
-  <div id="buttons-contain">
-    <button id="button-reset" name="reset">Reset</button>
-    <button id="button-clear-canvas">Clear Canvas</button>
-  </div>
-</div>
-<script  type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-		<script type="text/javascript" src="script.js"></script>
-	</body>
+			</div>
+			<div id="icons">
+				<div id="icons-items">
+					<img id="staff" class="icon" src="img/staff.png" title="Staff of Rain">
+					<img id="stones" class="icon" src="img/dq3-sunstone.png" title="Stones of Sunlight">
+					<img id="token" class="icon" src="img/token.png" title="Erdrick's Token">
+					<img id="harp" class="icon" src="img/harp.png" title="Silver Harp">
+					<img id="rbdrop" class="icon" src="img/rainbowdrop.png" title="Rainbow Drop">
+					<img id="flute" class="icon" src="img/flute.png" title="Fairy Flute">
+					<img id="key" class="icon" src="img/dq3-key.png" title="Magic Key">
+					<img id="ball" class="icon" src="img/thunderball_th.png" title="Ball of Light">
+					<img id="gps" class="icon" src="img/gwaelin.png" title="Gwaelin's Love">
+				</div>
+				<hr class="spacerv" role="presentational" />
+				<div id="icons-apdp">
+					<img title="Fighter's Ring: +2 AP" id="ring" class="icon" src="img/dq3-ring-sprite.png">
+					<img title="Dragon's Scale: +2 DP" id="scale" class="icon" src="img/dragon_scale.png">
+					<img title="Death Necklace: +10 AP, -25% HP" id="necklace" class="icon" src="img/reckless_necklace_th.png">
+					<img title="Weapon" id="weapon" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/erdricks_sword.png">
+					<img title="Armor" id="armor" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/torso/erdricks_armour.png">
+					<img title="Shield" id="shield" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/shield/silver_shield.png">
+				</div>
+			</div>
+			<hr class="spacerh" role="presentational" />
+			<div id="text-contain">
+				<ul id="spell-contain">
+					<li id="healmore" class="more-spell filter"><span>Heal</span><span>more</span></li>
+					<li id="hurtmore" class="more-spell filter"><span>Hurt</span><span>more</span></li>
+					<li class="single">Sleep</li>
+					<li class="single">Radiant</li>
+					<li class="single" style="font-size: .9em;">Stopspell</li>
+					<li class="single">Outside</li>
+					<li class="single">Return</li>
+					<li class="single">Repel</li>
+				</ul>
+				<hr class="spacerv" role="presentational" />
+				<div id="stats">
+					<div id="coordinates">
+						<div id="ns-contain">
+							<input type="radio" name="ns" id="n">
+							<label for="n">N</label>
+							<input type="radio" name="ns" id="s">
+							<label for="s">S</label>
+							<input type="number" id="ns-number" min="0" max="255" value="50" placeholder="---">
+						</div>
+						<div id="we-contain">
+							<input type="radio" name="we" id="w">
+							<label for="w">W</label>
+							<input type="radio" name="we" id="e">
+							<label for="e">E</label>
+							<input type="number" id="we-number" min="0" max="255" value="50" placeholder="---">
+						</div> 
+					</div>
+				</div>
+			</div>
+			<div id="gg-contain" class="gg-hide">
+				<button id="gg-contain-close">&#10006;</button>
+				<div id="gg-element">
+					<h2><span>G</span></h2>
+					<h2><span>G</span></h2>
+				</div>
+			</div>
+		</div>
+		<div id="map">
+			<header>
+				<input type="radio" name="canvasmode" id="draw">
+				<label for="draw" title="placeholder"></label>
+				<input type="radio" name="canvasmode" id="town">
+				<label for="town" title="placeholder"></label>
+				<input type="radio" name="canvasmode" id="king">
+				<label for="king" title="placeholder"></label>
+				<input type="radio" name="canvasmode" id="cave">
+				<label for="cave" title="placeholder"></label>
+			</header>
+			<div id="canvas-contain">
+				<canvas id="canvas"></canvas>
+			</div>
+		</div>
+		<footer>
+			<p>by <a target="_blank" title="Feel free to send me bugs. Or things you think should be added." href="https://twitter.com/CaptUhu">@Capt_Uhu</a></p>
+			<button id="button-reset" name="reset">Reset</button>
+			<button id="button-clear-canvas">Clear Canvas</button>
+		</footer>
+		<!--div id="options-contain">
+			<h4>Options</h4>
+			<label for="colorWell">Background Color:</label>
+			<input type="color" value="#0000ff" id="colorWell">
+		</div-->
+	</div>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="canvas.js"></script>
+</body>
 	
 </html>
