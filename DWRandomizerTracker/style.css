@@ -9,15 +9,17 @@ body{
   justify-content:center;
   align-items:center;
   position: relative;
+	padding: 1em;
 }
 
 .contain{
   display:flex;
   justify-content:center;
   align-items:center;
-  flex-flow: column wrap;
+  flex-flow: row wrap;
   user-select: none;
   height: calc(401px + 2em);
+	width: 684px;
 }
 
 hr{
@@ -45,6 +47,7 @@ hr{
   background-color: #000;
   background-repeat: no-repeat;
   position: relative;
+	border: solid 5px #000;
 }
 
 #icons,#text-contain{
@@ -107,19 +110,28 @@ hr{
 #to-staff {stroke: gray;}
 #to-drop {fill: gray;stroke: none;stroke-width: 0;}
 
-#stats{
- display:flex;
- justify-content:center;
- align-items:center;
+footer{
+	flex:1;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
 }
 
-footer{
-  text-align: center;
-  position: relative;
+footer p{
+	position: absolute;
+	left: 0;
 }
+
 footer a{
   color: #000;
 }
+
+button{padding: .25em;position: relative;user-select:none;}
+button:hover{color: red;}
+
+#button-reset{margin-right: 1em;}
+
 .icon,.list{
   width: 64px;
   height: 64px;
@@ -212,17 +224,6 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 }
 
 
-#buttons-contain{
-  position: relative;
-}
-
-button{padding: .25em;position: relative;user-select:none;}
-button:hover{color: red;}
-
-#button-reset{
-  margin-right: .75em;
-}
-
 #gg-contain{
   position: absolute;
   top:0;
@@ -307,15 +308,103 @@ button:hover{color: red;}
   padding: 16px;
 }
 
-canvas{
+
+#stats{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#ns-contain{
+	margin-bottom: 1em;
+}
+
+#ns-contain, #we-contain{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#coordinates input,#coordinates label {
+  padding: .25em .5em;
+  font-size: 1em;
+	font-family: 'Press Start 2P', Arial black;
+}
+#coordinates input{
+  border:none;
+  color: #fff;
+  outline: none;
+	transition: transform .1s;
+}
+
+#coordinates input:hover{
+	transform: scale(1.5);
+	z-index: 10;
+	position: relative;
+}
+#coordinates label{filter: brightness(.2); margin-right:.5em;border: 1px solid transparent;padding: 8px;}
+#coordinates label:hover{filter: brightness(.4);}
+
+#coordinates input[type="radio"]:checked + label {
+  filter: brightness(1);
+  border: 1px solid rgba(255,255,255,.5);
+}
+
+#coordinates input[type="radio"]{
+  -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
   position: absolute;
-  top: 0;
-  left: 0;
+}
+
+#coordinates input[type="number"]{
+  width:5em;
+  text-align: right;
+  background-color: #000;
+  border: 1px solid rgba(255,255,255,.5);
+	padding: 8px;
+}
+
+#map header{
+	background-color:#000;
+	display: flex;
+	padding: 8px;
+}
+
+#map header input{
+	  -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+  position: absolute;
+}
+
+#map header label{
+	width: 32px;
+	height: 32px;
+	background-color: rgba(255,255,255,.2);
+}
+
+#map header label:not(:last-of-type){
+	margin-right: 8px;
+}
+
+#canvas-contain{
+	width: 341px;
+	height: 353px;
+	overflow: scroll;
+}
+
+#canvas-contain::-webkit-scrollbar-track{border: 1px black solid; background-color: #80d011;}
+#canvas-contain::-webkit-scrollbar{width: 10px;height: 10px;background-color: #F5F5F5;}
+#canvas-contain::-webkit-scrollbar-thumb{background-color: rgba(0,0,0,.8);}
+#canvas-contain::-webkit-scrollbar-thumb:hover{background-color: #000;}
+#canvas-contain::-webkit-scrollbar-corner{background-color: #000;}
+
+canvas{
   background-color: #80d011;
   background-image: url("img/plains.png");
   background-size: 32px;
   cursor: crosshair;
   image-rendering: pixelated;
-  resize: both;
-  overflow: scroll;
 }
