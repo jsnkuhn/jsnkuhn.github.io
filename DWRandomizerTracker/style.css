@@ -1,8 +1,10 @@
 *{margin: 0;padding:0;box-sizing: border-box;}
 
 body{
-  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-  background-color: #80d011;
+	font-family: 'Press Start 2P', Arial black;
+  background-color: #737373;
+  background-image: url("img/dw1-titleback.png");
+	background-size: 16px;
   image-rendering: pixelated;
   color: #fff;
   display:flex;
@@ -20,6 +22,75 @@ body{
   user-select: none;
   height: calc(401px + 2em);
 	width: 684px;
+}
+
+#title{
+	flex:100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #d82800;
+  background-image: url("img/brick.png");
+	padding: 16px;
+	position:relative;
+	margin-bottom: 16px;
+	}
+#title h1, #title h2, #title h3{
+	flex:1;
+	text-align: center;
+}
+
+#title h2:nth-of-type(1){
+	color: #737373;
+	background-color: rgb(188,188,188);
+  border: 2px dashed rgb(188,188,188);
+	border-color: #737373 #737373 #000 #000;
+  border-image: url("img/dw1_wall.png") 6 / 6px round;
+	text-transform: uppercase;
+	padding: 8px;
+  text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
+	line-height: 2.25em;
+	}
+
+#title em{
+	text-transform: none;
+	font-family: 'Lobster', cursive;
+	text-shadow: 1px 1px 0 rgba(255,255,255,.5);
+	color: #000;
+	transform: skewY(-8deg);
+	font-style: normal;
+	display:block;
+	font-size: 1.75em;
+	top: 1.2em;
+	left: 2.4em;
+	position:absolute;
+}
+	
+#title h3{
+	line-height: 1.5em;
+}
+#title svg{
+
+}
+#title h2:nth-of-type(2){
+	background-color: #000;
+}
+
+header .dw{
+  font:bold 48px serif;
+  transform:scaleY(1.2);
+}
+header .stretch{ 
+  transform:scale(1,1.9) translateY(-17px);
+  transform-origin:50% 50%;
+}
+
+header .randomizer{
+  font-size:.65em;
+  font-weight: normal;
+  fill:#fff;
+  font-family: 'Press Start 2P', cursive;
+	letter-spacing: .5px;
 }
 
 hr{
@@ -101,6 +172,17 @@ hr{
 
 .no-filter span:nth-of-type(1), .no-filter span:nth-of-type(2) {filter: none;}
 
+/* IE10-11 specific */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	#spell-contain .single{opacity: .2;}
+	.filter span:nth-of-type(1), .filter span:nth-of-type(2){opacity:.2;}
+	.filter:hover span:nth-of-type(1){opacity:.5;}
+	.half-filter span:nth-of-type(1){opacity:1;}
+	.half-filter span:nth-of-type(2){opacity:.2;}
+	.half-filter:hover span:nth-of-type(2){opacity:.5;}
+	.no-filter span:nth-of-type(1), .no-filter span:nth-of-type(2) {opacity:1;}
+}
+
 #background-lines{
   position: absolute;
   z-index: 0;
@@ -111,16 +193,15 @@ hr{
 #to-drop {fill: gray;stroke: none;stroke-width: 0;}
 
 footer{
-	flex:1;
+	margin-top: 16px;
+	flex: 100%;
 	display:flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 }
-
 footer p{
-	position: absolute;
-	left: 0;
+	margin-right: 8px;
 }
 
 footer a{
@@ -141,10 +222,14 @@ button:hover{color: red;}
   user-select: none;
 }
 
+/* IE10-11 specific */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.icon,.list{opacity: .2;}
+}
+
 img[src*="graphics"] {
   transform:scale(1.3);
 }
-
 
 .list:hover, .icon:hover, #spell-contain .single:hover{
   filter: brightness(.5);
@@ -155,6 +240,13 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 }
 .selected{
   filter: none;
+}
+
+/* IE10-11 specific */
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.list:hover, .icon:hover, #spell-contain .single:hover{opacity:.5;}
+	img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover{opacity:1;}
+	.selected{opacity:1;}
 }
 
 #hurtmore,#healmore{
@@ -265,7 +357,6 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 }
 
 #gg-element h2{
-  font-family: 'Press Start 2P', Arial black;
   font-size: 52px;
   line-height: 80px;
   color: #000;
@@ -355,6 +446,7 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
   -webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	z-index: -1;
   position: absolute;
 }
 
@@ -366,6 +458,8 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 	padding: 8px;
 }
 
+#stats{
+}
 #map header{
 	background-color:#000;
 	display: flex;
@@ -377,6 +471,7 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 	-moz-appearance: none;
 	appearance: none;
   position: absolute;
+	z-index: -1;
 }
 
 #map header label{
@@ -391,8 +486,9 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 
 #canvas-contain{
 	width: 341px;
-	height: 353px;
+	height: 395px;
 	overflow: scroll;
+	border-left: solid #000 1px;
 }
 
 #canvas-contain::-webkit-scrollbar-track{border: 1px black solid; background-color: #80d011;}
