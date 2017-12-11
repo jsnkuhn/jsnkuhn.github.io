@@ -42,5 +42,5 @@ function clearCanvas(){
   context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-document.getElementById("canvas-contain").scroll(canvas.width/3, canvas.height/3);
+document.getElementById("canvas-contain").scrollTo(canvas.width/3, canvas.height/3);
 document.getElementById("button-clear-canvas").addEventListener('click', clearCanvas);
