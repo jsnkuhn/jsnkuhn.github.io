@@ -3,13 +3,36 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Dragon Warrior Randomizer Tracker</title>
+		<meta name="description" content="A tracker for Dragon Warrior Randomizer (NES). Tracks items, spells, coordinates, etc.... ">
+		<meta name="keywords" content="dragon warrior randomizer tracker, dragon warrior, dragon quest, randomizer, tracker">
 		<link rel="icon" type="image/png" href="img/blueslime.png">
 		<link rel="stylesheet" href="style.css">
-		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Lobster" rel="stylesheet">
 	</head>
 	<body>
 	
 	<div class="contain">
+		<header id="title">
+			<h2>Erdrick's <em>other</em> Tablet</h2>
+			<h3>a<br/>tracker<br/>for</h3>
+			<h2><a href="https://github.com/mcgrew/dwrandomizer/releases">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 150">
+    <defs>
+      <linearGradient id="gradient" x1="0" x2="0" y1="0" y2="1">
+        <stop offset="5%" stop-color="#ea092d" />
+        <stop offset="95%" stop-color="#fcea48" />
+      </linearGradient>
+    </defs>
+    <g fill="url(#gradient)">
+      <text class="dw" x="16" y="51">DRAGON</text>
+      <text class="stretch dw" x="0" y="86">W</text>
+      <text class="dw" x="42" y="91">ARRIO</text>
+      <text class="stretch dw" x="203" y="86">R</text>
+     </g>
+      <text class="randomizer" x="44" y="132">RANDOMIZER</text>
+    </svg></a>
+			</h2>
+		</header>
 		<div id="tracker-contain">
 			<div id="background-lines">
 				<svg style="filter:brightness(1);" width='96' height='192' viewBox='0 0 96 192' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='none' stroke-width='4'>
@@ -42,14 +65,17 @@
 			<hr class="spacerh" role="presentational" />
 			<div id="text-contain">
 				<ul id="spell-contain">
-					<li id="healmore" class="more-spell filter"><span>Heal</span><span>more</span></li>
-					<li id="hurtmore" class="more-spell filter"><span>Hurt</span><span>more</span></li>
+					<!--li id="healmore" class="more-spell filter"><span>Heal</span><span>more</span></li-->
+					<li class="single">Heal</li>
+					<li class="single">Hurt</li>
 					<li class="single">Sleep</li>
 					<li class="single">Radiant</li>
 					<li class="single" style="font-size: .9em;">Stopspell</li>
 					<li class="single">Outside</li>
 					<li class="single">Return</li>
 					<li class="single">Repel</li>
+					<li class="single">Healmore</li>
+					<li class="single">Hurtmore</li>
 				</ul>
 				<hr class="spacerv" role="presentational" />
 				<div id="stats">
