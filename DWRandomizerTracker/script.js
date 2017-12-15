@@ -172,7 +172,25 @@ $(function(){
       $('#gg-contain').addClass('gg-hide');
 			$('#n,#s,#w,#e').prop('checked', false);
 			$('#ns-number,#we-number').val('50');
+			$('#ns-counter,#we-counter').val('0');
+			$('#ns-number,#we-number,#ns-counter,#we-counter').css('backgroundColor','#000');
     });
+});
+
+// Change coordinate input background color when correct steps value is selected
+
+$('#ns-number,#ns-counter').on("change", function () {
+	if ( $('#ns-number').val() === $('#ns-counter').val() )
+		{$('#ns-number, #ns-counter').css('backgroundColor','green')}
+	else
+		($('#ns-number, #ns-counter').css('backgroundColor','#000'))
+});
+
+$('#we-number,#we-counter').on("change", function () {
+	if ( $('#we-number').val() === $('#we-counter').val() )
+		{$('#we-number, #we-counter').css('backgroundColor','green')}
+	else
+		($('#we-number, #we-counter').css('backgroundColor','#000'))
 });
 
 // Change sprite set--------------------------------------------
@@ -205,6 +223,25 @@ $("#ball").on("click", function() {
 
 $("#gg-contain").on("click", function() {
   $('#gg-contain').addClass('gg-hide');
+});
+
+
+// stats tabs
+
+$('#coordinates-tab, #lvexp-tab, #dl-tab').on("change", function () {
+	
+$('#coordinates, #lvexp, #dl').addClass('hide')
+
+//if($(this).prop('checked') === true)
+//	{$(this - "-tab").removeClass('hide')}
+
+if($('#coordinates-tab').prop('checked') === true)
+	{$('#coordinates').removeClass('hide')}
+else if($('#lvexp-tab').prop('checked') === true)
+	{$('#lvexp').removeClass('hide')}
+else if($('#dl-tab').prop('checked') === true)
+	{$('#dl').removeClass('hide')}
+
 });
 
 /*
