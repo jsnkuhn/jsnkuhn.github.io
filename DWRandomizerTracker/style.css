@@ -4,12 +4,9 @@ body{
 	font-family: 'Press Start 2P', Arial black;
   background-color: #737373;
   background-image: url("img/dw1-titleback.png");
-	background-size: 16px;
+	background-size: 32px;
   image-rendering: pixelated;
   color: #fff;
-  display:flex;
-  justify-content:center;
-  align-items:center;
   position: relative;
 	padding: 1em;
 }
@@ -21,11 +18,20 @@ body{
   flex-flow: row wrap;
   user-select: none;
   height: calc(401px + 2em);
-	width: 684px;
+	width: 341px;
+	margin: 0 auto;
+}
+
+#title, #tracker-contain, #map, footer{
+	margin-bottom: 16px;
+}
+
+#map{
+	order:1;
 }
 
 #title{
-	flex:100%;
+	width:341px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -33,14 +39,18 @@ body{
   background-image: url("img/brick.png");
 	padding: 16px;
 	position:relative;
-	margin-bottom: 16px;
 	}
+
+#title h3, #dwr-logo {display:none;}
+
 #title h1, #title h2, #title h3{
 	flex:1;
 	text-align: center;
 }
 
-#title h2:nth-of-type(1){
+#eot-logo{
+	width: 236px;
+	height: 128px;
 	color: #737373;
 	background-color: rgb(188,188,188);
   border: 2px dashed rgb(188,188,188);
@@ -50,9 +60,10 @@ body{
 	padding: 8px;
   text-shadow: 0 1px 0 #fff, 0 -1px 0 #000;
 	line-height: 2.25em;
+	position: relative;
 	}
 
-#title em{
+#eot-logo em{
 	text-transform: none;
 	font-family: 'Lobster', cursive;
 	text-shadow: 1px 1px 0 rgba(255,255,255,.5);
@@ -61,36 +72,46 @@ body{
 	font-style: normal;
 	display:block;
 	font-size: 1.75em;
-	top: 1.2em;
-	left: 2.4em;
+	top: .7em;
+	left: 2.7em;
 	position:absolute;
 }
 	
 #title h3{
 	line-height: 1.5em;
 }
-#title svg{
 
+#dwr-logo{
+  padding: 8px;
+  background-color: #000;
+  text-align: center;
 }
-#title h2:nth-of-type(2){
-	background-color: #000;
+#dwr-logo a{
+	text-decoration: none;
 }
-
-header .dw{
-  font:bold 48px serif;
-  transform:scaleY(1.2);
-}
-header .stretch{ 
-  transform:scale(1,1.9) translateY(-17px);
-  transform-origin:50% 50%;
+#dwr-logo h2{
+  color: #ea092d;
+  font: bold 48px/.85em serif;
 }
 
-header .randomizer{
-  font-size:.65em;
-  font-weight: normal;
-  fill:#fff;
-  font-family: 'Press Start 2P', cursive;
-	letter-spacing: .5px;
+#dwr-logo h2 span.tall{
+  display: inline-block;
+  transform:scale(1,1.9) translateY(-3px);
+  transform-origin:50% 0;
+}
+
+#dwr-logo h2, #dwr-logo h2 span.tall{
+	background: -webkit-linear-gradient(#ea092d, #fcea48);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+	}
+#dwr-logo h3{
+  color:#fff;
+  font:bold 15px 'Press Start 2P', cursive;
+  letter-spacing: .5px;
+  padding: .4em;
+	position: relative;
+	left: 6px;
 }
 
 hr{
@@ -124,7 +145,6 @@ hr{
 #icons,#text-contain{
   display:flex;
   justify-content:space-between;
-  align-items:center;
 }
 
 #icons-items, #icons-apdp{
@@ -193,15 +213,10 @@ hr{
 #to-drop {fill: gray;stroke: none;stroke-width: 0;}
 
 footer{
-	margin-top: 16px;
-	flex: 100%;
+	width: 100%;
 	display:flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
-	position: relative;
-}
-footer p{
-	margin-right: 8px;
 }
 
 footer a{
@@ -211,7 +226,6 @@ footer a{
 button{padding: .25em;position: relative;user-select:none;}
 button:hover{color: red;}
 
-#button-reset{margin-right: 1em;}
 
 .icon,.list{
   width: 64px;
@@ -299,20 +313,20 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 }
 
 @keyframes rainbowdrop {
-  from {background-color: #0070ec; stroke: #0070ec; opacity: 1;}
-  8% {background-color: #3cbcfc; stroke: #3cbcfc; fill: #3cbcfc;}
-  16% {background-color: #5c94fc; stroke: #5c94fc; fill: #5c94fc;}
-  25% {background-color: #4088fc; stroke: #4088fc; fill: #4088fc;}
-  33% {background-color: #f478fc; stroke: #f478fc; fill: #f478fc;}
-  41% {background-color: #fc74b4; stroke: #fc74b4; fill: #fc74b4;}
-  50% {background-color: #fc7460; stroke: #fc7460; fill: #fc7460;}
-  58% {background-color: #fc9838; stroke: #fc9838; fill: #fc9838;}
-  66% {background-color: #f0bc3c; stroke: #f0bc3c; fill: #f0bc3c;}
-  75% {background-color: #80d010; stroke: #80d010; fill: #80d010;}
-  83% {background-color: #4cdc48; stroke: #4cdc48; fill: #4cdc48;}
-  92% {background-color: #58f898; stroke: #58f898; fill: #58f898;}
-  99% {background-color: #00e8d8; stroke: #00e8d8; fill: #00e8d8;}
-  to {background-color: #ffe359; stroke: #ffe359; fill: #ffe359; opacity: .3;}
+  from {stroke: #0070ec; fill: #0070ec; opacity: 1;}
+  8% {stroke: #3cbcfc; fill: #3cbcfc;}
+  16% {stroke: #5c94fc; fill: #5c94fc;}
+  25% {stroke: #4088fc; fill: #4088fc;}
+  33% {stroke: #f478fc; fill: #f478fc;}
+  41% {stroke: #fc74b4; fill: #fc74b4;}
+  50% {stroke: #fc7460; fill: #fc7460;}
+  58% {stroke: #fc9838; fill: #fc9838;}
+  66% {stroke: #f0bc3c; fill: #f0bc3c;}
+  75% {stroke: #80d010; fill: #80d010;}
+  83% {stroke: #4cdc48; fill: #4cdc48;}
+  92% {stroke: #58f898; fill: #58f898;}
+  99% {stroke: #00e8d8; fill: #00e8d8;}
+  to {stroke: #ffe359; fill: #ffe359; opacity: .3;}
 }
 
 
@@ -399,22 +413,79 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
   padding: 16px;
 }
 
-
 #stats{
 	flex: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+}
+#stats #tabs{
+	display: flex;
+}
+#tabs label{
+	flex: 1;
+	filter: brightness(.2);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 8px 0;
+	border-bottom: solid #000;
 }
 
-#ns-contain{
-	margin-bottom: 1em;
+#tabs label:hover{
+	filter: brightness(.8);
 }
 
-#ns-contain, #we-contain{
+#tabs input[type="radio"]:checked + label {
+  filter: brightness(1);
+	border-bottom: solid #fff;
+}
+
+#tabs input[type="radio"]{
+  -webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	z-index: -1;
+  position: absolute;
+}
+
+#tabs label img{
+	height: 32px;
+}
+
+#lvexp{
+	height: 179px;
+	overflow: auto;
+	xpadding-top: 8px;
+}
+tr:nth-of-type(even){
+  background-color: #333;
+}
+td:nth-of-type(2){
+  text-align: right;
+}
+
+#lvexp::-webkit-scrollbar-track{border: 1px black solid; background-color: #000;}
+#lvexp::-webkit-scrollbar{width: 8px;height: 8px;background-color: #000;}
+#lvexp::-webkit-scrollbar-thumb{background-color: silver;}
+#lvexp::-webkit-scrollbar-corner{background-color: #000;}
+
+table{
+	margin: 1em auto;
+}
+
+#coordinates{
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
+	padding-top: 16px;
+}
+
+.hide{
+	position: absolute;
+	top: 0;
+	z-index: -1; /* i guess you can't display:none; a flex container? so I hide you with z-index*/
+	display:none;
 }
 
 #coordinates input,#coordinates label {
@@ -422,6 +493,7 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
   font-size: 1em;
 	font-family: 'Press Start 2P', Arial black;
 }
+
 #coordinates input{
   border:none;
   color: #fff;
@@ -434,12 +506,27 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 	z-index: 10;
 	position: relative;
 }
-#coordinates label{filter: brightness(.2); margin-right:.5em;border: 1px solid transparent;padding: 8px;}
+#coordinates label{
+	padding: 8px;
+	filter: brightness(.2);
+	border: 1px solid transparent;
+	padding: 8px;
+	}
+#step-counters h6{
+	width: 64px;
+	height: 34px;
+	text-align: center;
+	border: solid 1px gray;
+	padding-top: 10px;
+}
+#ns-counter{
+	margin-bottom: 16px;
+}
 #coordinates label:hover{filter: brightness(.4);}
 
 #coordinates input[type="radio"]:checked + label {
   filter: brightness(1);
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid gray;
 }
 
 #coordinates input[type="radio"]{
@@ -451,15 +538,28 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 }
 
 #coordinates input[type="number"]{
-  width:5em;
+  width:4em;
   text-align: right;
   background-color: #000;
-  border: 1px solid rgba(255,255,255,.5);
+  border: 1px solid gray;
 	padding: 8px;
 }
 
-#stats{
+#ns-contain{
+	margin-bottom: 1em;
 }
+
+#ns-label-contain, #we-label-contain{
+	display:flex;
+	position: relative;
+	top: 1px;
+}
+
+#we-label-contain label:nth-of-type(2), #ns-label-contain label:nth-of-type(2){
+	position: relative;
+	left: -4px;
+}
+
 #map header{
 	background-color:#000;
 	display: flex;
@@ -503,4 +603,18 @@ canvas{
   background-size: 32px;
   cursor: crosshair;
   image-rendering: pixelated;
+}
+
+@media (min-width: 764px) {
+	.contain {width:682px;}
+	footer{order:2;}
+	#title{flex: 100%;}
+	#title h3, #dwr-logo {display:block;}
+	#eot-logo em{left:1.85em;}
+	}
+
+@media (max-width: 764px) {
+	#title{width: 682px;}
+	footer{order:1;}
+	#map{order:2;}
 }
