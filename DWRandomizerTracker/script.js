@@ -174,6 +174,7 @@ $(function(){
 			$('#ns-number,#we-number').val('50');
 			$('#ns-counter,#we-counter').val('0');
 			$('#ns-number,#we-number,#ns-counter,#we-counter').css('backgroundColor','#000');
+			context.clearRect(0, 0, canvas.width, canvas.height);
     });
 });
 
@@ -181,14 +182,14 @@ $(function(){
 
 $('#ns-number,#ns-counter').on("change", function () {
 	if ( $('#ns-number').val() === $('#ns-counter').val() )
-		{$('#ns-number, #ns-counter').css('backgroundColor','green')}
+		{$('#ns-number, #ns-counter').css('backgroundColor','#2038ec')}
 	else
 		($('#ns-number, #ns-counter').css('backgroundColor','#000'))
 });
 
 $('#we-number,#we-counter').on("change", function () {
 	if ( $('#we-number').val() === $('#we-counter').val() )
-		{$('#we-number, #we-counter').css('backgroundColor','green')}
+		{$('#we-number, #we-counter').css('backgroundColor','#737373')}
 	else
 		($('#we-number, #we-counter').css('backgroundColor','#000'))
 });
