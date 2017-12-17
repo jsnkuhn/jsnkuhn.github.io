@@ -14,7 +14,7 @@ body{
 .contain{
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-start;
   flex-flow: row wrap;
   user-select: none;
   height: calc(401px + 2em);
@@ -22,16 +22,16 @@ body{
 	margin: 0 auto;
 }
 
-#title, #tracker-contain, #map, footer{
+#title, #tracker-contain, #chests-contain, #map, footer{
 	margin-bottom: 16px;
+	width: 341px;
 }
 
-#map{
-	order:1;
-}
+footer{order:1;}
+#chests-contain{order: 2;}
+#map{order:3;}
 
 #title{
-	width:341px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -41,13 +41,12 @@ body{
 	position:relative;
 	}
 
-#title h3, #dwr-logo {display:none;}
-
 #title h1, #title h2, #title h3{
 	flex:1;
 	text-align: center;
 }
 
+#title h3, #dwr-logo {display:none;}
 #eot-logo{
 	width: 236px;
 	height: 128px;
@@ -213,10 +212,9 @@ hr{
 #to-drop {fill: gray;stroke: none;stroke-width: 0;}
 
 footer{
-	width: 100%;
+	width: 341px;
 	display:flex;
 	justify-content: space-around;
-	align-items: center;
 }
 
 footer a{
@@ -477,10 +475,17 @@ table{
 #coordinates{
 	display: flex;
 	justify-content: space-around;
+	flex-wrap: wrap;
 	align-items: center;
 	padding-top: 16px;
 }
 
+#coordinates-contain, #step-counters{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	
+}
 .hide{
 	position: absolute;
 	top: 0;
@@ -518,6 +523,8 @@ table{
 	text-align: center;
 	border: solid 1px gray;
 	padding-top: 10px;
+	position: relative;
+	top: 1px;
 }
 #ns-counter{
 	margin-bottom: 16px;
@@ -560,10 +567,53 @@ table{
 	left: -4px;
 }
 
+#chests-contain{
+	font: bold 1em times;
+  background-color: #000;
+  width: 341px;
+  height: 443px;
+}
+#chests-contain div{
+  padding: 4px;
+  text-align: center;
+}
+
+#chests-contain div div {
+  border: 1px solid rgba(255,255,255,.2);
+}
+
+#chests-contain img{
+  width: 24px;
+	height: 24px;
+}
+
+#towns, #shrines, #caves{
+  display:flex;
+  flex-flow: wrap;
+}
+#chests-contain h4{
+  margin:0;
+  padding:0;
+  text-align: center;
+}
+#chests-contain h4 img{
+  width:1em;
+	height:1em;
+  transition: transform .1s ease-in;
+}
+#chests-contain h4 img:hover{
+  transform: scale(2.5);
+}
+
+
 #map header{
 	background-color:#000;
 	display: flex;
+	align-items: center;
 	padding: 8px;
+}
+#map header h4{
+	margin-right: auto;
 }
 
 #map header input{
@@ -605,16 +655,14 @@ canvas{
   image-rendering: pixelated;
 }
 
+/* widescreen */
 @media (min-width: 764px) {
-	.contain {width:682px;}
-	footer{order:2;}
+	.contain {width:698px;}
+	footer{order:3;}
+	#chests-contain{order: 1;}
+	#map{order:2;}
 	#title{flex: 100%;}
 	#title h3, #dwr-logo {display:block;}
 	#eot-logo em{left:1.85em;}
+	#chests-contain, footer{margin-left: 16px;}
 	}
-
-@media (max-width: 764px) {
-	#title{width: 682px;}
-	footer{order:1;}
-	#map{order:2;}
-}
