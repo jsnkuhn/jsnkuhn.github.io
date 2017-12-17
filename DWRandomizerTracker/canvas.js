@@ -37,11 +37,5 @@ canvas.addEventListener('mousedown', engage);
 canvas.addEventListener('mousemove', putPoint);
 canvas.addEventListener('mouseup', disengage);
 
-document.getElementById("button-clear-canvas").addEventListener('click', clearCanvas);
-
-function clearCanvas(){
-  context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
 document.getElementById("canvas-contain").scrollTo(canvas.width/3, canvas.height/3);
 
