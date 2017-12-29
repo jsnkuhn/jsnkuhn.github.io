@@ -1,6 +1,6 @@
-
 html{
 background-color: #747474;
+font-family: arial;
 }
 
 body{
@@ -17,7 +17,6 @@ body{
   z-index: 0;
 }
 
-
 .to-staff, .to-drop{opacity: .2;}
 .to-staff {stroke: gray;}
 .to-drop {fill: gray;stroke: none;stroke-width: 0;}
@@ -26,11 +25,10 @@ body{
   display: grid;
   grid-template: repeat(2,auto) / repeat(2, auto);
   grid-gap: 1em;
-  width: calc(64px * 6 + 2em);
 }
 
 img:hover{
-  filter: brightness(.5);
+  cursor: pointer;
 }
 
 img.selected:hover{
@@ -42,17 +40,34 @@ img.selected:hover{
 
 .icons-items{
   padding: 5px;
-  width: calc(64px * 3);
   height: calc(64px * 3);
+	width: calc(64px * 3);
   display:  flex;
   flex-flow: column wrap;
 }
+
+.icons-items-right{
+	width: calc(64px * 4);
+}
+
+.hide{
+	display:none;
+}
+
+.bordered{
+	border: 2px solid #fff;
+}
+
 img{
   filter: brightness(.2);
   width: 64px;
   height: 64px;
   z-index:2;
-	image-rendering: pixelated;
+	-ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-pixelated;
+  image-rendering: pixelated;
 }
 
 img[src*="graphics"] {
@@ -121,6 +136,87 @@ img[src*="graphics"] {
   to {stroke: #ffe359; fill: #ffe359; opacity: .3;}
 }
 
+.gg-contain{
+  font-family: 'Press Start 2P', Arial black;
+  position: absolute;
+  top:0;
+  left:0;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color: rgba(255,255,255,.1);
+  height: 100%;
+  width: 100%;
+  z-index:9;
+  cursor: url("https://jsnkuhn.github.io/DWRandomizerTracker/img/blueslime.png") 18 0, default;
+}
+
+.gg-contain-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  font-size: 1.6em;
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+}
+
+.gg-contain-close:hover{
+  border: none;
+  background-color: #000;
+}
+
+.gg-element{
+  user-select:none;
+  background-color: #d82800;
+  background-image: url("https://jsnkuhn.github.io/DWRandomizerTracker/img/brick.png");
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height: 65%;
+  width: 85%;
+}
+
+.gg-element h2{
+  font-size: 36px;
+  line-height: 60px;
+  color: #000;
+  border-top: 4px solid #fc9838;
+  position: relative;
+  transform-origin: 50% 0;
+  overflow: hidden;
+}
+
+.gg-element h2:not(:last-of-type){  margin-right: .5em;}
+
+.gg-element h2 span{
+  background-image: repeating-linear-gradient(to right, #fcc4d8, #fcc4d8 15%, transparent 15%, transparent 30%), linear-gradient(#fcc4d8, #fcc4d8);
+  background-size: 100% 4px, 100% calc(100% - 4px);
+  background-position: bottom, top;
+  background-repeat: no-repeat;
+  display: block;
+  padding: 4px 16px;
+  animation: unravel 1s ease-in;}
+
+.gg-element h2:nth-of-type(2) span{
+  animation: unravel2 1.8s ease-in;
+}
+
+@keyframes unravel {
+  from{ transform:translateY(-110px);}
+  to{ transform:translateY(0);}
+}
+@keyframes unravel2 {
+  from,50%{ transform: translateY(-110px);}
+  to{ transform: translateY(0);}
+}
+
+.gg-contain.gg-hide{
+  display:none;
+}
+
+
 #reset{
   display: grid;
   grid-template: repeat(3,auto) / repeat(3,auto);
@@ -139,4 +235,14 @@ img[src*="graphics"] {
 
 #reset button{
   height: 4em;
+}
+
+#options img{
+	width: 32px;
+	height: 32px;
+	filter:brightness(1);
+}
+
+input[type="radio"]{
+	margin-left: 2em;
 }
