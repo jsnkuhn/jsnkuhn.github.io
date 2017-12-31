@@ -23,306 +23,347 @@
 		<link rel="prefetch" href="img/dw1_wall.png">
 	</head>
 	<body>
-	
-	<div class="contain">
-		<header id="title">
-			<h2 id="eot-logo">Erdrick's <em>other</em> Tablet</h2>
-			<h3>a<br/>tracker<br/>for</h3>
-			<div id="dwr-logo">
-				<a href="https://github.com/mcgrew/dwrandomizer/releases">
-					<h2>DRAGON</h2>
-					<h2><span class="tall">W</span>ARRIO<span class="tall">R</span></h2>
-					<h3>RANDOMIZER</h3>
-				</a>
-			</div>
-		</header>
-		<div id="tracker-contain">
-			<div id="background-lines">
-				<svg style="filter:brightness(1);" width='96' height='192' viewBox='0 0 96 192' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='none' stroke-width='4'>
-					<path id="to-staff" d='M32,32h61'/>
-					<path id="to-drop" d='M36,36h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4'/>
-				</svg>
-			</div>
-			<div id="icons">
-				<div id="icons-items">
-					<img id="staff" class="icon" src="img/staff.png" title="Staff of Rain">
-					<img id="stones" class="icon" src="img/dq3-sunstone.png" title="Stones of Sunlight">
-					<img id="token" class="icon" src="img/token.png" title="Erdrick's Token">
-					<img id="harp" class="icon" src="img/harp.png" title="Silver Harp">
-					<img id="rbdrop" class="icon" src="img/rainbowdrop.png" title="Rainbow Drop">
-					<img id="flute" class="icon" src="img/flute.png" title="Fairy Flute">
-					<img id="key" class="icon" src="img/dq3-key.png" title="Magic Key">
-					<img id="ball" class="icon" src="img/thunderball_th.png" title="Ball of Light">
-					<img id="gps" class="icon" src="img/gwaelin.png" title="Gwaelin's Love">
+	<header id="title">
+		<h2 id="eot-logo">Erdrick's <em>other</em> Tablet</h2>
+		<h3>a<br/>tracker<br/>for</h3>
+		<div id="dwr-logo">
+			<a href="https://github.com/mcgrew/dwrandomizer/releases">
+				<h2>DRAGON</h2>
+				<h2><span class="tall">W</span>ARRIO<span class="tall">R</span></h2>
+				<h3>RANDOMIZER</h3>
+			</a>
+		</div>
+	</header>
+	<div id="tabs" class="contain">
+		<ul id="tab-clickers">
+			<li class="active"><a title="Items/Spells, etc..." href="#tracker-contain"><img src="img/dw1_weapon.png" alt="Items/Spells">
+</a></li>
+			<li><a title="Chests" href="#chests-contain"><img src="img/dw1-chest.png" alt="chests"></a></li>
+			<li><a title="Overworld Mapper" href="#map"><img src="http://www.woodus.com/den/gallery/graphics/dq5ds/item/adventurers_map.png" alt="mapper"/></a></li>
+			<li><a title="Cave Maps" href="#cave-maps"><img src="img/dw1-cave-32.png" alt="Cave Maps"/></a></li>
+			<li><a title="Monsters" href="#monsters"><img src="img/blueslime.png" alt="Monsters"/></a></li>
+		</ul>
+		<div id="panes-contain">
+			<div id="tracker-contain" class="nested-pane" style="z-index:1;">
+				<div id="background-lines">
+					<svg style="filter:brightness(1);" width='96' height='192' viewBox='0 0 96 192' version='1.1' xmlns='http://www.w3.org/2000/svg' fill='none' stroke-width='4'>
+						<path id="to-staff" d='M36,32h61'/>
+						<path id="to-drop" d='M36,36h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4h-4v4'/>
+					</svg>
 				</div>
-				<hr class="spacerv" role="presentational" />
-				<div id="icons-apdp">
-					<img title="Fighter's Ring: +2 AP" id="ring" class="icon" src="img/dq3-ring-sprite.png">
-					<img title="Dragon's Scale: +2 DP" id="scale" class="icon" src="http://www.woodus.com/den/gallery/graphics/dq9ds/accessory/dragon_scale_th.png">
-					<img title="Death Necklace: +10 AP, -25% HP" id="necklace" class="icon" src="http://www.woodus.com/den/gallery/graphics/dq9ds/accessory/reckless_necklace_th.png">
-					<img title="Weapon" id="weapon" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/erdricks_sword.png">
-					<img title="Armor" id="armor" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/torso/erdricks_armour.png">
-					<img title="Shield" id="shield" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/shield/silver_shield.png">
+				<div id="icons">
+					<div id="icons-items">
+						<img id="staff" class="icon" src="img/staff.png" title="Staff of Rain" alt="">
+						<img id="stones" class="icon" src="img/dq3-sunstone.png" title="Stones of Sunlight" alt="">
+						<img id="token" class="icon" src="img/token.png" title="Erdrick's Token" alt="">
+						<img id="harp" class="icon" src="img/harp.png" title="Silver Harp" alt="">
+						<img id="rbdrop" class="icon" src="img/rainbowdrop.png" title="Rainbow Drop" alt="">
+						<img id="flute" class="icon" src="img/flute.png" title="Fairy Flute" alt="">
+						<img id="key" class="icon" src="img/dq3-key.png" title="Magic Key" alt="">
+						<img id="ball" class="icon" src="img/thunderball_th.png" title="Ball of Light" alt="">
+						<img id="gps" class="icon" src="img/gwaelin.png" title="Gwaelin's Love" alt="">
+					</div>
+					<hr class="spacerv" role="presentation" />
+					<div id="icons-apdp">
+						<img title="Fighter's Ring: +2 AP" id="ring" class="icon" src="img/dq3-ring-sprite.png" alt="">
+						<img title="Dragon's Scale: +2 DP" id="scale" class="icon" src="http://www.woodus.com/den/gallery/graphics/dq9ds/accessory/dragon_scale_th.png" alt="">
+						<img title="Death Necklace: +10 AP, -25% HP" id="necklace" class="icon" src="http://www.woodus.com/den/gallery/graphics/dq9ds/accessory/reckless_necklace_th.png" alt="">
+						<img title="Weapon" id="weapon" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/erdricks_sword.png" alt="">
+						<img title="Armor" id="armor" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/torso/erdricks_armour.png" alt="">
+						<img title="Shield" id="shield" class="list" src="http://www.woodus.com/den/gallery/graphics/dq9ds/shield/silver_shield.png" alt="">
+					</div>
 				</div>
-			</div>
-			<hr class="spacerh" role="presentational" />
-			<div id="text-contain">
-				<ul id="spell-contain">
-					<!--li id="healmore" class="more-spell filter"><span>Heal</span><span>more</span></li-->
-					<li class="single">Heal</li>
-					<li class="single">Hurt</li>
-					<li class="single">Sleep</li>
-					<li class="single">Radiant</li>
-					<li class="single" style="font-size: .9em;">Stopspell</li>
-					<li class="single">Outside</li>
-					<li class="single">Return</li>
-					<li class="single">Repel</li>
-					<li class="single">Healmore</li>
-					<li class="single">Hurtmore</li>
-				</ul>
-				<hr class="spacerv" role="presentational" />
-				<div id="stats">
-					<div id="tabs">
-						<input type="radio" name="stats-tabs" id="lvexp-tab">
-						<label for="lvexp-tab" title="Level/Exp List">
-							<img id="" class="" src="img/dw1-hero-swordshield.png">
-						</label>
-						<input type="radio" name="stats-tabs" id="coordinates-tab" checked>
-						<label for="coordinates-tab" title="Coordinates">
-							<img id="" class="" src="img/dw1-coordinatesguy.png">
-						</label>
-						<input type="radio" name="stats-tabs" id="dl-tab">
-						<label for="dl-tab" title="Dragonlord Fight Stats">
-							<img id="" class="" src="img/dw1-dragonlord-1.png">
-						</label>
-					</div>
-					<div id="lvexp" class="hide">
-						<table id="normal"><thead><tr><th colspan="2">NORMAL</th></tr><tr><th>LV</th><th>E</th></tr></thead><tbody><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>7</td></tr><tr><td>3</td><td>23</td></tr><tr><td>4</td><td>47</td></tr><tr><td>5</td><td>110</td></tr><tr><td>6</td><td>220</td></tr><tr><td>7</td><td>450</td></tr><tr><td>8</td><td>800</td></tr><tr><td>9</td><td>1300</td></tr><tr><td>10</td><td>2000</td></tr><tr><td>11</td><td>2900</td></tr><tr><td>12</td><td>4000</td></tr><tr><td>13</td><td>5500</td></tr><tr><td>14</td><td>7500</td></tr><tr><td>15</td><td>10000</td></tr><tr><td>16</td><td>13000</td></tr><tr><td>17</td><td>16000</td></tr><tr><td>18</td><td>19000</td></tr><tr><td>19</td><td>22000</td></tr><tr><td>20</td><td>26000</td></tr><tr><td>21</td><td>30000</td></tr><tr><td>22</td><td>34000</td></tr><tr><td>23</td><td>38000</td></tr><tr><td>24</td><td>42000</td></tr><tr><td>25</td><td>46000</td></tr><tr><td>26</td><td>50000</td></tr><tr><td>27</td><td>54000</td></tr><tr><td>28</td><td>58000</td></tr><tr><td>29</td><td>62000</td></tr><tr><td>30</td><td>65535</td></tr></tbody></table>
-						<table id="fast"><thead><tr><th colspan="2">FAST</th></tr><tr><th>LV</th><th>E</th></tr></thead><tbody><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>17</td></tr><tr><td>4</td><td>35</td></tr><tr><td>5</td><td>82</td></tr><tr><td>6</td><td>165</td></tr><tr><td>7</td><td>337</td></tr><tr><td>8</td><td>600</td></tr><tr><td>9</td><td>975</td></tr><tr><td>10</td><td>1500</td></tr><tr><td>11</td><td>2175</td></tr><tr><td>12</td><td>3000</td></tr><tr><td>13</td><td>4125</td></tr><tr><td>14</td><td>5625</td></tr><tr><td>15</td><td>7500</td></tr><tr><td>16</td><td>9750</td></tr><tr><td>17</td><td>12000</td></tr><tr><td>18</td><td>14250</td></tr><tr><td>19</td><td>16500</td></tr><tr><td>20</td><td>19500</td></tr><tr><td>21</td><td>22500</td></tr><tr><td>22</td><td>25500</td></tr><tr><td>23</td><td>28500</td></tr><tr><td>24</td><td>31500</td></tr><tr><td>25</td><td>34500</td></tr><tr><td>26</td><td>37500</td></tr><tr><td>27</td><td>40500</td></tr><tr><td>28</td><td>43500</td></tr><tr><td>29</td><td>46500</td></tr><tr><td>30</td><td>49151</td></tr></tbody></table>
-						<table id="very-fast"><thead><tr><th colspan="2">VERY FAST</th></tr><tr><th>LV</th><th>E</th></tr></thead><tbody><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>3</td></tr><tr><td>3</td><td>11</td></tr><tr><td>4</td><td>23</td></tr><tr><td>5</td><td>55</td></tr><tr><td>6</td><td>110</td></tr><tr><td>7</td><td>225</td></tr><tr><td>8</td><td>400</td></tr><tr><td>9</td><td>650</td></tr><tr><td>10</td><td>1000</td></tr><tr><td>11</td><td>1450</td></tr><tr><td>12</td><td>2000</td></tr><tr><td>13</td><td>2750</td></tr><tr><td>14</td><td>3750</td></tr><tr><td>15</td><td>5000</td></tr><tr><td>16</td><td>6500</td></tr><tr><td>17</td><td>8000</td></tr><tr><td>18</td><td>9500</td></tr><tr><td>19</td><td>11000</td></tr><tr><td>20</td><td>13000</td></tr><tr><td>21</td><td>15000</td></tr><tr><td>22</td><td>17000</td></tr><tr><td>23</td><td>19000</td></tr><tr><td>24</td><td>21000</td></tr><tr><td>25</td><td>23000</td></tr><tr><td>26</td><td>25000</td></tr><tr><td>27</td><td>27000</td></tr><tr><td>28</td><td>29000</td></tr><tr><td>29</td><td>31000</td></tr><tr><td>30</td><td>32767</td></tr></tbody></table>
-					</div>
-					<div id="coordinates">
-						<div id="coordinates-contain">
-							<div id="ns-contain">
-								<div id="ns-label-contain">
-									<input type="radio" name="ns" id="n">
-									<label for="n">N</label>
-									<input type="radio" name="ns" id="s">
-									<label for="s">S</label>
+				<hr class="spacerh" role="presentation" />
+				<div id="text-contain">
+					<ul id="spell-contain">
+						<!--li id="healmore" class="more-spell filter"><span>Heal</span><span>more</span></li-->
+						<li class="single">Heal</li>
+						<li class="single">Hurt</li>
+						<li class="single">Sleep</li>
+						<li class="single">Radiant</li>
+						<li class="single" style="font-size: .9em;">Stopspell</li>
+						<li class="single">Outside</li>
+						<li class="single">Return</li>
+						<li class="single">Repel</li>
+						<li class="single">Healmore</li>
+						<li class="single">Hurtmore</li>
+					</ul>
+					<hr class="spacerv" role="presentation" />
+					<div id="stats">
+						<div id="stats-tabs">
+							<input type="radio" name="stats-tabs" id="lvexp-tab">
+							<label for="lvexp-tab" title="Level/Exp List">
+								<img class="" src="img/dw1-hero-swordshield.png" alt="">
+							</label>
+							<input type="radio" name="stats-tabs" id="coordinates-tab" checked>
+							<label for="coordinates-tab" title="Coordinates">
+								<img class="" src="img/dw1-coordinatesguy.png" alt="">
+							</label>
+							<input type="radio" name="stats-tabs" id="dl-tab">
+							<label for="dl-tab" title="Dragonlord Fight Stats">
+								<img class="" src="img/dw1-dragonlord-1.png" alt="">
+							</label>
+						</div>
+						<div id="lvexp" class="hide">
+							<table id="normal"><thead><tr><th colspan="2">NORMAL</th></tr><tr><th>LV</th><th>E</th></tr></thead><tbody><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>7</td></tr><tr><td>3</td><td>23</td></tr><tr><td>4</td><td>47</td></tr><tr><td>5</td><td>110</td></tr><tr><td>6</td><td>220</td></tr><tr><td>7</td><td>450</td></tr><tr><td>8</td><td>800</td></tr><tr><td>9</td><td>1300</td></tr><tr><td>10</td><td>2000</td></tr><tr><td>11</td><td>2900</td></tr><tr><td>12</td><td>4000</td></tr><tr><td>13</td><td>5500</td></tr><tr><td>14</td><td>7500</td></tr><tr><td>15</td><td>10000</td></tr><tr><td>16</td><td>13000</td></tr><tr><td>17</td><td>16000</td></tr><tr><td>18</td><td>19000</td></tr><tr><td>19</td><td>22000</td></tr><tr><td>20</td><td>26000</td></tr><tr><td>21</td><td>30000</td></tr><tr><td>22</td><td>34000</td></tr><tr><td>23</td><td>38000</td></tr><tr><td>24</td><td>42000</td></tr><tr><td>25</td><td>46000</td></tr><tr><td>26</td><td>50000</td></tr><tr><td>27</td><td>54000</td></tr><tr><td>28</td><td>58000</td></tr><tr><td>29</td><td>62000</td></tr><tr><td>30</td><td>65535</td></tr></tbody></table>
+							<table id="fast"><thead><tr><th colspan="2">FAST</th></tr><tr><th>LV</th><th>E</th></tr></thead><tbody><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>5</td></tr><tr><td>3</td><td>17</td></tr><tr><td>4</td><td>35</td></tr><tr><td>5</td><td>82</td></tr><tr><td>6</td><td>165</td></tr><tr><td>7</td><td>337</td></tr><tr><td>8</td><td>600</td></tr><tr><td>9</td><td>975</td></tr><tr><td>10</td><td>1500</td></tr><tr><td>11</td><td>2175</td></tr><tr><td>12</td><td>3000</td></tr><tr><td>13</td><td>4125</td></tr><tr><td>14</td><td>5625</td></tr><tr><td>15</td><td>7500</td></tr><tr><td>16</td><td>9750</td></tr><tr><td>17</td><td>12000</td></tr><tr><td>18</td><td>14250</td></tr><tr><td>19</td><td>16500</td></tr><tr><td>20</td><td>19500</td></tr><tr><td>21</td><td>22500</td></tr><tr><td>22</td><td>25500</td></tr><tr><td>23</td><td>28500</td></tr><tr><td>24</td><td>31500</td></tr><tr><td>25</td><td>34500</td></tr><tr><td>26</td><td>37500</td></tr><tr><td>27</td><td>40500</td></tr><tr><td>28</td><td>43500</td></tr><tr><td>29</td><td>46500</td></tr><tr><td>30</td><td>49151</td></tr></tbody></table>
+							<table id="very-fast"><thead><tr><th colspan="2">V. FAST</th></tr><tr><th>LV</th><th>E</th></tr></thead><tbody><tr><td>1</td><td>0</td></tr><tr><td>2</td><td>3</td></tr><tr><td>3</td><td>11</td></tr><tr><td>4</td><td>23</td></tr><tr><td>5</td><td>55</td></tr><tr><td>6</td><td>110</td></tr><tr><td>7</td><td>225</td></tr><tr><td>8</td><td>400</td></tr><tr><td>9</td><td>650</td></tr><tr><td>10</td><td>1000</td></tr><tr><td>11</td><td>1450</td></tr><tr><td>12</td><td>2000</td></tr><tr><td>13</td><td>2750</td></tr><tr><td>14</td><td>3750</td></tr><tr><td>15</td><td>5000</td></tr><tr><td>16</td><td>6500</td></tr><tr><td>17</td><td>8000</td></tr><tr><td>18</td><td>9500</td></tr><tr><td>19</td><td>11000</td></tr><tr><td>20</td><td>13000</td></tr><tr><td>21</td><td>15000</td></tr><tr><td>22</td><td>17000</td></tr><tr><td>23</td><td>19000</td></tr><tr><td>24</td><td>21000</td></tr><tr><td>25</td><td>23000</td></tr><tr><td>26</td><td>25000</td></tr><tr><td>27</td><td>27000</td></tr><tr><td>28</td><td>29000</td></tr><tr><td>29</td><td>31000</td></tr><tr><td>30</td><td>32767</td></tr></tbody></table>
+						</div>
+						<div id="coordinates">
+							<div id="coordinates-contain">
+								<div id="ns-contain">
+									<div id="ns-label-contain">
+										<input type="radio" name="ns" id="n">
+										<label for="n">N</label>
+										<input type="radio" name="ns" id="s">
+										<label for="s">S</label>
+									</div>
+									<input type="number" id="ns-number" min="0" max="99" value="50" placeholder="---">
 								</div>
-								<input type="number" id="ns-number" min="0" max="99" value="50" placeholder="---">
+								<div id="we-contain">
+									<div id="we-label-contain">
+										<input type="radio" name="we" id="w">
+										<label for="w">W</label>
+										<input type="radio" name="we" id="e">
+										<label for="e">E</label>
+									</div>
+									<input type="number" id="we-number" min="0" max="99" value="50" placeholder="---">
+								</div>
 							</div>
-							<div id="we-contain">
-								<div id="we-label-contain">
-									<input type="radio" name="we" id="w">
-									<label for="w">W</label>
-									<input type="radio" name="we" id="e">
-									<label for="e">E</label>
+							<div id="step-counters">
+								<div>
+									<h6>COUNT</h6>
+									<input type="number" id="ns-counter" min="0" max="99" value="0" placeholder="---">
 								</div>
-								<input type="number" id="we-number" min="0" max="99" value="50" placeholder="---">
+								<div>
+									<h6>COUNT</h6>
+									<input type="number" id="we-counter" min="0" max="99" value="0" placeholder="---">
+								</div>
 							</div>
 						</div>
-						<div id="step-counters">
-							<div>
-								<h6>COUNT</h6>
-								<input type="number" id="ns-counter" min="0" max="99" value="0" placeholder="---">
-							</div>
-							<div>
-								<h6>COUNT</h6>
-								<input type="number" id="we-counter" min="0" max="99" value="0" placeholder="---">
-							</div>
+						<div id="dl" class="hide">
+							<table>
+								<tr><td>ST</td><td>?</td></tr>
+								<tr><td>AG</td><td>?</td></tr>
+								<tr><td>HP</td><td>?</td></tr>
+								<tr><td>MP</td><td>?</td></tr>
+								<tr><td>AP</td><td>?</td></tr>
+								<tr><td>DP</td><td>?</td></tr>							
+								<!--tr><td>AP</td><td></td></tr-->
+								<!--tr><td>DP</td><td></td></tr-->
+							</table>
 						</div>
 					</div>
-					<div id="dl" class="hide">
-						<table>
-							<tr><td>ST</td><td>?</td></tr>
-							<tr><td>AG</td><td>?</td></tr>
-							<tr><td>HP</td><td>?</td></tr>
-							<tr><td>MP</td><td>?</td></tr>
-							<tr><td>AP</td><td>?</td></tr>
-							<tr><td>DP</td><td>?</td></tr>							
-							<!--tr><td>AP</td><td></td></tr-->
-							<!--tr><td>DP</td><td></td></tr-->
-						</table>
+				</div>
+				<div id="gg-contain" class="gg-hide">
+					<button id="gg-contain-close">&#10006;</button>
+					<div id="gg-element">
+						<h2><span>G</span></h2>
+						<h2><span>G</span></h2>
 					</div>
 				</div>
 			</div>
-			<div id="gg-contain" class="gg-hide">
-				<button id="gg-contain-close">&#10006;</button>
-				<div id="gg-element">
-					<h2><span>G</span></h2>
-					<h2><span>G</span></h2>
+			<div id="chests-contain" class="nested-pane">
+			<div id="throne-room">
+				<h4>Throne Room</h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-door.png" alt="Door">
 				</div>
 			</div>
-		</div>
-		<div id="chests-contain">
-  <div id="towns">
-    <div id="throne-room">
-      <h4>Throne Room</h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-door.png" alt="">
-      </div>
-    </div>
 
-    <div id="tantagel-castle">
-      <h4>Tantagel Castle <img src="img/dq3-key.png" alt=""></h4>
-      <div>
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-door.png" alt="">
-      </div>
-    </div>
-
-    <div id="garinham">
-      <h4>Garinham</h4>
-      <div>
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="kol">
-      <h4>Kol</h4>
-      <div>
-        <img class="icon" src="img/dw1-kol-fountain.png" alt="">
-      </div>
-    </div>
-
-    <div id="rimuldar">
-      <h4>Rimuldar <img src="img/dq3-key.png" alt=""></h4>
-      <div>
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="hauksness">
-      <h4>Hauks.</h4>
-      <div>
-        <img class="icon" src="img/dw1-tree.png" alt="">
-      </div>
-    </div>
-
-  </div>
-  <div id="shrines">
-    <div id="stonesshrine">
-      <h4>Stones Shrine</h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="harpshrine">
-      <h4>Harp Shrine</h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="dropshrine">
-      <h4>Drop Shrine</h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-  </div>
-  <div id="caves">
-
-    <div id="mountainscave">
-      <h4>Mountain Cave <img src="img/dw1-mountaincave.png" alt="">
-				<img alt="cave-flat-test" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QwREA8jBUBxsQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAANElEQVQoz2Pcs2cPAymAiYFEMAg1sKDxXVxcNpBqQwAZTgogww8BZHg6gIxQwtTDOBKTBgBNPweVsQ41SAAAAABJRU5ErkJggg==">
-			</h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="swampcave">
-      <h4>Swamp Cave <img src="img/dw1-swapnorth.png" alt="">
-        <img src="img/dw1-swampcave-south.png" alt=""></h4>
-      <div>
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/gwaelin.png" alt="">
-      </div>
-    </div>
-
-    <div id="erdrickscave">
-      <h4>Erdrick's Cave <img src="img/dw1-erdrickscave.png" alt=""></h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="garinsgrave">
-      <h4>Garin's Grave  <img src="img/dw1-garinsgrave.png" alt=""></h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-
-    <div id="charlockcastle">
-      <h4>Charlock Castle</h4>
-      <div>
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-door.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-        <img class="icon" src="img/dw1-chest.png" alt="">
-      </div>
-    </div>
-  </div>
-</div>
-		<div id="map">
-			<header>
-				<h4>MAPPER</h4>
-				<input type="radio" name="canvasmode" id="draw">
-				<label for="draw" title="placeholder"></label>
-				<input type="radio" name="canvasmode" id="town">
-				<label for="town" title="placeholder"></label>
-				<input type="radio" name="canvasmode" id="king">
-				<label for="king" title="placeholder"></label>
-				<input type="radio" name="canvasmode" id="cave">
-				<label for="cave" title="placeholder"></label>
-			</header>
-			<div id="canvas-contain">
-				<canvas id="canvas"></canvas>
+			<div id="tantagel-castle">
+				<h4>Tantagel Castle <img src="img/dw1-castle-32.png" alt="Castle"/> <img src="img/dq3-key.png" alt="Key"></h4>
+				<div>
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+				</div>
 			</div>
-		</div>
-		<footer>
-			<p>by <a target="_blank" title="Feel free to send me bugs. Or things you think should be added." href="https://twitter.com/CaptUhu">@Capt_Uhu</a></p>
-			<button id="button-reset" name="reset">Reset</button>
-			<button id="button-reload" title="Check for Updates" onClick="window.location.reload(true);">Update</button>
-		</footer>
-		<!--div id="options-contain">
-			<h4>Options</h4>
-			<label for="colorWell">Background Color:</label>
-			<input type="color" value="#0000ff" id="colorWell">
-		</div-->
+
+			<div id="garinham-town">
+				<h4>Garinham <img src="img/dw1-town-32.png" alt="Town"></h4>
+				<div>
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="kol">
+				<h4>Kol <img src="img/dw1-town-32.png" alt="Town"></h4>
+				<div>
+					<img class="icon" src="img/dw1-kol-fountain.png" alt="Fountain">
+				</div>
+			</div>
+
+			<div id="rimuldar">
+				<h4>Rimuldar <img src="img/dw1-town-32.png" alt="Town"> <img src="img/dq3-key.png" alt="Key"></h4>
+				<div>
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="hauksness">
+				<h4>Hauksness <img src="img/dw1-town-32.png" alt="Town"></h4>
+				<div>
+					<img class="icon" src="img/dw1-tree.png" alt="Tree">
+				</div>
+			</div>
+
+			<div id="stonesshrine">
+				<h4>Stones <img src="img/dw1-cave-32.png" alt="Cave"></h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="harpshrine">
+				<h4>Harp <img src="img/dw1-cave-32.png" alt="Cave"></h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="dropshrine">
+				<h4>Drop <img src="img/dw1-cave-32.png" alt="Cave"></h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="mountainscave">
+				<h4>Mountain <img src="img/dw1-cave-32.png" alt="Cave"> <img src="img/dw1-mountaincave-flat.png" alt="">
+				</h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="swampcave">
+				<h4>Swamp <img src="img/dw1-cave-32.png" alt="Cave"> <img src="img/dw1-swampnorth-flat.png" alt="">
+					<img src="img/dw1-swampsouth-flat.png" alt="">
+					</h4>
+				<div>
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/gwaelin.png" alt="Gwaelin">
+				</div>
+			</div>
+
+			<div id="erdrickscave">
+				<h4>Erdrick's <img src="img/dw1-cave-32.png" alt="Cave"> <img src="img/dw1-erdrickscave-flat.png" alt=""></h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="garinsgrave">
+				<h4>Garin's <img src="img/dw1-cave-32.png" alt="Cave"> <img src="img/dw1-garinsgrave-flat.png" alt="">
+	</h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+
+			<div id="charlockcastle">
+				<h4>Charlock <img src="img/dw1-castle-32.png" alt="Castle"/></h4>
+				<div>
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-door.png" alt="Door">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+					<img class="icon" src="img/dw1-chest.png" alt="Chest">
+				</div>
+			</div>
+		
 	</div>
-	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="script.js"></script>
-	<script type="text/javascript" src="canvas.js"></script>
+			<div id="map" class="nested-pane">
+				<header>
+					<h4>MAPPER</h4>
+					<input type="radio" name="canvasmode" id="draw">
+					<label for="draw" title="placeholder"></label>
+					<input type="radio" name="canvasmode" id="town">
+					<label for="town" title="placeholder"></label>
+					<input type="radio" name="canvasmode" id="king">
+					<label for="king" title="placeholder"></label>
+					<input type="radio" name="canvasmode" id="cave">
+					<label for="cave" title="placeholder"></label>
+				</header>
+				<div id="canvas-contain">
+					<canvas id="canvas"></canvas>
+				</div>
+			</div>
+			<div id="cave-maps" class="nested-pane">
+					<div id="tabs-cavemaps">
+						<ul id="tab-clickers-cavemaps">
+							<li class="active"><a title="Erdrick's Cave" href="#erdricks"><img src="img/dw1-erdrickscave.png" alt="">
+				</a></li>
+							<li><a title="Mountain Cave" href="#mountain"><img src="img/dw1-mountaincave.png" alt=""/></a></li>
+							<li><a title="Swamp Cave North" href="#swampn"><img src="img/dw1-swampcave-north.png" alt=""/></a></li>
+							<li><a title="Swamp Cave South" href="#swamps"><img src="img/dw1-swampcave-south.png" alt=""/></a></li>
+							<li><a title="Grave of Garinham" href="#garinham"><img src="img/dw1-garinsgrave.png" alt=""/></a></li>
+						</ul>
+						<div id="cave-pane-contain">
+							<div id="erdricks" class="cave-pane">
+								<img src="http://www.realmofdarkness.net/dq/img/nes/dw/maps/erdricks-cave.gif" alt="">
+							</div>
+							<div id="mountain" class="cave-pane">
+								<img src="http://www.realmofdarkness.net/dq/img/nes/dw/maps/rockmountain-cave.gif" alt="">
+							</div>
+							<div id="swampn" class="cave-pane">
+								<img src="http://www.realmofdarkness.net/dq/img/nes/dw/maps/swamp-cave.gif" alt="">
+							</div>
+							<div id="swamps" class="cave-pane">
+								<img src="http://www.realmofdarkness.net/dq/img/nes/dw/maps/swamp-cave.gif" alt="">
+							</div>
+							<div id="garinham" class="cave-pane">
+								<img src="http://www.realmofdarkness.net/dq/img/nes/dw/maps/grave-garinham.gif" alt="">
+							</div>
+						</div>
+					</div>
+			</div>
+			<div id="monsters" class="nested-pane">
+				<div id="monsters-grind">
+					<div id="monsters-grind-hauksness"></div>
+					<div id="monsters-grind-swamp"></div>
+					<div id="monsters-grind-charlock"></div>
+				</div>
+			</div>
+			<!--div id="options-contain">
+				<h4>Options</h4>
+				<label for="colorWell">Background Color:</label>
+				<input type="color" value="#0000ff" id="colorWell">
+			</div-->
+		</div>
+	</div>
+	<footer>
+		<p>by <a target="_blank" title="Feel free to send me bugs. Or things you think should be added." href="https://twitter.com/CaptUhu">@Capt_Uhu</a></p>
+		<button id="button-reset" name="reset">Reset</button>
+		<button id="button-reload" title="Check for Updates" onClick="window.location.reload(true);">Update</button>
+	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+	<script src="canvas.js"></script>
 </body>
 	
 </html>

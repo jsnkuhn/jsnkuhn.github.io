@@ -1,48 +1,62 @@
+// tabbed interface
+
+$(document).ready(function(){
+	$('#tabs .nested-pane').css('z-index','-1'); 
+	$('#tabs .nested-pane:first').css('z-index','1'); 
+	$('#tabs #tab-clickers li:first').addClass('active');
+	$('#tabs #tab-clickers li a').click(function(){ 
+		$('#tabs #tab-clickers li').removeClass('active');
+		$(this).parent().addClass('active'); 
+		var currentTab = $(this).attr('href'); 
+		$('#tabs .nested-pane').css('z-index','-1');
+		$(currentTab).css('z-index','1'); 
+		return false;
+		});
+	});
+
+$(document).ready(function(){
+	$('#tabs-cavemaps .cave-pane').hide(); 
+	$('#tabs-cavemaps .cave-pane:first').show(); 
+	$('#tabs-cavemaps #tab-clickers-cavemaps li:first').addClass('active');
+	$('#tabs-cavemaps #tab-clickers-cavemaps li a').click(function(){ 
+		$('#tabs-cavemaps #tab-clickers-cavemaps li').removeClass('active');
+		$(this).parent().addClass('active'); 
+		var currentTab = $(this).attr('href'); 
+		$('#tabs-cavemaps .cave-pane').hide();
+		$(currentTab).show(); 
+		return false;
+		});
+	});	
+
+// click to toggle function
+
+function clickToToggle(a,b){
+	 $(a).on("click", function() {
+      $(this).toggleClass(b);
+    });
+}
+
+function clickToToggleOther(a,b,c){
+	 $(a).on("click", function() {
+      $(b).toggleClass(c);
+    });
+}	
+
 // toggle .selected on imgs
 
-$(function(){
-    $(".icon, .list, .single").on("click", function() {
-      $(this).toggleClass("selected");
-    });
-});
+clickToToggle(".icon, .list, .single","selected");
 
-// rainbow Drop animation on click
+// background rainbow animations on click
 
-$(function(){
-    $("#rbdrop").on("click", function() {
-      $("#to-drop").toggleClass("rainbow2");
-    });
-});
+clickToToggleOther("#rbdrop","#to-drop","rainbow2");
+clickToToggleOther("#staff","#to-staff","rainbow2");
 
-$(function(){
-    $("#staff").on("click", function() {
-      $("#to-staff").toggleClass("rainbow2");
-    });
-});
+// plot items move animations on click
 
-$(function(){
-    $("#rbdrop").on("click", function() {
-      $(this).toggleClass("dropmove");
-    });
-});
-
-$(function(){
-    $("#token").on("click", function() {
-      $(this).toggleClass("tokenmove");
-    });
-});
-
-$(function(){
-    $("#staff").on("click", function() {
-      $(this).toggleClass("staffmove");
-    });
-});
-
-$(function(){
-    $("#stones").on("click", function() {
-      $(this).toggleClass("stonesmove");
-    });
-});
+clickToToggle("#rbdrop","dropmove");
+clickToToggle("#token","tokenmove");
+clickToToggle("#staff","staffmove");
+clickToToggle("#stones","stonesmove");
 
 // Weapon arrays--------------------------------------------
 
@@ -217,7 +231,7 @@ $('#hurtmore').click(function () {
 // Show/hide GG -------------------------
 
 $("#ball").on("click", function() {
-  if ($("#ball").hasClass('selected') === false){
+  if ($("#ball").hasClass('selected') === true){
   $('#gg-contain').removeClass('gg-hide');  
     }
 });
@@ -233,9 +247,6 @@ $('#coordinates-tab, #lvexp-tab, #dl-tab').on("change", function () {
 	
 $('#coordinates, #lvexp, #dl').addClass('hide')
 
-//if($(this).prop('checked') === true)
-//	{$(this - "-tab").removeClass('hide')}
-
 if($('#coordinates-tab').prop('checked') === true)
 	{$('#coordinates').removeClass('hide')}
 else if($('#lvexp-tab').prop('checked') === true)
@@ -244,6 +255,12 @@ else if($('#dl-tab').prop('checked') === true)
 	{$('#dl').removeClass('hide')}
 
 });
+
+// make borders around chests highlight when all chests are selected
+
+if($('#chest-contain div div img').length === $('#chest-contain div div img').hasClass('selected').length){
+		$(this).parent().css('border-color','#fff')
+}
 
 /*
 // get color value

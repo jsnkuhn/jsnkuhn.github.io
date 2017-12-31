@@ -9,32 +9,77 @@ body{
   color: #fff;
   position: relative;
 	padding: 1em;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input{
+font-family: 'Press Start 2P', Arial black;
 }
 
 .contain{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
-  flex-flow: row wrap;
   user-select: none;
-  height: calc(401px + 2em);
 	width: 341px;
-	margin: 0 auto;
+	position: relative;
 }
 
-#title, #tracker-contain, #chests-contain, #map, footer{
+#panes-contain, #tracker-contain, #chests-contain, #map, #cave-maps, #monsters{
+	width: 341px;
+	height: 443px;
+}
+#title{
+	width: 341px;
+}
+
+#title, #tab-clickers, .contain{
 	margin-bottom: 16px;
-	width: 341px;
 }
 
-footer{order:1;}
-#chests-contain{order: 2;}
-#map{order:3;}
+#cave-maps, #monsters {
+	background-color: #000;
+}
+
+#tab-clickers {
+	display: flex;
+	justify-content: space-around;
+	list-style-type: none;
+	background-color: #000;
+}
+#tab-clickers li{
+	padding: 4px;
+	filter: brightness(.4);
+}
+	
+#tab-clickers li:hover{
+	padding: 4px;
+	filter: brightness(.7);
+}
+
+#tab-clickers li.active{
+	transform: scale(1.4);
+	filter: brightness(1);
+}
+#tab-clickers img{
+	width: 32px;
+	height: 32px;
+}
+
+#panes-contain{
+	position: relative;
+}
+
+.nested-pane{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
 
 #title{
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 	background-color: #d82800;
   background-image: url("img/brick.png");
 	padding: 16px;
@@ -48,7 +93,6 @@ footer{order:1;}
 
 #title h3, #dwr-logo {display:none;}
 #eot-logo{
-	width: 236px;
 	height: 128px;
 	color: #737373;
 	background-color: rgb(188,188,188);
@@ -72,10 +116,10 @@ footer{order:1;}
 	display:block;
 	font-size: 1.75em;
 	top: .7em;
-	left: 2.7em;
+	left: 2.6em;
 	position:absolute;
 }
-	
+
 #title h3{
 	line-height: 1.5em;
 }
@@ -106,7 +150,7 @@ footer{order:1;}
 	}
 #dwr-logo h3{
   color:#fff;
-  font:bold 15px 'Press Start 2P', cursive;
+  font:bold 15px 'Press Start 2P', Arial Black;
   letter-spacing: .5px;
   padding: .4em;
 	position: relative;
@@ -137,7 +181,6 @@ hr{
 #tracker-contain {
   background-color: #000;
   background-repeat: no-repeat;
-  position: relative;
 	border: solid 5px #000;
 }
 
@@ -160,9 +203,8 @@ hr{
 }
 
 #spell-contain{
-  font-family: 'Press Start 2P', Arial;
   font-weight: bold;
-  text-transform: uppercase;
+	text-transform: uppercase;
   letter-spacing: 1px;
   padding: 0 4px;
   list-style-type: none;
@@ -215,7 +257,8 @@ footer{
 	width: 341px;
 	display:flex;
 	justify-content: space-around;
-}
+	align-items: center;
+	}
 
 footer a{
   color: #000;
@@ -416,11 +459,12 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 	position: relative;
 	display: flex;
 	flex-direction: column;
+	background-color: #000;
 }
-#stats #tabs{
+#stats-tabs{
 	display: flex;
 }
-#tabs label{
+#stats-tabs label{
 	flex: 1;
 	filter: brightness(.2);
 	display: flex;
@@ -430,16 +474,16 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 	border-bottom: solid #000;
 }
 
-#tabs label:hover{
+#stats-tabs label:hover{
 	filter: brightness(.8);
 }
 
-#tabs input[type="radio"]:checked + label {
+#stats-tabs input[type="radio"]:checked + label {
   filter: brightness(1);
 	border-bottom: solid #fff;
 }
 
-#tabs input[type="radio"]{
+#stats-tabs input[type="radio"]{
   -webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
@@ -447,7 +491,7 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
   position: absolute;
 }
 
-#tabs label img{
+#stats-tabs label img{
 	height: 32px;
 }
 
@@ -459,7 +503,7 @@ img.selected:hover, #spell-contain li.selected, #spell-contain li.selected:hover
 tr:nth-of-type(even){
   background-color: #333;
 }
-td:nth-of-type(2){
+th, td:nth-of-type(2){
   text-align: right;
 }
 
@@ -473,30 +517,25 @@ table{
 }
 
 #coordinates{
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	align-items: center;
 	padding-top: 16px;
+	position: relative;
 }
 
 #coordinates-contain, #step-counters{
 	width: 100%;
 	display: flex;
 	justify-content: space-around;
-	
 }
 .hide{
 	position: absolute;
 	top: 0;
-	z-index: -1; /* i guess you can't display:none; a flex container? so I hide you with z-index*/
-	display:none;
+	z-index: -10; /* i guess you can't display:none; a flex container? so I hide you with z-index*/
+	display: none;
 }
 
 #coordinates input,#coordinates label {
   padding: .25em .5em;
   font-size: 1em;
-	font-family: 'Press Start 2P', Arial black;
 }
 
 #coordinates input{
@@ -518,8 +557,7 @@ table{
 	padding: 8px;
 	}
 #step-counters h6{
-	width: 64px;
-	height: 34px;
+	width: 64px;	height: 34px;
 	text-align: center;
 	border: solid 1px gray;
 	padding-top: 10px;
@@ -534,6 +572,14 @@ table{
 #coordinates input[type="radio"]:checked + label {
   filter: brightness(1);
   border: 1px solid gray;
+}
+
+#ns-label-contain input[type="radio"]:checked + label {
+	background-color: #2038ec;
+}
+
+#we-label-contain input[type="radio"]:checked + label {
+	background-color: #737373;
 }
 
 #coordinates input[type="radio"]{
@@ -572,10 +618,15 @@ table{
   background-color: #000;
   width: 341px;
   height: 443px;
+	display: flex;
+	flex-wrap: wrap;
 }
+
+
 #chests-contain div{
   padding: 4px;
   text-align: center;
+	border: 1px solid rgba(255,255,255,.2);
 }
 
 #chests-contain div div {
@@ -595,14 +646,20 @@ table{
   margin:0;
   padding:0;
   text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
+
 #chests-contain h4 img{
   width:1em;
 	height:1em;
+	margin-left: 8px;
   transition: transform .1s ease-in;
 }
 #chests-contain h4 img:hover{
   transform: scale(2.5);
+	z-index: 10;
 }
 
 
@@ -655,14 +712,62 @@ canvas{
   image-rendering: pixelated;
 }
 
+#cave-maps{
+	padding: 16px;
+}
+#tab-clickers-cavemaps{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom: 16px;
+	list-style-type: none;
+}
+#tab-clickers-cavemaps li{
+padding-bottom: 8px;
+border-bottom: 3px solid #000;
+}
+#tab-clickers-cavemaps li.active{
+	border-bottom: 3px solid;
+}
+.cave-pane{
+	overflow: scroll;
+	height: 339px;
+}
+
+#monsters-grind{
+	display: flex;
+	padding: 16px;
+}
+#monsters-grind div{
+	flex: 1;
+	height: 150px;
+	background-size: 24px 24px;
+}
+
+#monsters-grind div:not(:last-of-type){
+	margin-right: 16px;
+}
+
+#monsters-grind-hauksness{
+	background-color: #fcd8a8;
+	background-image: url("img/dw1-desert.png");
+}
+#monsters-grind-swamp{
+	background-color: #000;
+	background-image: url("img/dw1-swamp.png");
+}
+#monsters-grind-charlock{
+	background-color: #d82800;
+  background-image: url("img/brick.png");
+}
+
 /* widescreen */
-@media (min-width: 764px) {
-	.contain {width:698px;}
-	footer{order:3;}
-	#chests-contain{order: 1;}
-	#map{order:2;}
-	#title{flex: 100%;}
+@media (min-width: 810px) {
+	html{display:flex;align-items: center;justify-content: center;}
+	body{flex-flow: row wrap;width:786px;justify-content:center;}
+	.contain {display: flex;flex-direction: row;width:397px; margin-right: 16px;}
+	#tab-clickers{flex-direction: column; height: 286px;margin-right: 16px;}
 	#title h3, #dwr-logo {display:block;}
-	#eot-logo em{left:1.85em;}
-	#chests-contain, footer{margin-left: 16px;}
+	#title {order: 1;height: 443px;}
+	footer{order: 2;flex:1;}
 	}
