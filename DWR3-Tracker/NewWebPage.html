@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TITLE</title>
+		<style>
+body{
+  height: 100vh;
+  background-color: #000;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+img{
+   width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
+}
+
+.orb{
+  transition: filter .5s;
+  filter: brightness(.3) drop-shadow(0 0 0 rgb(255,255,255));
+}
+
+.orb.selected{
+  filter: brightness(1) drop-shadow(0 0 0 rgb(255,255,255));
+}
+
+.orb.glow{
+   filter: drop-shadow(0 0 15px rgb(255,255,255)) brightness(1);
+}
+
+#tracker-contain{
+  background-color: #000;
+  border: 1px solid #fff;
+  display: grid;
+  grid-template: repeat(4,auto) / repeat(3,auto);
+  grid-gap: 1em;
+}
+img:nth-of-type(1){grid-area: 1/2;}
+img:nth-of-type(2){grid-area: 2/1;}
+img:nth-of-type(3){grid-area: 2/3;}
+img:nth-of-type(4){grid-area: 3/1;}
+img:nth-of-type(5){grid-area: 3/3;}
+img:nth-of-type(6){grid-area: 4/2;}
+#bird{grid-area: 1/1/span 5/span 3;
+align-self: center;
+justify-self: center;}
+		</style>
+		<script>
+// toggle .selected on imgs
+
+$(function(){
+    $(".orb").on("click", function() {
+      $(this).toggleClass("selected");
+     });
+});
+
+      // if all orbs have .selected --> add .glow to all
+
+
+ $(function(){
+    $(".orb").on("click", function() {
+       if ( $(".orb").hasClass("selected") )
+    {$(this).toggleClass("glow"); }
+
+     });
+});
+		</script>
+	</head>
+	<body>
+	<div class="contain">
+  <div id="tracker-contain">
+    <img id="blue" class="orb" src="Blue_Orb.png" title="Blue Orb">
+    <img id="green" class="orb" src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/green_orb_th.png" title="Green Orb">
+    <img id="purple" class="orb" src="Purple_Orb.png" title="Purple Orb">
+    <img id="red" class="orb" src="Red_Orb.png" title="Red Orb">
+    <img id="silver" class="orb" src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/silver_orb_th.png" title="Silver Orb">
+    <img id="yellow" class="orb" src="Yellow_Orb.png" title="Red Orb" title="Yellow Orb">
+    <!-- column 3 -->
+    <img id="bird" src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/thiefs_key_th.png" title="Thief's Key">
+    <!--img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/magic_key_th.png" title="Magic Key">
+    <img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/ultimate_key_th.png" title="Ultimate Key">
+    <!-- column 4 -->
+    <!--img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/sages_stone_th.png" title="Sage's Stone"-->
+  </div>
+</div>
+	
+	</body>
+	
+</html>
