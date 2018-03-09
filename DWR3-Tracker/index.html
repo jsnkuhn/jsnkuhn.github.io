@@ -13,30 +13,33 @@ body{
 }
 
 img{
-   width: 48px;
-  height: 48px;
+   width: 56px;
+  height: 56px;
+	image-rendering: -moz-crisp-edges;
   image-rendering: pixelated;
+	 transition: filter .5s;
 }
 
 .orb{
-  transition: filter .5s;
-  filter: brightness(.3) drop-shadow(0 0 0 rgb(255,255,255));
+  filter: brightness(.3);
 }
 
 .orb.selected{
   filter: brightness(1) drop-shadow(0 0 0 rgb(255,255,255));
 }
 
-.orb.glow{
-   filter: drop-shadow(0 0 15px rgb(255,255,255)) brightness(1);
-}
+#blue.orb.glow{filter: drop-shadow(0 0 15px rgb(0,0,255)) brightness(1);}
+#green.orb.glow{filter: drop-shadow(0 0 15px rgb(0,255,0)) brightness(1);}
+#purple.orb.glow{filter: drop-shadow(0 0 15px purple) brightness(1);}
+#red.orb.glow{filter: drop-shadow(0 0 15px rgb(255,0,0)) brightness(1);}
+#silver.orb.glow{filter: drop-shadow(0 0 15px silver) brightness(1);}
+#yellow.orb.glow{filter: drop-shadow(0 0 15px rgb(255,255,0)) brightness(1);}
 
 #tracker-contain{
   background-color: #000;
-  border: 1px solid #fff;
   display: grid;
-  grid-template: repeat(4,auto) / repeat(3,auto);
-  grid-gap: 1em;
+  grid-template-columns: repeat(3,auto);
+  grid-gap: 2em;
 }
 img:nth-of-type(1){grid-area: 1/2;}
 img:nth-of-type(2){grid-area: 2/1;}
@@ -44,9 +47,12 @@ img:nth-of-type(3){grid-area: 2/3;}
 img:nth-of-type(4){grid-area: 3/1;}
 img:nth-of-type(5){grid-area: 3/3;}
 img:nth-of-type(6){grid-area: 4/2;}
-#bird{grid-area: 1/1/span 5/span 3;
+#bird{grid-area: 1/1/span 4/span 3;
+width: 76px;
+height: 72px;
 align-self: center;
-justify-self: center;}
+justify-self: center;
+transform: translateY(-10px);}
 		</style>
 		
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -56,34 +62,46 @@ justify-self: center;}
 $(function(){
     $(".orb").on("click", function() {
       $(this).toggleClass("selected");
+			if ( $('#blue').hasClass("selected") && $('#green').hasClass("selected") && $('#purple').hasClass("selected") &&
+			$('#red').hasClass("selected") && $('#silver').hasClass("selected") && $('#yellow').hasClass("selected"))
+			{$("#blue,#green,#purple,#red,#silver,#yellow").addClass("glow"); }
+			else{$("#blue,#green,#purple,#red,#silver,#yellow").removeClass("glow");}
+		 });
+});
+
+$(function(){
+    $("#bird").on("click", function() {
+      $(this).toggleClass("selected");
+			if ($(this).hasClass("selected") )
+				{$(this).attr('src', 'ramia.png').attr('title', 'Ramia')}
+			else ($(this).attr('src', 'ramia_egg.png').attr('title', 'Ramia Egg') )
      });
 });
 
       // if all orbs have .selected --> add .glow to all
 
 
- $(function(){
-    $(".orb").on("click", function() {
-       if ( $(".orb").hasClass("selected") )
-    {$(this).toggleClass("glow"); }
-
-     });
-});
+//$(function(){
+//   $(".orb").on("click", function() {
+//      if ( $("#blue,#green,#purple,#red,#silver,#yellow").hasClass("selected") )
+ //  {$(this).toggleClass("glow"); }
+  //  });
+//		});
 		</script>
 	</head>
 	<body>
 	<div class="contain">
   <div id="tracker-contain">
     <img id="blue" class="orb" src="Blue_Orb.png" title="Blue Orb">
-    <img id="green" class="orb" src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/green_orb_th.png" title="Green Orb">
+    <img id="green" class="orb" src="Green_Orb.png" title="Green Orb">
     <img id="purple" class="orb" src="Purple_Orb.png" title="Purple Orb">
     <img id="red" class="orb" src="Red_Orb.png" title="Red Orb">
-    <img id="silver" class="orb" src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/silver_orb_th.png" title="Silver Orb">
-    <img id="yellow" class="orb" src="Yellow_Orb.png" title="Red Orb" title="Yellow Orb">
+    <img id="silver" class="orb" src="Silver_Orb.png" title="Silver Orb">
+    <img id="yellow" class="orb" src="Yellow_Orb.png" title="Yellow Orb">
     <!-- column 3 -->
-    <img id="bird" src="ramia.png" title="Ramia">
+    <img id="bird" src="ramia_egg.png" title="Ramia Egg">
     <!--img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/magic_key_th.png" title="Magic Key">
-    <img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/ultimate_key_th.png" title="Ultimate Key">
+    <img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/ultimate_key_th.png" title="Ultimate Key"-->
     <!-- column 4 -->
     <!--img src="http://www.woodus.com/den/gallery/graphics/dq9ds/item/sages_stone_th.png" title="Sage's Stone"-->
   </div>
