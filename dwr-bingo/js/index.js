@@ -56,7 +56,8 @@ var goals = [
   {"name":"deal 40 damage to dl2"},
   {"name":"Only heal at INNS"},
   {"name":"Drop an HERB on a damage tile"},
-  {"name":"Drop a WING in a forest"}
+  {"name":"Drop a WING in a forest"},
+  {"name":"Critical hit a Drakee"}
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
@@ -110,6 +111,8 @@ var generateCard = function(){
 
   h4Els.forEach( addSelect );
 };
+
+//copy bingosync code
 
 generateCard();
 button.addEventListener("click",generateCard);
