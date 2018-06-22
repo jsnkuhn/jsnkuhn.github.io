@@ -7,3 +7,5 @@
 [DWR3-Tracker](https://jsnkuhn.github.io/DWR3-Tracker/)
 
 [DWR_Monsterhunt](https://jsnkuhn.github.io/dwr_monsterhunt/)
+
+[DWR Bingo](https://jsnkuhn.github.io/dwrbingo/)
