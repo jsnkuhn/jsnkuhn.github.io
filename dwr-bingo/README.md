@@ -1,3 +1,3 @@
 # dwrbingo
 
-[DWR Bingo](https://jsnkuhn.github.io/dwrbingo/)
+[DWR Bingo](https://jsnkuhn.github.io/dwr-bingo/)
