@@ -9,16 +9,15 @@ html{
 }
 body{
   margin: 24px auto;
-  display: grid;
-  grid-template-columns: repeat(2,auto);
-  grid-gap: 2em;
+  display: flex;
   justify-content: center;
   background-image: url('../img/floor.png');
 }
 main{
   width: calc(96px * 5 + 72px + 48px);
-  display: grid;
-  grid-template-columns: repeat(5,auto);
+  margin-right: 2em;
+  display: flex;
+  flex-wrap: wrap;
   text-align: center;
   border: solid;
   border-width: 24px 72px 48px 48px;
