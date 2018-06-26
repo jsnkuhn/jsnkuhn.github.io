@@ -1,3 +1,8 @@
+(function () {
+  if ( typeof NodeList.prototype.forEach === "function" ) return false;
+  NodeList.prototype.forEach = Array.prototype.forEach;
+})();
+
 var button = document.getElementById("genCard");
 var theCard = document.getElementById("theCard");
 var bingoSync = document.getElementById("bingosync");
@@ -104,18 +109,21 @@ var generateCard = function(){
   
   var h4Els = document.querySelectorAll('h4');
 
-  var addSelect = function(h4) {
-      h4.addEventListener("click", function() {
-          h4.classList.toggle("selected")
+  var addSelect = function(goal) {
+      goal.addEventListener("click", function() {
+        if(goal.className == "selected"){
+          goal.className = ""
+        }
+        else (goal.className = "selected")
       });}
 
   h4Els.forEach( addSelect );
 };
 
-//copy bingosync code
-
 generateCard();
 button.addEventListener("click",generateCard);
+
+//copy bingosync code
 
 function copy() {
   bingoSync.select();
