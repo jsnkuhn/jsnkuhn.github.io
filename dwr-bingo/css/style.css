@@ -19,6 +19,8 @@ main{
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  display: grid;
+  grid-template-columns: repeat(5,96px);
   border: solid;
   border-width: 24px 72px 48px 48px;
   -o-border-image: url('../img/border.png') repeat 24 72 48 48 / 24px 72px 48px 48px;
