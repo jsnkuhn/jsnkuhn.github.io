@@ -1,0 +1,76 @@
+img{
+  -webkit-filter: brightness(.3);
+          filter: brightness(.3);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.selected{
+  filter: brightness(1);
+  transition: filter 1s;
+}
+
+#moon.selected{filter: brightness(1) drop-shadow( 0 0 15px white);}
+#star.selected{filter: brightness(1) drop-shadow( 0 0 15px yellow);}
+#water.selected{filter: brightness(1) drop-shadow( 0 0 15px blue);}
+#life.selected{filter: brightness(1) drop-shadow( 0 0 15px red);}
+#fire.selected{filter: brightness(1) drop-shadow( 0 0 15px orange);}
+
+#eye{
+  width: 48px;
+  height: 48px;
+}
+
+.element div{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.element div:first-of-type{
+  justify-content:center;
+}
+.element div:last-of-type{
+  justify-content:space-around;
+}
+
+.element div img{
+  width: 32px;
+  height: 32px;
+}
+
+.element {
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
+  padding: .75em;
+  background-color: #000;
+  height: 175px;
+  width: 175px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background-image: url('../img/malroth.png');
+  background-position: center center;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
+
+.contain{
+  height: 100vh;
+  display: flex;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+h2{font-size: 4em;}
+
+body{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    background-color: #29252C;
+    color: #D8E9F0;
+}
+*{margin: 0;padding:0;box-sizing: border-box;}
