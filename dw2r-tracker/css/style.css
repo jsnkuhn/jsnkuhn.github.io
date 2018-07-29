@@ -1,15 +1,32 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+
+body, a{
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  background-color: #29252C;
+  color: #D8E9F0;
+}
+
+body{
+  width: 175px;
+}
+.contain{
+  padding: .75em;
+  border: 1px solid #000;
+}
+
 img{
-  -webkit-filter: brightness(.3);
-          filter: brightness(.3);
+  image-rendering: pixelated;
+  filter: brightness(.3);
   display:flex;
   justify-content:center;
   align-items:center;
+  width: 32px;
+  height: 32px;
 }
 
-.selected{
-  filter: brightness(1);
-  transition: filter 1s;
-}
+img:hover{cursor: pointer;}
+
+.selected{filter: brightness(1);}
 
 #moon.selected{filter: brightness(1) drop-shadow( 0 0 15px white);}
 #star.selected{filter: brightness(1) drop-shadow( 0 0 15px yellow);}
@@ -17,60 +34,69 @@ img{
 #life.selected{filter: brightness(1) drop-shadow( 0 0 15px red);}
 #fire.selected{filter: brightness(1) drop-shadow( 0 0 15px orange);}
 
+#crests .selected{
+  transition: filter 1s;
+}
+
 #eye{
   width: 48px;
   height: 48px;
 }
 
-.element div{
+#crests div{
   display:flex;
   justify-content:space-between;
   align-items:center;
 }
-.element div:first-of-type{
+#crests div:first-of-type{
   justify-content:center;
 }
-.element div:last-of-type{
+#crests div:last-of-type{
   justify-content:space-around;
 }
 
-.element div img{
-  width: 32px;
-  height: 32px;
-}
-
-.element {
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: -o-pixelated;
-      image-rendering: pixelated;
-  padding: .75em;
-  background-color: #000;
-  height: 175px;
-  width: 175px;
+#crests { 
+  height: 150px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
+  /*
   background-image: url('../img/malroth.png');
   background-position: center center;
   background-size: 90%;
   background-repeat: no-repeat;
+  */
 }
 
-.contain{
-  height: 100vh;
+#other{
+  display: grid;
+  grid-template-columns: repeat(4, 32px);
+  justify-content: space-between;
+  grid-gap: 4px;
+  padding-top: 2em;
+}
+
+#ship{
+  background-image: url('../img/ship-right-frames.png');
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+#ship.selected{
+  animation: ship-move .5s steps(2) 4;
+}
+
+@keyframes ship-move {
+  from{background-position: 0 0;}
+  to{ background-position: -64px 0;}
+}
+
+footer{
   display: flex;
-  align-content: space-around;
-  align-items: center;
-  justify-content: center;
-  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-h2{font-size: 4em;}
-
-body{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    background-color: #29252C;
-    color: #D8E9F0;
+button{
+  padding: .25em;
+  margin-top: 1em;
 }
-*{margin: 0;padding:0;box-sizing: border-box;}
