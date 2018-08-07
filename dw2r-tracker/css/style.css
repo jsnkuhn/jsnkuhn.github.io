@@ -76,6 +76,18 @@ img:hover{cursor: pointer;}
   padding-top: 2em;
 }
 
+img[alt="Silver Key"]{
+  background: url(../img/dw2-door-1.png) no-repeat bottom right / 16px;
+}
+
+img[alt="Gold Key"]{
+  background: url(../img/dw2-door-2.png) no-repeat bottom right / 16px;
+}
+
+img[alt="Jailor's Key"]{
+  background: url(../img/dw2-door-3.png) no-repeat bottom right / 16px;
+}
+
 #ship{
   background-image: url('../img/ship-right-frames.png');
   background-repeat: no-repeat;
