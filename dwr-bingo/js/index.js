@@ -61,7 +61,8 @@ var goals = [
   {"name":"deal 40 damage to dl2"},
   {"name":"Only heal at INNS"},
   {"name":"Critical hit a Drakee"},
-  {"name":"Run 5 laps around throne room"}
+  {"name":"Run 5 laps around throne room"},
+  {"name":"Talk to all NCPs"}
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
