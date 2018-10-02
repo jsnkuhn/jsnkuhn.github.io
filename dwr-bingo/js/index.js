@@ -23,9 +23,10 @@ var goals = [
   {"name":"Find Erdrick's Sword"},
   {"name":"Find Erdrick's Armor"},
   {"name":"Sell Erdrick's Sword"},
+  {"name":"Sell Erdrick's Sword 5 times"},
   {"name":"Sell Erdrick's Armor"},
-  {"name":"Take princess to dragonlord"},
-  {"name":"Talk to Puff Puff Woman (Rimuldar)"},
+  {"name":"Take princess to Dragonlord"},
+  {"name":"Talk to<br/>Puff Puff<br/> Woman"},
   {"name":"Kill DL 2"},
   {"name":"USE Erdick's token in Battle"},
   {"name":"USE silver harp in a swamp"},
@@ -57,16 +58,19 @@ var goals = [
   {"name":"Run from a slime"},
   {"name":"Activate infinite chest glitch"},
   {"name":"Fake out DL"},
-  {"name":"Deal 40 (non-crit) damage"},
-  {"name":"deal 40 damage to dl2"},
   {"name":"Only heal at INNS"},
-  {"name":"Critical hit a Drakee"},
-  {"name":"Run 5 laps around throne room"},
-  {"name":"Talk to all NCPs"}
+  {"name":"Run 5 laps around King's throne"},
+  {"name":"Run 5 laps around DL's throne"},
+  {"name":"Talk to all NPCs in Breconary"},
+  {"name":"Talk to all NPCs in Garinham"},
+  {"name":"Talk to all NPCs in Rimildar"}
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
   //Never use an inn
+  //Kill a {monster} with a {weapon}
+  //something with infinite loop in Charlock Castle
+  //search behind wyn's counter?
 ];
 
 // randomize JSON object
