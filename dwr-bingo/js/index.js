@@ -57,7 +57,7 @@ var goals = [
   {"name":"Open all doors"},
   {"name":"Run from a slime"},
   {"name":"Activate infinite chest glitch"},
-  {"name":"Fake out DL"},
+  {"name":"Say YES<br/>then NO<br/>to DL"},
   {"name":"Only heal at INNS"},
   {"name":"Run 5 laps around King's throne"},
   {"name":"Run 5 laps around DL's throne"},

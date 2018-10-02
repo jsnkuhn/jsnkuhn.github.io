@@ -7,14 +7,12 @@
     <link rel="stylesheet" href="css/style.css">  
 </head>
 <body>
+    <header>
+        <h1>Dragon Warrior Bingo</h1>
+        <button id="genCard">New Card</button>
+    </header>
     <main id="theCard"></main>
     <aside>
-        <button id="genCard">New Card</button>
-        <div>
-            <label for="bingosync">bingosync:</label>
-            <textarea id="bingosync" name="bingosync"></textarea>
-            <button id="copy">copy</button>
-        </div>
         <article>
             <div>
                 <h2>Frequently Asked Questions</h2>
@@ -22,10 +20,6 @@
             <div>
                 <h3>How do I get kicked out of "The Jerk" cave?</h3>
                 <p>You must speak to him before you posses Erdrick's Token or after he gives you the Rainbow Drop.</p>
-            </div>
-            <div>
-                <h3>How do I "fake out" the Dragonlord</h3>
-                <p>Accept his offer to rule along side him and then, when he asks you to confirm, say "no"</p>
             </div>
             <div>
                 <h3>What counts as a "lap" around the king's/DL's throne</h3>
@@ -40,9 +34,18 @@
                 <p>Playing the Sliver Harp in battle will make an enemy happy.</p>
             </div>
             <div>
+                <h3>Can we race this bingo?</h3>
+                <p>
+                    Yes. Here's the code to copy paste into <a href="https://bingosync.com/">bingosync.com</a>:
+                    <label for="bingosync">bingosync:</label>
+                    <textarea id="bingosync" name="bingosync"></textarea>
+                    <button id="copy">copy</button>
+                </p>
+            </div>
+            <!--div>
                 <h3>How do I "make an enemy happy?"</h3>
                 <p>Playing the Sliver Harp in battle will make an enemy happy.</p>
-            </div>
+            </div-->
         </article>
     </aside>
     <script src="js/index.js"></script>
