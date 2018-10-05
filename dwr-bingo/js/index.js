@@ -63,7 +63,8 @@ var goals = [
   {"name":"Run 5 laps around DL's throne"},
   {"name":"Talk to all NPCs in Breconary"},
   {"name":"Talk to all NPCs in Garinham"},
-  {"name":"Talk to all NPCs in Rimildar"}
+  {"name":"Talk to all NPCs in Rimildar"},
+  {"name":"Get kicked out of Tantagel Castle"}
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
