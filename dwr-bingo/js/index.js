@@ -39,11 +39,8 @@ var goals = [
   {"name":"Toot your flute for a merchant"},
   {"name":"Toot your flute for the Jerk"},
   {"name":"Drown the princess in a swamp 5x"},
-  //{"name":"Never light up a cave"},
   {"name":"Give Gwaelin a cursed belt"},
-  {"name":"Stay a night in every town"},
   {"name":"Stay a night in every town w/Gwaelin"},
-  //{"name":"Don't buy a Dragon Scale"},
   {"name":"Equip the Death Necklace"},
   {"name":"Sell the Death Necklace"},
   {"name":"Drop the Death Necklace"},
@@ -64,14 +61,20 @@ var goals = [
   {"name":"Talk to all NPCs in Breconary"},
   {"name":"Talk to all NPCs in Garinham"},
   {"name":"Talk to all NPCs in Rimildar"},
-  {"name":"Get kicked out of Tantagel Castle"}
+  {"name":"Talk to all NPCs in Kol"},
+  {"name":"Get kicked out of Tantagel Castle"},
+  {"name":"Kill a dragon with a Bamboo Poll"},
+  {"name":"Make an enemy cast heal 5 times"}
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
   //Never use an inn
   //Kill a {monster} with a {weapon}
+  //Kill DL with a Hand Axe
   //something with infinite loop in Charlock Castle
   //search behind wyn's counter?
+  //{"name":"Never light up a cave"},
+  //{"name":"Don't buy a Dragon Scale"},
 ];
 
 // randomize JSON object
