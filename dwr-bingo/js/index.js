@@ -12,7 +12,6 @@ var goals = [
   {"name":"Kill any slime w/ HURTMORE"},
   {"name":"Kill any scorpion w/ HURT"},
   {"name":"Reach <br> LV 20"},
-  //{"name":"Don't cast REPEL"},
   {"name":"Grind to 50k GP"},
   {"name":"Lose 15,000+ GP in one death"},
   {"name":"Search a \"Sparkover Bridge\""},
@@ -20,8 +19,6 @@ var goals = [
   {"name":"Rescue the princess"},
   {"name":"4 deaths to swamp damage"},
   {"name":"2 deaths to damage tiles"},
-  {"name":"Find Erdrick's Sword"},
-  {"name":"Find Erdrick's Armor"},
   {"name":"Sell Erdrick's Sword"},
   {"name":"Sell Erdrick's Sword 5 times"},
   {"name":"Sell Erdrick's Armor"},
@@ -31,7 +28,7 @@ var goals = [
   {"name":"USE Erdick's token in Battle"},
   {"name":"USE silver harp in a swamp"},
   {"name":"USE silver harp in a cave"},
-  {"name":"USE silver harp in a town"},
+  {"name":"USE silver harp at the bath in Kol"},
   {"name":"Make 10 Enemies Happy"},
   {"name":"Make a Dragon Happy"},
   {"name":"Toot your flute for an old man"},
@@ -45,8 +42,8 @@ var goals = [
   {"name":"Sell the Death Necklace"},
   {"name":"Drop the Death Necklace"},
   {"name":"Equip the Cursed Belt"},
-  {"name":"Sell the Cursed Belt"},
-  {"name":"Drop the Cursed Belt"},
+  {"name":"Sell the Cursed<br/>Belt"},
+  {"name":"Drop the Cursed<br/>Belt"},
   {"name":"Accept DL's offer"},
   {"name":"Accept DL's offer w/ Gwaelin"},
   {"name":"Show DL Erdrick's token"},
@@ -61,10 +58,11 @@ var goals = [
   {"name":"Talk to all NPCs in Breconary"},
   {"name":"Talk to all NPCs in Garinham"},
   {"name":"Talk to all NPCs in Rimildar"},
-  {"name":"Talk to all NPCs in Kol"},
+  {"name":"Talk to all NPCs in<br/>Kol"},
   {"name":"Get kicked out of Tantagel Castle"},
   {"name":"Kill a dragon with a Bamboo Poll"},
-  {"name":"Make an enemy cast heal 5 times"}
+  {"name":"Make an enemy cast heal 5 times"},
+  {"name":"Kill all mini bosses with a Club"},
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
@@ -75,6 +73,7 @@ var goals = [
   //search behind wyn's counter?
   //{"name":"Never light up a cave"},
   //{"name":"Don't buy a Dragon Scale"},
+  //{"name":"Don't cast REPEL"},
 ];
 
 // randomize JSON object
