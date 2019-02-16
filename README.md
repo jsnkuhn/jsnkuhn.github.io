@@ -16,4 +16,4 @@
 
 #### Dragon Warrior 3 Randomizer
 
-- [DWR3-Tracker](https://jsnkuhn.github.io/DWR3-Tracker/)
+- [DWR3-Tracker](https://jsnkuhn.github.io/dw3r-tracker/)
