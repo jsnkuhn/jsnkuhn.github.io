@@ -558,7 +558,8 @@ table{
 	padding: 8px;
 	}
 #step-counters h6{
-	width: 64px;	height: 34px;
+	width: 64px;
+	height: 34px;
 	text-align: center;
 	border: solid 1px gray;
 	padding-top: 10px;
@@ -592,7 +593,7 @@ table{
 }
 
 #coordinates input[type="number"]{
-  width:4em;
+  width:5em;
   text-align: right;
   background-color: #000;
   border: 1px solid gray;
