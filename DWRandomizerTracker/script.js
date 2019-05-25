@@ -3,9 +3,9 @@
 $(document).ready(function(){
 	$('#tabs .nested-pane').css('z-index','-1'); 
 	$('#tabs .nested-pane:first').css('z-index','1'); 
-	$('#tabs #tab-clickers li:first').addClass('active');
-	$('#tabs #tab-clickers li a').click(function(){ 
-		$('#tabs #tab-clickers li').removeClass('active');
+	$('#tabs .tab-clickers li:first').addClass('active');
+	$('#tabs .tab-clickers li a').click(function(){ 
+		$('#tabs .tab-clickers li').removeClass('active');
 		$(this).parent().addClass('active'); 
 		var currentTab = $(this).attr('href'); 
 		$('#tabs .nested-pane').css('z-index','-1');
@@ -67,17 +67,19 @@ weaponTitle = [
   "Hand Axe: +15 AP",
   "Broad Sword: +20 AP",
   "Flame Sword: +28 AP",
-  "Erdrick's Sword: +40 AP"
+  "Erdrick's Sword: +40 AP",
+  "Weapon"
   ];
 
 var weaponListPixel = [
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/bamboo_lance.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/oaken_club.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/copper_sword.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/battle_axe.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/steel_broadsword.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/fire_blade.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/weapon/erdricks_sword.png"
+  "img/weapon/bamboo.png",
+  "img/weapon/club.png",
+  "img/weapon/copper.png",
+  "img/weapon/axe.png",
+  "img/weapon/broad.png",
+  "img/weapon/flame.png",
+  "img/weapon/erdricks.png",
+  "img/weapon/weapon-no.png"
 ];
 
 // Weapon array var
@@ -105,17 +107,20 @@ var armorTitle = [
   "Half Plate: +16 DP",
   "Full Plate: +24 DP",
   "Magic Armor: +24 DP",
-  "Erdrick's Armor: +28 DP"
+  "Erdrick's Armor: +28 DP",
+  "Armor"
 ];
 
 var armorListPixel = [
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/plain_clothes.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/leather_armour.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/chain_mail.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/heavy_armour.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/full_plate_armour.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/magic_armour.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/torso/erdricks_armour.png"];
+  "img/armor/clothes.png",
+  "img/armor/leather.png",
+  "img/armor/chain.png",
+  "img/armor/half.png",
+  "img/armor/full.png",
+  "img/armor/magic.png",
+  "img/armor/erdricks.png",
+  "img/armor/armor-no.png"
+];
 
 // Armor array var
 
@@ -138,13 +143,15 @@ $(function () {
 var shieldTitle = [
   "Small Shield: +4 DP",
   "Large Shield: +10 DP",
-  "Silver Shield: +20 DP"
+  "Silver Shield: +20 DP",
+  "Shield"
 ];
 
 var shieldListPixel = [
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/shield/pot_lid.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/shield/iron_shield.png",
-  "http://www.woodus.com/den/gallery/graphics/dq9ds/shield/silver_shield.png"
+  "img/shield/small.png",
+  "img/shield/large.png",
+  "img/shield/silver.png",
+  "img/shield/shield-no.png"
 ];
 
 // Shield array var
@@ -167,7 +174,7 @@ $(function () {
 
 $(function(){
     $("#button-reset").on("click", function() {
-      $("img, #spell-contain li").removeClass("selected");
+      $("img, .single").removeClass("selected");
       $("#tracker-contain").removeClass("rainbow");
       $('#weapon').attr('src', weaponUrl[weaponTitle.length - 1]).attr('title', 'Weapon');
       $('#armor').attr('src', armorUrl[armorTitle.length - 1]).attr('title', 'Armor');
@@ -188,7 +195,6 @@ $(function(){
 			$('#ns-number,#we-number').val('50');
 			$('#ns-counter,#we-counter').val('0');
 			$('#ns-number,#we-number,#ns-counter,#we-counter').css('backgroundColor','#000');
-			context.clearRect(0, 0, canvas.width, canvas.height);
     });
 });
 
@@ -243,16 +249,16 @@ $("#gg-contain").on("click", function() {
 
 // stats tabs
 
-$('#coordinates-tab, #lvexp-tab, #dl-tab').on("change", function () {
+$('#coordinates_tab, #lvexp_tab, #dl_tab').on("change", function () {
 	
-$('#coordinates, #lvexp, #dl').addClass('hide')
+  $('#coordinates, #lvexp, #dl').addClass('hide')
 
-if($('#coordinates-tab').prop('checked') === true)
-	{$('#coordinates').removeClass('hide')}
-else if($('#lvexp-tab').prop('checked') === true)
-	{$('#lvexp').removeClass('hide')}
-else if($('#dl-tab').prop('checked') === true)
-	{$('#dl').removeClass('hide')}
+  if($('#coordinates_tab').prop('checked') === true)
+    {$('#coordinates').removeClass('hide')}
+  else if($('#lvexp_tab').prop('checked') === true)
+    {$('#lvexp').removeClass('hide')}
+  else if($('#dl_tab').prop('checked') === true)
+    {$('#dl').removeClass('hide')}
 
 });
 
