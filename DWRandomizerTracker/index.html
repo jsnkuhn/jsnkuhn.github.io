@@ -36,6 +36,7 @@
 		<ul class="tab-clickers">
 			<li class="active"><a title="Items/Spells, etc..." href="#tracker-contain"><img src="img/dw1_weapon.png" alt="Items/Spells"></a></li>
 			<li><a title="Chests" href="#chests-contain"><img src="img/dw1-chest.png" alt="chests"></a></li>
+			<li><a title="Caves" href="#caves-contain"><img src="img/dw1-cave-32.png" alt="cave"></a></li>
 			<!-- <li><a title="Overworld Mapper" href="#map"><img src="img/DW3_GBC_Map.png" alt="mapper"/></a></li> -->
 			<!-- <li><a title="Monsters" href="#monsters"><img src="img/blueslime.png" alt="Monsters"/></a></li> -->
 			<li><a title="Notes" href="#notes"><img src="img/dkj-8thnote.png" alt="Notes"/></a></li>
@@ -274,41 +275,7 @@
 				</div>
 			</div>
 	</div>
-			<!-- <div id="map" class="nested-pane">
-				<header>
-					<h4>MAPPER</h4>
-					<input type="radio" name="canvasmode" id="draw">
-					<label for="draw" title="placeholder"></label>
-					<input type="radio" name="canvasmode" id="town">
-					<label for="town" title="placeholder"></label>
-					<input type="radio" name="canvasmode" id="king">
-					<label for="king" title="placeholder"></label>
-					<input type="radio" name="canvasmode" id="cave">
-					<label for="cave" title="placeholder"></label>
-				</header>
-				<div id="canvas-contain">
-					<canvas id="canvas"></canvas>
-				</div>
-			</div> -->
-			<!--div id="monsters" class="nested-pane">
-				<div id="monsters-grind">
-					<div id="monsters-grind-hauksness"></div>
-					<div id="monsters-grind-swamp"></div>
-					<div id="monsters-grind-charlock"></div>
-				</div>
-			</div-->
-			<div id="notes" class="nested-pane pane-notes">
-				<h3>Notes:</h3>
-				<textarea></textarea>
-			</div>
-			<!--div id="options-contain">
-				<h4>Options</h4>
-				<label for="colorWell">Background Color:</label>
-				<input type="color" value="#0000ff" id="colorWell">
-			</div-->
-		</div>
-	</div>
-	<div class="cave-maps">
+	<div id="caves-contain" class="nested-pane cave-maps">
 		<div id="tabs-cavemaps">
 			<ul id="tab-clickers-cavemaps">
 				<li class="active"><a title="Erdrick's Cave" href="#erdricks"><img src="img/map/dw1-erdrickscave.png" alt=""></a></li>
@@ -416,6 +383,40 @@
 			</div>
 		</div>
 </div>
+			<!-- <div id="map" class="nested-pane">
+				<header>
+					<h4>MAPPER</h4>
+					<input type="radio" name="canvasmode" id="draw">
+					<label for="draw" title="placeholder"></label>
+					<input type="radio" name="canvasmode" id="town">
+					<label for="town" title="placeholder"></label>
+					<input type="radio" name="canvasmode" id="king">
+					<label for="king" title="placeholder"></label>
+					<input type="radio" name="canvasmode" id="cave">
+					<label for="cave" title="placeholder"></label>
+				</header>
+				<div id="canvas-contain">
+					<canvas id="canvas"></canvas>
+				</div>
+			</div> -->
+			<!--div id="monsters" class="nested-pane">
+				<div id="monsters-grind">
+					<div id="monsters-grind-hauksness"></div>
+					<div id="monsters-grind-swamp"></div>
+					<div id="monsters-grind-charlock"></div>
+				</div>
+			</div-->
+			<div id="notes" class="nested-pane pane-notes">
+				<h3>Notes:</h3>
+				<textarea></textarea>
+			</div>
+			<!--div id="options-contain">
+				<h4>Options</h4>
+				<label for="colorWell">Background Color:</label>
+				<input type="color" value="#0000ff" id="colorWell">
+			</div-->
+		</div>
+	</div>
 	<footer>
 		<p>by <a target="_blank" title="Feel free to send me bugs. Or things you think should be added." href="https://twitter.com/CaptUhu">@Capt_Uhu</a></p>
 		<button id="button-reset" name="reset">Reset</button>

@@ -270,12 +270,13 @@ input[type="number"]{
 }
 
 /* cave maps */
+#cave-pane-contain{
+	padding: 0 1em;
+}
 
 .cave-maps{
 	background-color: #000;
-	height: 483px;
-	width: 752px;
-	padding: 1em;
+	width: 341px;
 }
 
 #tab-clickers-cavemaps{
@@ -311,17 +312,16 @@ input[type="number"]{
 
 .cave-pane{
 	overflow: auto;
-	height: 388px;
+	height: 370px;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	flex-direction: column;
 	/* grid-template-columns: repeat(auto-fill, minmax(28%, auto));
 	grid-gap: 1em 3em ; */
+	display: none;
 }
 .cave-pane h2{
 	text-align: center;
 	color: #fff;
-	flex: 100% 0 0;
 	/* grid-column-end: -1; */
 	margin: 1em 0 .5em 0;
 }
