@@ -337,6 +337,47 @@ input[type="number"]{
 	margin-left: 16px;
 }
 
+
+/* Towns */
+
+#tab-clickers-town-maps{
+	font-family: arial;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	list-style-type: none;
+}
+
+#tab-clickers-town-maps li{
+	margin: 0 .5em .5em;
+	text-align: center;
+}
+
+#tab-clickers-town-maps li a{
+	color: #fff;
+	text-decoration: none;
+}
+
+#tab-clickers-town-maps li a:hover{
+	text-decoration: underline;
+}
+
+.town-pane{
+	display: none;
+	height: 390px;
+	text-align: center;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(2,auto); 
+	align-content: space-around;
+}
+
+.town-pane img{
+	image-rendering: initial;
+	text-align: center;
+	max-width: calc(100% - 2em);
+}
+
 #coordinates.hide, .hide{
 	display: none;
 }

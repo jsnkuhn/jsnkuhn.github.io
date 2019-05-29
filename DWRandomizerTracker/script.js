@@ -28,6 +28,20 @@ $(document).ready(function(){
 		});
 	});	
 
+  $(document).ready(function(){
+    $('#tabs-townmaps .town-pane').hide(); 
+    $('#tabs-townmaps .town-pane:first').show(); 
+    $('#tabs-townmaps #tab-clickers-town-maps li:first').addClass('active');
+    $('#tabs-townmaps #tab-clickers-town-maps li a').click(function(){ 
+      $('#tabs-townmaps #tab-clickers-town-maps li').removeClass('active');
+      $(this).parent().addClass('active'); 
+      var currentTab = $(this).attr('href'); 
+      $('#tabs-townmaps .town-pane').hide();
+      $(currentTab).show(); 
+      return false;
+      });
+    });	
+
 // click to toggle function
 
 function clickToToggle(a,b){
