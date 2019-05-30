@@ -342,6 +342,7 @@ input[type="number"]{
 
 #tab-clickers-town-maps{
 	font-family: arial;
+	font-weight: bold;
 	display: flex;
 	justify-content: space-around;
 	flex-wrap: wrap;
@@ -356,10 +357,19 @@ input[type="number"]{
 #tab-clickers-town-maps li a{
 	color: #fff;
 	text-decoration: none;
+	padding: .1em .25em;
 }
 
 #tab-clickers-town-maps li a:hover{
 	text-decoration: underline;
+}
+#tab-clickers-town-maps li.active a:hover{
+	text-decoration: none;
+}
+
+#tab-clickers-town-maps li.active a{
+	background-color: #fff;
+	color: #000;
 }
 
 .town-pane{

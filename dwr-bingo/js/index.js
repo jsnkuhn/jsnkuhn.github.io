@@ -64,7 +64,8 @@ var goals = [
   {"name":"Make an enemy cast heal 5 times"},
   {"name":"Kill all mini bosses with a Club"},
   {"name":"Kill a droll with a Club"},
-  {"name":"Ring around Radish Vendor (4x)"}
+  {"name":"Talk to the Radish Vendor"},
+  {"name":"Circle Nester 4 times"}
   //Never use an herb
   //No healing magic(edited)
   //Never buy a shield
