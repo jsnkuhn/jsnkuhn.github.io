@@ -152,35 +152,24 @@ $(function () {
     });
 });
 
-// Shield arrays ------------------------------------
+// Shield ------------------------------------
 
-var shieldTitle = [
-  "Small Shield: +4 DP",
-  "Large Shield: +10 DP",
-  "Silver Shield: +20 DP",
-  "Shield"
-];
+var shieldImgs = document.querySelectorAll('#shields img');
+var shieldCounter = 0;
 
-var shieldListPixel = [
-  "img/shield/small.png",
-  "img/shield/large.png",
-  "img/shield/silver.png",
-  "img/shield/shield-no.png"
-];
+shieldImgs.forEach( function(el){
+  el.style.display = "none";
+});
 
-// Shield array var
+shieldImgs[0].style.display = "inline";
 
-var shieldUrl = shieldListPixel;
-
-// cycle through Shield array on click
-
-var shieldCounter = shieldTitle.length - 1;
-
-$(function () {
-    $('#shield').click(function () {
-      $(this).addClass("selected");
-      shieldCounter = (shieldCounter + 1) % shieldTitle.length;
-      $(this).attr('src', shieldUrl[shieldCounter]).attr('title', shieldTitle[shieldCounter]);
+shieldImgs.forEach( function(el){
+  el.addEventListener("click", function() {
+    shieldImgs.forEach( function(el){
+      el.style.display = "none";
+    });
+    shieldCounter = (shieldCounter + 1) % shieldImgs.length;
+    shieldImgs[shieldCounter].style.display = "inline";
     });
 });
 
@@ -192,10 +181,11 @@ $(function(){
       $("#tracker-contain").removeClass("rainbow");
       $('#weapon').attr('src', weaponUrl[weaponTitle.length - 1]).attr('title', 'Weapon');
       $('#armor').attr('src', armorUrl[armorTitle.length - 1]).attr('title', 'Armor');
-      $('#shield').attr('src', shieldUrl[shieldTitle.length - 1]).attr('title', 'Shield');
       weaponCounter = weaponTitle.length - 1;
       armorCounter = armorTitle.length - 1;
-      shieldCounter = shieldTitle.length - 1;
+      shieldCounter = 0;
+      shieldImgs.forEach( function(el){el.style.display = "none";});
+      shieldImgs[0].style.display = "inline";
       $('#healmore, #hurtmore').removeClass().addClass('more-spell filter')
       healmoreCounter = classes.length - 1;
       hurtmoreCounter = classes.length - 1;
