@@ -28,7 +28,8 @@ header button{
   margin-right: 24px;
 }
 main{
-  width: calc(96px * 5 + 72px + 48px);
+  width: 600px;
+  height: 552px;
   color: #211010;
   margin-right: 2em;
   display: flex;
@@ -37,16 +38,17 @@ main{
   display: grid;
   grid-template-columns: repeat(5,96px);
   border: solid;
+  background-color: #9cc610;
+  background-image: url('../img/back-grass.png');
+  background-origin: padding-box;
+  background-clip: padding-box;
   border-width: 24px 72px 48px 48px;
-  -o-border-image: url('../img/border.png') repeat 24 72 48 48 / 24px 72px 48px 48px;
-     border-image: url('../img/border.png') repeat 24 72 48 48 / 24px 72px 48px 48px;
+  border-image: url('../img/border.png') repeat 24 72 48 48;
 }
 main h4{
   width: 96px;
   height: 96px; 
   line-height: 1.1em;
-  background-image: url('../img/back-grass.png');
-  background-repeat: no-repeat;
   padding: 22px 4px;
   float: left;
 }
