@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Alefgard Safari | Dragon Warrior Monster Hunt</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="preload" href="/images/spritesheet.png" as="image" type="image/png">
 </head>
 <body>
   <main>
@@ -76,8 +77,23 @@
       <span class="dragonlord-true" title="DL2"></span>
     </div>
   </main>
-  <button id="button-reset">RESET</button>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script  src="js/index.js"></script>
+  <button id="button_reset">RESET</button>
+  <script>  
+    var spanEls = document.querySelectorAll('span');
+    var resetButton = document.getElementById('button_reset');
+    
+    var toggleSelect = function(img) {
+      img.addEventListener("click", function() {
+        img.classList.toggle("selected")
+      });
+    }
+    spanEls.forEach( toggleSelect );
+    
+    resetButton.addEventListener("click", function() {
+      spanEls.forEach( function(img){
+        img.classList.remove("selected")
+      });
+    });
+  </script>
 </body>
 </html>
