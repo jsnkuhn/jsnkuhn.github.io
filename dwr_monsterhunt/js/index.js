@@ -4,11 +4,11 @@ function clickToToggle(a,b){
     });
 }
 
-clickToToggle("img","selected");
+clickToToggle("span","selected");
 
 $(function(){
     $("#button-reset").on("click", function() {
-      $("img").removeClass("selected");
+      $("span").removeClass("selected");
     });
 });
 
