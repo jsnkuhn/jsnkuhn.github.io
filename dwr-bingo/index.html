@@ -7,63 +7,62 @@
     <link rel="preload" href="img/floor.png" as="image" type="image/png">
     <link rel="preload" href="img/border.png" as="image" type="image/png">
     <link rel="preload" href="img/back-grass.png" as="image" type="image/png">
-    <link rel="prefetch" href="img/back-red.png" as="image" type="image/png">
+    <link rel="preload" href="img/back-red.png" as="image" type="image/png">
 </head>
 <body>
     <header>
         <h1>Dragon Warrior Bingo</h1>
         <button id="genCard">New Card</button>
     </header>
-    <main id="theCard"></main>
+    <main id="theCard">
+    </main>
     <aside>
-        <article>
-            <div>
-                <h2>Frequently Asked Questions</h2>
-            </div>
-            <div>
-                <h3>How do I get kicked out of "The Jerk" cave?</h3>
-                <p>You must speak to him before you posses Erdrick's Token or after he gives you the Rainbow Drop.</p>
-            </div>
-            <div>
-                <h3>What counts as a "lap" around the king's/DL's throne</h3>
-                <p>
-                <video autoplay loop muted playsinline>
-                    <source src="circle-the-throne.av1.mp4" type="video/mp4">
-                    <source src="circle-the-throne.webm" type="video/webm">
-                    <source src="circle-the-throne.mp4" type="video/mp4">
-                  </video>
-                </p>
-            </div>
-            <div>
-                <h3>Who/where is "Puff Puff Woman?"</h3>
-                <p>"Puff Puff Woman" is next to the bath in the village of KOL.</p>
-            </div>
-            <div>
-                <h3>How do I "make an enemy happy?"</h3>
-                <p>Playing the Sliver Harp in battle will make an enemy happy.</p>
-            </div>
-            <div>
-                <h3>How do I "get kicked out of Tantagel Castle?"</h3>
-                <p>You will be kicked out of Tantagel Castle immediately upon entering if you have a cursed item equipped.</p>
-            </div>
-            <div>
-                <h3>How do I remove a curse?</h3>
-                <p>An old wizard in Breconary can remove curses.</p>
-            </div>
-            <div>
-                <h3>Can we race this bingo?</h3>
-                <p>
-                    Yes. Here's the code to copy paste into <a href="https://bingosync.com/">bingosync.com</a>:
-                    <label for="bingosync">bingosync:</label>
-                    <textarea id="bingosync" name="bingosync"></textarea>
-                    <button id="copy">copy</button>
-                </p>
-            </div>
-            <!--div>
-                <h3>How do I "make an enemy happy?"</h3>
-                <p>Playing the Sliver Harp in battle will make an enemy happy.</p>
-            </div-->
-        </article>
+        <div>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div>
+            <h3>How do I get kicked out of "The Jerk" cave?</h3>
+            <p>You must speak to him before you posses Erdrick's Token or after he gives you the Rainbow Drop.</p>
+        </div>
+        <div>
+            <h3>What counts as a "lap" around the king's/DL's throne?</h3>
+            <p>
+            <video width="80" height="80" autoplay loop muted playsinline>
+                <source src="circle-the-throne.av1.mp4" type="video/mp4">
+                <source src="circle-the-throne.webm" type="video/webm">
+                <source src="circle-the-throne.mp4" type="video/mp4">
+                </video>
+            </p>
+        </div>
+        <div>
+            <h3>Where is "Puff Puff Woman?"</h3>
+            <p>"Puff Puff Woman" is next to the bath in the village of KOL.</p>
+        </div>
+        <div>
+            <h3>How do I "make an enemy happy?"</h3>
+            <p>Playing the Sliver Harp in battle will make an enemy happy.</p>
+        </div>
+        <div>
+            <h3>How do I "get kicked out of Tantagel Castle?"</h3>
+            <p>You will be kicked out of Tantagel Castle immediately upon entering if you have a cursed item equipped.</p>
+        </div>
+        <div>
+            <h3>How do I remove a curse?</h3>
+            <p>An old wizard in Breconary can remove curses.</p>
+        </div>
+        <div>
+            <h3>Can we race this bingo?</h3>
+            <p>
+                Yes. Here's the code to copy paste into <a href="https://bingosync.com/">bingosync.com</a>:
+                <label for="bingosync">bingosync:</label>
+                <textarea id="bingosync" name="bingosync"></textarea>
+                <button id="copy">copy</button>
+            </p>
+        </div>
+        <!--div>
+            <h3>How do I "make an enemy happy?"</h3>
+            <p>Playing the Sliver Harp in battle will make an enemy happy.</p>
+        </div-->
     </aside>
     <script src="js/index.js"></script>
 </body>

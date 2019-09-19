@@ -5,22 +5,23 @@
 }
 html{
   color: #efefe7;
-  font: normal .9em arial;
+  font: normal .9em/1.1 arial;
 }
 body{
   margin: 24px;
   background-image: url('../img/floor.png');
-  display: grid;
-  grid-template-columns: calc(96px * 5 + 72px + 48px);
-  grid-gap: 1em
+  width: 600px;
 }
 
+body > *~*{
+  margin: 1em 0;
+}
 header{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-header h1{
+h1{
   text-align: center;
 }
 header button{
@@ -31,28 +32,20 @@ main{
   width: 600px;
   height: 552px;
   color: #211010;
-  margin-right: 2em;
   display: flex;
   flex-wrap: wrap;
   text-align: center;
-  display: grid;
-  grid-template-columns: repeat(5,96px);
-  border: solid;
-  background-color: #9cc610;
-  background-image: url('../img/back-grass.png');
-  background-origin: padding-box;
-  background-clip: padding-box;
+  background: #9cc610 url('../img/back-grass.png') padding-box padding-box;
+  border-style: solid;
   border-width: 24px 72px 48px 48px;
   border-image: url('../img/border.png') repeat 24 72 48 48;
 }
-main h4{
+h4{
   width: 96px;
-  height: 96px; 
-  line-height: 1.1em;
+  height: 96px;
   padding: 22px 4px;
-  float: left;
 }
-h4 span{
+span{
   background-color: #9cc610;
   vertical-align: middle;
 }
@@ -64,14 +57,14 @@ h4 span{
 .selected span{
   background-color: transparent;
 }
-aside label{
+label{
   display: block; 
 }
-article{
+aside{
   background-color: #211010;
   border: solid 3px;
   padding: 1em;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-gap: 1em;
+}
+div{
+  margin: 1em 0;
 }
