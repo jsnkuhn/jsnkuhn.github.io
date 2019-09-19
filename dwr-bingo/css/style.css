@@ -70,7 +70,6 @@ aside label{
 article{
   background-color: #211010;
   border: solid 3px;
-  /* border-image: url('../img/back-grass.png') 3; */
   padding: 1em;
   display: grid;
   grid-template-columns: 1fr;
