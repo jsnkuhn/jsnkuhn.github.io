@@ -10,6 +10,7 @@ html{
 body{
   margin: 24px;
   background-image: url('../img/floor.png');
+  background-color: #743430;
   width: 600px;
 }
 
