@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Dragon Warrior 4 Randomizer Tracker</title>
+		<style>
+      html{background-color: #ddd;}
+
+      body{
+        height: 100vh;
+        margin:0;
+      }
+      .tracker-contain{
+        background-color: #000;
+        padding: .5em;
+        width: max-content;
+      }
+      [class^="chapter"]{
+        display: flex;
+      }
+      img{
+        width: auto;
+        height: 32px;
+        image-rendering: -moz-crisp-edges;
+        image-rendering: pixelated;
+        filter: opacity(.3);
+      }
+      .selected{
+        filter: opacity(1);
+      }
+      hr{
+        border: none;
+        border-top: 2px solid rgba(255,255,255,.3);
+      }
+      figure{
+        margin:0;
+      }
+      figure img{
+        filter: opacity(1);
+      }
+      figure .vanilla{
+        filter: opacity(.3);
+      }
+    </style>
+	</head>
+	<body>
+    <div class="tracker-contain">
+      <div class="chapter-1">
+        <figure class="ragnar">
+          <img class="vanilla" src="images/characters/ragnar-frames.png" title="Ragnar" alt="">
+          <img src="images/characters/ragnar-frames.png" title="Ragnar" alt="">
+          <img src="images/characters/healie-frames.png" title="Healie" alt="">
+          <img src="images/characters/alena-frames.png" title="Alena" alt="">
+          <img src="images/characters/bray-frames.png" title="Bray" alt="">
+          <img src="images/characters/christo-frames.png" title="Christo" alt="">
+          <img src="images/characters/taloon-frames.png" title="Taloon" alt="">
+          <img src="images/characters/mara-frames.png" title="Mara" alt="">
+          <img src="images/characters/nara-frames.png" title="Nara" alt="">
+          <img src="images/characters/taloon-frames.png" title="Hector" alt="">
+          <img src="images/characters/hero-male-frames.png" title="Hero" alt="">
+        </figure>
+        <img class="binary" src="images/items/talaria.png" title="Talaria (Flying Shoes)" alt="">
+      </div>
+      <hr>
+      <div class="chapter-2">
+        <figure>
+          <img src="images/characters/ragnar-frames.png" alt="">
+          <img src="images/characters/healie-frames.png" alt="">
+          <img src="images/characters/alena-frames.png" alt="">
+          <img src="images/characters/bray-frames.png" alt="">
+          <img src="images/characters/christo-frames.png" alt="">
+          <img src="images/characters/taloon-frames.png" alt="">
+          <img src="images/characters/mara-frames.png" alt="">
+          <img src="images/characters/nara-frames.png" alt="">
+          <img src="images/characters/taloon-frames.png" alt="">
+          <img src="images/characters/hero-male-frames.png" alt="">
+        </figure>
+        <figure>
+          <img src="images/characters/ragnar-frames.png" alt="">
+          <img src="images/characters/healie-frames.png" alt="">
+          <img src="images/characters/alena-frames.png" alt="">
+          <img src="images/characters/bray-frames.png" alt="">
+          <img src="images/characters/christo-frames.png" alt="">
+          <img src="images/characters/taloon-frames.png" alt="">
+          <img src="images/characters/mara-frames.png" alt="">
+          <img src="images/characters/nara-frames.png" alt="">
+          <img src="images/characters/taloon-frames.png" alt="">
+          <img src="images/characters/hero-male-frames.png" alt="">
+        </figure>
+        <figure>
+          <img src="images/characters/ragnar-frames.png" alt="">
+          <img src="images/characters/healie-frames.png" alt="">
+          <img src="images/characters/alena-frames.png" alt="">
+          <img src="images/characters/bray-frames.png" alt="">
+          <img src="images/characters/christo-frames.png" alt="">
+          <img src="images/characters/taloon-frames.png" alt="">
+          <img src="images/characters/mara-frames.png" alt="">
+          <img src="images/characters/nara-frames.png" alt="">
+          <img src="images/characters/taloon-frames.png" alt="">
+          <img src="images/characters/hero-male-frames.png" alt="">
+        </figure>
+        <img class="binary" src="images/items/bird-song-bird.png" title="Bird Song Nectar" alt="">
+      </div>
+      <hr>
+      <div class="chapter-3">
+        <img src="images/characters/taloon-frames.png" alt="">
+      </div>
+      <hr>
+      <div class="chapter-4">
+        <img src="images/characters/mara-frames.png" alt="">
+        <img src="images/characters/nara-frames.png" alt="">
+        <img src="images/characters/taloon-frames.png" alt="">
+      </div>
+      <hr>
+      <div class="chapter-5">
+        <img src="images/characters/hero-male-frames.png" alt="">
+        <img class="binary" src="images/items/gas-canister.png" title="Gas Canister" alt="">
+        <img class="binary" src="images/items/dw4-balloon.png" title="Balloon" alt="">
+        <img class="binary" src="images/items/zenithian-armour.png" title="Zenithian Armo(u)r" alt="">
+        <img class="binary" src="images/items/zenithian-helm.png" title="Zenithian Helm" alt="">
+        <img class="binary" src="images/items/zenithian-shield.png" title="Zenithian Shield" alt="">
+        <img class="binary" src="images/items/zenithian-sword.png" title="Zenithian Sword" alt="">
+      </div>
+    </div>
+	</body>
+  <script>
+    // toggle .selected on binary images
+
+    var binaryImg = Array.prototype.slice.call(document.querySelectorAll(".binary"));
+
+    binaryImg.forEach(function(img) {
+      img.addEventListener("click", function() {
+        img.classList.toggle("selected");
+      });
+    });
+
+    var ragnarImgs = document.querySelectorAll('figure.ragnar img');
+    var ragnarCounter = 0;
+
+    ragnarImgs.forEach( function(el){
+      el.style.display = "none";
+    });
+
+    ragnarImgs[0].style.display = "inline";
+
+    ragnarImgs.forEach( function(el){
+      el.addEventListener("click", function() {
+        ragnarImgs.forEach( function(el){
+          el.style.display = "none";
+        });
+        ragnarCounter = (ragnarCounter + 1) % ragnarImgs.length;
+        ragnarImgs[ragnarCounter].style.display = "inline";
+        });
+    });
+  </script>
+</html>
