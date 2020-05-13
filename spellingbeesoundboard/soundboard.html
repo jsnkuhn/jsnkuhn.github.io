@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Bee Sound Board</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        html{
+            background-color: #000;
+            color: #fff;
+        }
+        .contain{
+            width: 960px;
+        }
+        main {
+            display: grid;
+            grid-template: repeat(3, 300px) / repeat(3, 300px);
+            gap: 1em;
+        }
+        main div{
+            position: relative;
+            display: grid;
+        }
+        h1{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        video, h4{
+            width: 100%;
+            height: 100%;          
+            grid-area: 1/1;
+        }
+        h4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .positive{
+            background-image: radial-gradient(transparent, green);
+        }
+        .negative{
+            background-image: radial-gradient(transparent, red);
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <header>
+            <h1>Spelling Bee Sound Board</h1>
+        </header>
+        <main>
+            <div class="positive">
+                <h4>Tada!</h4>
+                <video controls src="tada.mp3"></video>
+            </div>
+            <div class="negative">
+                <h4>Losing Horns</h4>
+                <video controls src="losinghorns.mp3"></video>
+            </div>
+            <div>
+                <h4>Spanish Flea</h4>
+                <video controls src="spanishflea.mp3"></video>
+            </div>
+            <div>
+                <h4>Baby Elephant</h4>
+                <video controls src="babyelephant.mp3"></video>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
