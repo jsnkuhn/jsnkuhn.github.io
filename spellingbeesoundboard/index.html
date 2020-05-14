@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spelling Bee Sound Board</title>
+    <title>Spelling Bee Soundboard</title>
     <style>
         *{
             margin: 0;
@@ -16,19 +16,23 @@
             color: #fff;
         }
         .contain{
-            min-width: 960px;
+            margin: 0 auto;
         }
         main {
             display: grid;
-            grid-template: repeat(4, 300px) / repeat(4, 300px);
+            grid-template: repeat(4, 1fr) / repeat(4, 1fr);
             gap: 1em;
         }
         main div{
             position: relative;
             display: grid;
         }
-        h1{
+        h1, h4{
             text-align: center;
+        }
+
+        section{
+            display: contents;
         }
         video, h4{
             width: 100%;
@@ -40,11 +44,12 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            border: rgba(255,255,255,.25) dotted 1px;
         }
-        .positive{
+        .positive div{
             background-image: radial-gradient(transparent, green);
         }
-        .negative{
+        .negative div{
             background-image: radial-gradient(transparent, red);
         }
     </style>
@@ -52,25 +57,49 @@
 <body>
     <div class="contain">
         <header>
-            <h1>Spelling Bee Sound Board</h1>
+            <h1>Spelling Bee Soundboard</h1>
         </header>
         <main>
-            <div class="positive">
-                <h4>Tada!</h4>
-                <video controls src="tada.mp3"></video>
-            </div>
-            <div class="negative">
-                <h4>Losing Horns</h4>
-                <video controls src="losinghorns.mp3"></video>
-            </div>
-            <div>
-                <h4>Spanish Flea</h4>
-                <video controls src="spanishflea.mp3"></video>
-            </div>
-            <div>
-                <h4>Baby Elephant</h4>
-                <video controls src="babyelephant.mp3"></video>
-            </div>
+            <section class="positive">
+                <div>
+                    <h4>Tada!</h4>
+                    <video controls src="https://www.soundboard.com/mediafiles/ot/OTYyMzQ4ODE4OTYyNDY5_tZc69RHEupw.mp3"></video>
+                </div>
+            </section>
+            <section class="negative">
+                <div>
+                    <h4>Losing Horns</h4>
+                    <video controls src="https://www.soundboard.com/mediafiles/mj/Mjg0ODQ4ODE4Mjg0ODQ1_5qYVv1DlVlA.mp3"></video>
+                </div>
+                <div>
+                    <h4>Buzzer</h4>
+                    <video controls src="https://www.soundboard.com/mediafiles/mt/MTUyNjQ4ODE4MTUyNjUy_VBTNFrVmhqs.mp3"></video>
+                </div>
+                <div>
+                    <h4>Sad <br>Trombone</h4>
+                    <iframe src="https://www.youtube.com/embed/CQeezCdF4mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <h4>Rimshot <br>(Ba-Dum-Dum)</h4>
+                    <video controls src="https://www.soundboard.com/mediafiles/nj/Njc0NTQ4ODE4Njc0NTkz_9_2bN_2f7u5USUI.mp3"></video>
+                </div>
+
+                <div>
+                    <h4>Spanish Flea</h4>
+                    <video controls src="https://www.soundboard.com/mediafiles/od/ODI5ODQ4ODE4ODI5OTI1_YTFHNCtwQHw.mp3"></video>
+                </div>
+                <div>
+                    <h4>Baby Elephant</h4>
+                    <video controls src="babyelephant.mp3"></video>
+                </div>
+                <div>
+                    <h4>Zelda End</h4>
+                    <video controls src="http://www.vgmpf.com/Wiki/images/4/4c/15_-_Legend_of_Zelda_-_NES_-_Ending_Theme.ogg"></video>
+                </div>
+            </section>
+
         </main>
     </div>
 </body>
