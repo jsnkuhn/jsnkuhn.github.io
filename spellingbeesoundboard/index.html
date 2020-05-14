@@ -17,15 +17,17 @@
         }
         .contain{
             margin: 0 auto;
+            padding: 1em;
         }
         main {
             display: grid;
-            grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 1em;
         }
         main div{
             position: relative;
             display: grid;
+            height: 250px;
         }
         h1, h4{
             text-align: center;
@@ -44,7 +46,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: rgba(255,255,255,.25) dotted 1px;
+            border: rgba(255,255,255,.25) solid 1px;
         }
         .positive div{
             background-image: radial-gradient(transparent, green);
@@ -63,17 +65,17 @@
             <section class="positive">
                 <div>
                     <h4>Tada!</h4>
-                    <video controls src="https://www.soundboard.com/mediafiles/ot/OTYyMzQ4ODE4OTYyNDY5_tZc69RHEupw.mp3"></video>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/ot/OTYyMzQ4ODE4OTYyNDY5_tZc69RHEupw.mp3"></video>
                 </div>
             </section>
             <section class="negative">
                 <div>
                     <h4>Losing Horns</h4>
-                    <video controls src="https://www.soundboard.com/mediafiles/mj/Mjg0ODQ4ODE4Mjg0ODQ1_5qYVv1DlVlA.mp3"></video>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/mj/Mjg0ODQ4ODE4Mjg0ODQ1_5qYVv1DlVlA.mp3"></video>
                 </div>
                 <div>
                     <h4>Buzzer</h4>
-                    <video controls src="https://www.soundboard.com/mediafiles/mt/MTUyNjQ4ODE4MTUyNjUy_VBTNFrVmhqs.mp3"></video>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/mt/MTUyNjQ4ODE4MTUyNjUy_VBTNFrVmhqs.mp3"></video>
                 </div>
                 <div>
                     <h4>Sad <br>Trombone</h4>
@@ -82,21 +84,21 @@
             </section>
             <section>
                 <div>
-                    <h4>Rimshot <br>(Ba-Dum-Dum)</h4>
-                    <video controls src="https://www.soundboard.com/mediafiles/nj/Njc0NTQ4ODE4Njc0NTkz_9_2bN_2f7u5USUI.mp3"></video>
+                    <h4>Ba-Dum-Tss</h4>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/nj/Njc0NTQ4ODE4Njc0NTkz_9_2bN_2f7u5USUI.mp3"></video>
                 </div>
 
                 <div>
                     <h4>Spanish Flea</h4>
-                    <video controls src="https://www.soundboard.com/mediafiles/od/ODI5ODQ4ODE4ODI5OTI1_YTFHNCtwQHw.mp3"></video>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/od/ODI5ODQ4ODE4ODI5OTI1_YTFHNCtwQHw.mp3"></video>
                 </div>
                 <div>
                     <h4>Baby Elephant</h4>
-                    <video controls src="babyelephant.mp3"></video>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="babyelephant.mp3"></video>
                 </div>
                 <div>
                     <h4>Zelda End</h4>
-                    <video controls src="http://www.vgmpf.com/Wiki/images/4/4c/15_-_Legend_of_Zelda_-_NES_-_Ending_Theme.ogg"></video>
+                    <video onclick="this.paused ? this.play() : this.pause();" src="http://www.vgmpf.com/Wiki/images/4/4c/15_-_Legend_of_Zelda_-_NES_-_Ending_Theme.ogg"></video>
                 </div>
             </section>
 
