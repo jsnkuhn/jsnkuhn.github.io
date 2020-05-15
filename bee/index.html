@@ -3,92 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>Spelling Bee Soundboard</title>
-    <style>
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html{
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
-        .contain{
-            margin: 0 auto;
-            padding: 1em;
-        }
-        main {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 1em;
-        }
-        section > div{
-            position: relative;
-            display: grid;
-            height: 200px;
-        }
-        header{
-            grid-column: 1 / -1;
-        }
-        h1, h2{
-            text-align: center;
-        }
-
-        section{
-            display: contents;
-        }
-
-        video{
-            cursor: pointer; 
-        }
-
-        video, h2{
-            width: 100%;
-            height: 100%;          
-            grid-area: 1/1;
-        }
-
-        progress[value] {
-            /* Reset the default appearance */
-            -webkit-appearance: none;
-            appearance: none;
-        }
-        
-        progress[value]::-webkit-progress-bar {
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
-            }
-
-        /* progress::-moz-progress-bar {background-color:#0095dd;} */
-
-        progress[value]::-webkit-progress-value {
-            background-color: #00f;
-        }
-        progress{
-            grid-area: 1/1;
-            align-self: end;
-            width: 100%;
-            height: 5px;
-            color: #000;
-            border: none;
-            z-index: 5;
-        }
-
-        h2{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: rgba(255,255,255,.25) solid 1px;
-            user-select: none;
-        }
-        .positive div{
-            background-image: radial-gradient(transparent, rgba(0, 128, 0, 0.6));
-        }
-        .negative div{
-            background-image: radial-gradient(transparent, rgba(128, 0, 0, 0.6));
-        }
-    </style>
 </head>
 <body>
     <div class="contain">
@@ -121,7 +37,7 @@
                 </div>
                 <div>
                     <h2>Sad <br>Trombone</h2>
-                    <iframe src="https://www.youtube.com/embed/CQeezCdF4mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <video src="Sad-trombone.mp3"></video>
                 </div>
             </section>
             <section>
@@ -166,6 +82,11 @@
         var video = document.getElementById('video');
         var progress = document.getElementById('progress');
         var progressBar = document.getElementById('progress-bar');
+
+        progress.addEventListener('click', function(e) {
+            var pos = (e.pageX  - (this.offsetLeft + this.offsetParent.offsetLeft)) / this.offsetWidth;
+            video.currentTime = pos * video.duration;
+        });
 
         video.addEventListener('timeupdate', function() {
             if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
