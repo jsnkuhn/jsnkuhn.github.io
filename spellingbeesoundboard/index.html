@@ -21,13 +21,16 @@
         }
         main {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 1em;
         }
-        main div{
+        section > div{
             position: relative;
             display: grid;
-            height: 250px;
+            height: 200px;
+        }
+        header{
+            grid-column: 1 / -1;
         }
         h1, h4{
             text-align: center;
@@ -36,11 +39,44 @@
         section{
             display: contents;
         }
+
+        video{
+            cursor: pointer; 
+        }
+
         video, h4{
             width: 100%;
             height: 100%;          
             grid-area: 1/1;
         }
+
+        progress[value] {
+            /* Reset the default appearance */
+            -webkit-appearance: none;
+            appearance: none;
+        }
+        
+        progress[value]::-webkit-progress-bar {
+            background-color: #eee;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+            }
+
+        /* progress::-moz-progress-bar {background-color:#0095dd;} */
+        progress::-webkit-progress-value {background-color:#0095dd;}
+
+        progress[value]::-webkit-progress-value {
+            background-color: #00f;
+        }
+        progress{
+            grid-area: 1/1;
+            align-self: end;
+            width: 100%;
+            height: 5px;
+            color: #000;
+            border: none;
+            z-index: 5;
+        }
+
         h4{
             font-size: 1.5em;
             display: flex;
@@ -58,24 +94,32 @@
 </head>
 <body>
     <div class="contain">
-        <header>
-            <h1>Spelling Bee Soundboard</h1>
-        </header>
         <main>
+            <header>
+                <h1>Spelling Bee Soundboard</h1>
+            </header>
             <section class="positive">
                 <div>
                     <h4>Tada!</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/ot/OTYyMzQ4ODE4OTYyNDY5_tZc69RHEupw.mp3"></video>
+                    <video src="https://www.soundboard.com/mediafiles/ot/OTYyMzQ4ODE4OTYyNDY5_tZc69RHEupw.mp3"></video>
+                </div>
+                <div>
+                    <h4>1-Up</h4>
+                    <video src="http://www.vgmpf.com/Wiki/images/9/93/18_-_Super_Mario_Bros._-_NES_-_1-Up.ogg"></video>
+                </div>
+                <div>
+                    <h4>Dragon Warrior <br> Level Up</h4>
+                    <video src="http://www.vgmpf.com/Wiki/images/7/73/18_-_Dragon_Warrior_-_NES_-_Level_Up.ogg"></video>
                 </div>
             </section>
             <section class="negative">
                 <div>
                     <h4>Losing Horns</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/mj/Mjg0ODQ4ODE4Mjg0ODQ1_5qYVv1DlVlA.mp3"></video>
+                    <video src="https://www.soundboard.com/mediafiles/mj/Mjg0ODQ4ODE4Mjg0ODQ1_5qYVv1DlVlA.mp3"></video>
                 </div>
                 <div>
                     <h4>Buzzer</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/mt/MTUyNjQ4ODE4MTUyNjUy_VBTNFrVmhqs.mp3"></video>
+                    <video src="https://www.soundboard.com/mediafiles/mt/MTUyNjQ4ODE4MTUyNjUy_VBTNFrVmhqs.mp3"></video>
                 </div>
                 <div>
                     <h4>Sad <br>Trombone</h4>
@@ -85,24 +129,54 @@
             <section>
                 <div>
                     <h4>Ba-Dum-Tss</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/nj/Njc0NTQ4ODE4Njc0NTkz_9_2bN_2f7u5USUI.mp3"></video>
+                    <video src="https://www.soundboard.com/mediafiles/nj/Njc0NTQ4ODE4Njc0NTkz_9_2bN_2f7u5USUI.mp3"></video>
                 </div>
 
                 <div>
                     <h4>Spanish Flea</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="https://www.soundboard.com/mediafiles/od/ODI5ODQ4ODE4ODI5OTI1_YTFHNCtwQHw.mp3"></video>
+                    <video src="https://www.soundboard.com/mediafiles/od/ODI5ODQ4ODE4ODI5OTI1_YTFHNCtwQHw.mp3"></video>
                 </div>
                 <div>
                     <h4>Baby Elephant</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="babyelephant.mp3"></video>
+                    <video src="babyelephant.mp3"></video>
                 </div>
                 <div>
                     <h4>Zelda End</h4>
-                    <video onclick="this.paused ? this.play() : this.pause();" src="http://www.vgmpf.com/Wiki/images/4/4c/15_-_Legend_of_Zelda_-_NES_-_Ending_Theme.ogg"></video>
+                    <video id="video" src="http://www.vgmpf.com/Wiki/images/4/4c/15_-_Legend_of_Zelda_-_NES_-_Ending_Theme.ogg"></video>
+                    <progress id="progress" value="0" min="0">
+                        <span id="progress-bar"></span>
+                    </progress>
                 </div>
             </section>
 
         </main>
     </div>
+    <script>
+    
+        var videoEls = Array.prototype.slice.call(document.getElementsByTagName('video'));
+
+        var largeTouch = function (){ 
+            this.paused ? this.play() : this.pause();
+        }
+
+        videoEls.forEach( 
+            function(video){
+                video.addEventListener('click', largeTouch)
+            }
+        );
+
+// progress bar
+
+        var video = document.getElementById('video');
+        var progress = document.getElementById('progress');
+        var progressBar = document.getElementById('progress-bar');
+
+        video.addEventListener('timeupdate', function() {
+            if (!progress.getAttribute('max')) progress.setAttribute('max', video.duration);
+            progress.value = video.currentTime;
+            progressBar.style.width = Math.floor((video.currentTime / video.duration) * 100) + '%';
+        });
+
+    </script>
 </body>
 </html>
