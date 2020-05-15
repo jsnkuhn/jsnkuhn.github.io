@@ -32,7 +32,7 @@
         header{
             grid-column: 1 / -1;
         }
-        h1, h4{
+        h1, h2{
             text-align: center;
         }
 
@@ -44,7 +44,7 @@
             cursor: pointer; 
         }
 
-        video, h4{
+        video, h2{
             width: 100%;
             height: 100%;          
             grid-area: 1/1;
@@ -57,12 +57,10 @@
         }
         
         progress[value]::-webkit-progress-bar {
-            background-color: #eee;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
             }
 
         /* progress::-moz-progress-bar {background-color:#0095dd;} */
-        progress::-webkit-progress-value {background-color:#0095dd;}
 
         progress[value]::-webkit-progress-value {
             background-color: #00f;
@@ -77,18 +75,18 @@
             z-index: 5;
         }
 
-        h4{
-            font-size: 1.5em;
+        h2{
             display: flex;
             justify-content: center;
             align-items: center;
             border: rgba(255,255,255,.25) solid 1px;
+            user-select: none;
         }
         .positive div{
-            background-image: radial-gradient(transparent, green);
+            background-image: radial-gradient(transparent, rgba(0, 128, 0, 0.6));
         }
         .negative div{
-            background-image: radial-gradient(transparent, red);
+            background-image: radial-gradient(transparent, rgba(128, 0, 0, 0.6));
         }
     </style>
 </head>
@@ -100,55 +98,53 @@
             </header>
             <section class="positive">
                 <div>
-                    <h4>Tada!</h4>
+                    <h2>Tada!</h2>
                     <video src="https://www.soundboard.com/mediafiles/ot/OTYyMzQ4ODE4OTYyNDY5_tZc69RHEupw.mp3"></video>
                 </div>
                 <div>
-                    <h4>1-Up</h4>
-                    <video src="http://www.vgmpf.com/Wiki/images/9/93/18_-_Super_Mario_Bros._-_NES_-_1-Up.ogg"></video>
+                    <h2>1-Up</h2>
+                    <video src="1-Up.ogg"></video>
                 </div>
                 <div>
-                    <h4>Dragon Warrior <br> Level Up</h4>
-                    <video src="http://www.vgmpf.com/Wiki/images/7/73/18_-_Dragon_Warrior_-_NES_-_Level_Up.ogg"></video>
+                    <h2>Dragon Warrior <br> Level Up</h2>
+                    <video src="dw_Level_Up.ogg"></video>
                 </div>
             </section>
             <section class="negative">
                 <div>
-                    <h4>Losing Horns</h4>
+                    <h2>Losing Horns</h2>
                     <video src="https://www.soundboard.com/mediafiles/mj/Mjg0ODQ4ODE4Mjg0ODQ1_5qYVv1DlVlA.mp3"></video>
                 </div>
                 <div>
-                    <h4>Buzzer</h4>
+                    <h2>Buzzer</h2>
                     <video src="https://www.soundboard.com/mediafiles/mt/MTUyNjQ4ODE4MTUyNjUy_VBTNFrVmhqs.mp3"></video>
                 </div>
                 <div>
-                    <h4>Sad <br>Trombone</h4>
+                    <h2>Sad <br>Trombone</h2>
                     <iframe src="https://www.youtube.com/embed/CQeezCdF4mk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </section>
             <section>
                 <div>
-                    <h4>Ba-Dum-Tss</h4>
+                    <h2>Ba-Dum-Tss</h2>
                     <video src="https://www.soundboard.com/mediafiles/nj/Njc0NTQ4ODE4Njc0NTkz_9_2bN_2f7u5USUI.mp3"></video>
                 </div>
-
                 <div>
-                    <h4>Spanish Flea</h4>
+                    <h2>Spanish Flea</h2>
                     <video src="https://www.soundboard.com/mediafiles/od/ODI5ODQ4ODE4ODI5OTI1_YTFHNCtwQHw.mp3"></video>
                 </div>
                 <div>
-                    <h4>Baby Elephant</h4>
+                    <h2>Baby Elephant</h2>
                     <video src="babyelephant.mp3"></video>
                 </div>
                 <div>
-                    <h4>Zelda End</h4>
-                    <video id="video" src="http://www.vgmpf.com/Wiki/images/4/4c/15_-_Legend_of_Zelda_-_NES_-_Ending_Theme.ogg"></video>
+                    <h2>Zelda End</h2>
+                    <video id="video" src="Zelda_Ending_Theme.ogg"></video>
                     <progress id="progress" value="0" min="0">
                         <span id="progress-bar"></span>
                     </progress>
                 </div>
             </section>
-
         </main>
     </div>
     <script>
