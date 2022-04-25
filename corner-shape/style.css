@@ -1,3 +1,14 @@
+.contain{
+  max-width: 1024px;
+  margin-inline: auto;
+  color: #fff;
+  background-color: #222;
+}
+
+.category-contain:nth-of-type(odd){
+  background-color: #000;
+}
+
 .bordered{
   box-sizing: border-box;
   width: 200px;
@@ -38,10 +49,6 @@
   --corner-shapes: none none notch angle;
 }
 
-body {
-  color: #fff; 
-  background-color: #222;
-}
 h2{
   font-size: 24px;
 }
