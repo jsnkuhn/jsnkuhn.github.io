@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS corner-shape Paint API polyfill</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h2>All Corners</h2>
+    <div class="examples-contain">
+      <div class="bordered all-square"></div>
+      <div class="bordered all-notch"></div>
+      <div class="bordered all-angle"></div>
+      <div class="bordered all-round"></div>
+      <div class="bordered all-scoop"></div>
+    </div>
+    <script>
+      CSS.paintWorklet.addModule('script.js');
+    </script>
+  </body>
+</html>

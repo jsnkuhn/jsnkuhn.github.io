@@ -1,0 +1,38 @@
+.bordered{
+  box-sizing: border-box;
+  width: 200px;
+  height: 80px;
+  margin: 10px;
+  background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0);
+  --border-color: #fff;
+  --border-width: 1;
+  --corner-sizes: 13px; /* accepts 1-8 values */
+}
+
+.all-square{
+  --corner-shapes: square;
+}
+.all-notch{
+  --corner-shapes: notch;
+}
+.all-angle{
+  --corner-shapes: angle;
+}
+.all-round{
+  --corner-shapes: round;
+}
+.all-scoop{
+  --corner-shapes: scoop;
+}
+body {
+  color: #fff; 
+  background-color: #222;
+}
+h2{
+  font-size: 24px;
+}
+.examples-contain{
+  display: flex;
+  flex-wrap: wrap;
+}
