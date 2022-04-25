@@ -45,80 +45,80 @@ class cornerShape {
       const cornerWidths = cornerSizes.slice(0, indexToSplit);
       const cornerHeights = cornerSizes.slice(indexToSplit + 1);
       
-      function parseCorners(arrayLength, TL, TR, BR, BL, arrayName) {
-        switch (arrayLength) {
-          case 1:
-            TL = TR = BR = BL = arrayName[0];
-            break;
-          case 4:
-            TL = arrayName[0];
-            TR = arrayName[1];
-            BR = arrayName[2];
-            BL = arrayName[3];
-            break;
-          case 3:
-            TL = arrayName[0];
-            TR = BL = arrayName[1];
-            BR = arrayName[2];
-            break;
-          case 2:
-            TL = BR = arrayName[0];
-            TR = BL = arrayName[1];
-            break;
-        }
-      }
+//       function parseCorners(arrayLength, TL, TR, BR, BL, arrayName) {
+//         switch (arrayLength) {
+//           case 1:
+//             TL = TR = BR = BL = arrayName[0];
+//             break;
+//           case 4:
+//             TL = arrayName[0];
+//             TR = arrayName[1];
+//             BR = arrayName[2];
+//             BL = arrayName[3];
+//             break;
+//           case 3:
+//             TL = arrayName[0];
+//             TR = BL = arrayName[1];
+//             BR = arrayName[2];
+//             break;
+//           case 2:
+//             TL = BR = arrayName[0];
+//             TR = BL = arrayName[1];
+//             break;
+//         }
+//       }
       
-      let widthsLength = cornerWidths.length;
-      parseCorners(widthsLength, cornerTLW, cornerTRW, cornerBRW, cornerBLW, cornerWidths);
+//       let widthsLength = cornerWidths.length;
+//       parseCorners(widthsLength, cornerTLW, cornerTRW, cornerBRW, cornerBLW, cornerWidths);
       
 
       
-//       switch (widthsLength) {
-//         case 1:
-//           cornerTLW = cornerTRW = cornerBRW = cornerBLW = cornerWidths[0];
-//           break;
-//         case 4:
-//           cornerTLW = cornerWidths[0];
-//           cornerTRW = cornerWidths[1];
-//           cornerBRW = cornerWidths[2];
-//           cornerBLW = cornerWidths[3];
-//           break;
-//         case 3:
-//           cornerTLW = cornerWidths[0];
-//           cornerTRW = cornerBLW = cornerWidths[1];
-//           cornerBRW = cornerWidths[2];
-//           break;
-//         case 2:
-//           cornerTLW = cornerBRW = cornerWidths[0];
-//           cornerTRW = cornerBLW = cornerWidths[1];
-//           break;
-//       }
+      switch (widthsLength) {
+        case 1:
+          cornerTLW = cornerTRW = cornerBRW = cornerBLW = cornerWidths[0];
+          break;
+        case 4:
+          cornerTLW = cornerWidths[0];
+          cornerTRW = cornerWidths[1];
+          cornerBRW = cornerWidths[2];
+          cornerBLW = cornerWidths[3];
+          break;
+        case 3:
+          cornerTLW = cornerWidths[0];
+          cornerTRW = cornerBLW = cornerWidths[1];
+          cornerBRW = cornerWidths[2];
+          break;
+        case 2:
+          cornerTLW = cornerBRW = cornerWidths[0];
+          cornerTRW = cornerBLW = cornerWidths[1];
+          break;
+      }
       
-      let heighsLength = cornerHeighs.length;
-      parseCorners(heighsLength, cornerTLH, cornerTRH, cornerBRH, cornerBLH, cornerHeighs);
+      // let heighsLength = cornerHeighs.length;
+      // parseCorners(heighsLength, cornerTLH, cornerTRH, cornerBRH, cornerBLH, cornerHeighs);
       
-    //   let heighsLength = cornerHeights.length;
-    //   switch (heighsLength) {
-    //     case 1:
-    //       cornerTLH = cornerTRH = cornerBRH = cornerBLH = cornerHeights[0];
-    //       break;
-    //     case 4:
-    //       cornerTLH = cornerHeights[0];
-    //       cornerTRH = cornerHeights[1];
-    //       cornerBRH = cornerHeights[2];
-    //       cornerBLH = cornerHeights[3];
-    //       break;
-    //     case 3:
-    //       cornerTLH = cornerHeights[0];
-    //       cornerTRH = cornerBLH = cornerHeights[1];
-    //       cornerBRH = cornerHeights[2];
-    //       break;
-    //     case 2:
-    //       cornerTLH = cornerBRH = cornerHeights[0];
-    //       cornerTRH = cornerBLH = cornerHeights[1];
-    //       break;
-    //   }
-    // }
+      let heighsLength = cornerHeights.length;
+      switch (heighsLength) {
+        case 1:
+          cornerTLH = cornerTRH = cornerBRH = cornerBLH = cornerHeights[0];
+          break;
+        case 4:
+          cornerTLH = cornerHeights[0];
+          cornerTRH = cornerHeights[1];
+          cornerBRH = cornerHeights[2];
+          cornerBLH = cornerHeights[3];
+          break;
+        case 3:
+          cornerTLH = cornerHeights[0];
+          cornerTRH = cornerBLH = cornerHeights[1];
+          cornerBRH = cornerHeights[2];
+          break;
+        case 2:
+          cornerTLH = cornerBRH = cornerHeights[0];
+          cornerTRH = cornerBLH = cornerHeights[1];
+          break;
+      }
+    }
 
     var shapeTopRightX1, shapeTopRightY1, shapeTopRightX2, shapeTopRightY2, shapeTopRightRotation;
     
