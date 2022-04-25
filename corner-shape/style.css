@@ -5,6 +5,10 @@
   background-color: #222;
 }
 
+h1, .category-contain{
+  padding: 16px;
+}
+
 .category-contain:nth-of-type(odd){
   background-color: #000;
 }
@@ -52,7 +56,12 @@
 h2{
   font-size: 24px;
 }
+
 .examples-contain{
   display: flex;
   flex-wrap: wrap;
+}
+
+body{
+  margin: 0;
 }
