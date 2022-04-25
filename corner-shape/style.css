@@ -25,6 +25,19 @@
 .all-scoop{
   --corner-shapes: scoop;
 }
+
+.angled{
+  --background-color: black;
+  --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
+  --corner-shapes: angle;
+}
+
+.mixed{
+  --background-color: blue;
+  --corner-sizes: 0 0 95px 95px / 0 0 6px 54px;
+  --corner-shapes: none none notch angle;
+}
+
 body {
   color: #fff; 
   background-color: #222;
