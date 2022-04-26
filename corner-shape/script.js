@@ -9,11 +9,34 @@ class cornerShape {
     ];}
   
   paint(ctx, geom, properties) { 
-    const cornerShapes = properties.get('--corner-shapes').toString().trim();
+    const cornerShapes = properties.get('--corner-shapes').toString().trim().split(' ');
     const cornerSizes = properties.get('--corner-sizes').toString().replace(/px/g, '').trim().split(' ');
     const backgroundColor = properties.get('--background-color').toString();
     const borderWidth = properties.get('--border-width').toString();
     const borderColor = properties.get('--border-color').toString();
+
+    let shapesLength = cornerShapes.length;
+    switch (shapesLength) {
+      case 1:
+        cornerShapes[0] = cornerShapes[1] = cornerShapes[2] = cornerShapes[3];
+        break;
+      // case 4:
+      //   cornerTLW = cornerTLH = cornerSizes[0];
+      //   cornerTRW = cornerTRH = cornerSizes[1];
+      //   cornerBRW = cornerBRH = cornerSizes[2];
+      //   cornerBLW = cornerBLH = cornerSizes[3];
+      //   break;
+      case 3:
+        cornerShapes[2] = cornerShapes[3];
+        cornerShapes[1] = cornerShapes[2];
+        break;
+      case 2:
+        cornerSizes[0] = cornerSizes[2];
+        cornerSizes[1] = cornerSizes[3];
+        break;
+    }
+
+    console.log(cornerShapes)
 
     let cornerTLW, cornerTLH, cornerTRW, cornerTRH, cornerBRW, cornerBRH, cornerBLW, cornerBLH; 
 
@@ -94,11 +117,11 @@ class cornerShape {
           break;
       }
       
-      // let heighsLength = cornerHeighs.length;
-      // parseCorners(heighsLength, cornerTLH, cornerTRH, cornerBRH, cornerBLH, cornerHeighs);
+      // let heightsLength = cornerHeights.length;
+      // parseCorners(heightsLength, cornerTLH, cornerTRH, cornerBRH, cornerBLH, cornerHeights);
       
-      let heighsLength = cornerHeights.length;
-      switch (heighsLength) {
+      let heightsLength = cornerHeights.length;
+      switch (heightsLength) {
         case 1:
           cornerTLH = cornerTRH = cornerBRH = cornerBLH = cornerHeights[0];
           break;
