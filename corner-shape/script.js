@@ -20,7 +20,7 @@ class cornerShape {
     let shapesLength = cornerShapes.length;
     switch (shapesLength) {
       case 1:
-        cornerShapes[0] = cornerShapes[1] = cornerShapes[2] = cornerShapes[3];
+        cornerShapes[0] = cornerShapes[0] = cornerShapes[1] = cornerShapes[2] = cornerShapes[3];
         break;
       // case 4:
       //   cornerTLW = cornerTLH = cornerSizes[0];
