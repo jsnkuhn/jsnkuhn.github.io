@@ -9,57 +9,68 @@
   </head>
   <body>
     <div class="contain">
-      <h1>CSS corner-shape (Paint API polyfill)</h1>
-      <div class="category-contain all-corners">
-        <h2>All Corners</h2>
-        <div class="examples-contain">
-          <div class="bordered all-square"></div>
-          <div class="bordered all-notch"></div>
-          <div class="bordered all-angle"></div>
-          <div class="bordered all-round"></div>
-          <div class="bordered all-scoop"></div>
+      <header>
+        <h1>CSS corner-shape <br>(Paint API polyfill)</h1>
+        <ul class="jump-links">
+          <li><a class="all-round" href="#round">Round</a></li>
+          <li><a class="all-angle" href="#angle">Angle</a></li>
+          <li><a class="all-notch" href="#notch">Notch</a></li>
+          <li><a class="all-scoop" href="#scoop">Scoop</a></li>
+          <li><a class="mixed" href="#mixed">Mixed</a></li>
+        </ul>
+      </header>
+      <main>
+        <div class="category-contain all-corners">
+          <h2>All Corners</h2>
+          <div class="examples-contain">
+            <div class="bordered all-square"></div>
+            <div class="bordered all-notch"></div>
+            <div class="bordered all-angle"></div>
+            <div class="bordered all-round"></div>
+            <div class="bordered all-scoop"></div>
+          </div>
         </div>
-      </div>
-      <div class="category-contain angled">
-        <h2>Angled</h2>
-        <div class="examples-contain">
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
+        <div id="angled" class="category-contain angled">
+          <h2>Angled</h2>
+          <div class="examples-contain">
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+          </div>
         </div>
-      </div>
-      <div class="category-contain notched">
-        <h2>Notched</h2>
-        <div class="examples-contain">
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
+        <div id="notched" class="category-contain notched">
+          <h2>Notched</h2>
+          <div class="examples-contain">
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+          </div>
         </div>
-      </div>
-      <div class="category-contain scooped">
-        <h2>Scooped</h2>
-        <div class="examples-contain">
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
+        <div id="scooped" class="category-contain scooped">
+          <h2>Scooped</h2>
+          <div class="examples-contain">
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+          </div>
         </div>
-      </div>
-      <div class="category-contain mixed">
-        <h2>Mixed</h2>
-        <div class="examples-contain">
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
-          <div class="bordered"></div>
+        <div id="mixed" class="category-contain mixed">
+          <h2>Mixed</h2>
+          <div class="examples-contain">
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+            <div class="bordered"></div>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
     <script>
       CSS.paintWorklet.addModule('script.js');
