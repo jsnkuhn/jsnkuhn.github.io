@@ -15,6 +15,8 @@ class cornerShape {
     const borderWidth = properties.get('--border-width').toString();
     const borderColor = properties.get('--border-color').toString();
 
+    console.log(cornerShapes)
+
     let shapesLength = cornerShapes.length;
     switch (shapesLength) {
       case 1:
