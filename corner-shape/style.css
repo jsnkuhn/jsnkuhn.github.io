@@ -5,13 +5,29 @@
   background-color: #222;
 }
 
+header{
+  display: flex;
+}
+
 h1, .category-contain{
   padding: 16px;
   margin: 0;
 }
 
 h1{
+  flex: 66%;
   text-align: center;
+}
+
+.jump-links{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+}
+.jump-links a{
+  display: block;
 }
 
 .category-contain:nth-of-type(odd){
