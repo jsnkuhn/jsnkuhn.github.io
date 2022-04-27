@@ -8,38 +8,45 @@ class cornerShape {
       '--border-color'
     ];}
   
-  paint(ctx, geom, properties) { 
-    const cornerShapes = properties.get('--corner-shapes').toString().trim().split(' ');
+  paint(ctx, geom, properties) {
+    var cornerShapes = properties.get('--corner-shapes').toString().trim().split(' ');
     const cornerSizes = properties.get('--corner-sizes').toString().replace(/px/g, '').trim().split(' ');
     const backgroundColor = properties.get('--background-color').toString();
     const borderWidth = properties.get('--border-width').toString();
     const borderColor = properties.get('--border-color').toString();
 
-    console.log(cornerShapes)
-
+    var shapeTL, shapeTR, shapeBR, shapeBL; 
+    
     let shapesLength = cornerShapes.length;
     switch (shapesLength) {
       case 1:
-        cornerShapes[0] = cornerShapes[0] = cornerShapes[1] = cornerShapes[2] = cornerShapes[3];
+        shapeTL = shapeTR = shapeBR = shapeBL = cornerShapes[0];
         break;
-      // case 4:
-      //   cornerTLW = cornerTLH = cornerSizes[0];
-      //   cornerTRW = cornerTRH = cornerSizes[1];
-      //   cornerBRW = cornerBRH = cornerSizes[2];
-      //   cornerBLW = cornerBLH = cornerSizes[3];
-      //   break;
+      case 4:
+        shapeTL = cornerShapes[0];
+        shapeTR = cornerShapes[1];
+        shapeBR = cornerShapes[2];
+        shapeBL = cornerShapes[3];
+        break;
       case 3:
-        cornerShapes[2] = cornerShapes[3];
-        cornerShapes[1] = cornerShapes[2];
+        shapeTL = cornerShapes[0];
+        shapeTR = shapeBR = cornerShapes[1];
+        shapeBL = cornerShapes[2]
         break;
       case 2:
-        cornerSizes[0] = cornerSizes[2];
-        cornerSizes[1] = cornerSizes[3];
+        shapeTL = shapeBR = cornerShapes[0];
+        shapeTR = shapeBL = cornerShapes[1];
         break;
     }
-
-    console.log(cornerShapes)
-
+    
+    let shapesSorted = [];
+    shapesSorted[0] = shapeTL;
+    shapesSorted[1] = shapeTR;
+    shapesSorted[2] = shapeBR;
+    shapesSorted[3] = shapeBL;
+    
+    console.log(shapesSorted)
+    
     let cornerTLW, cornerTLH, cornerTRW, cornerTRH, cornerBRW, cornerBRH, cornerBLW, cornerBLH; 
 
     let inputLength = cornerSizes.length;
@@ -69,35 +76,7 @@ class cornerShape {
       var indexToSplit = cornerSizes.indexOf('/');
       const cornerWidths = cornerSizes.slice(0, indexToSplit);
       const cornerHeights = cornerSizes.slice(indexToSplit + 1);
-      
-//       function parseCorners(arrayLength, TL, TR, BR, BL, arrayName) {
-//         switch (arrayLength) {
-//           case 1:
-//             TL = TR = BR = BL = arrayName[0];
-//             break;
-//           case 4:
-//             TL = arrayName[0];
-//             TR = arrayName[1];
-//             BR = arrayName[2];
-//             BL = arrayName[3];
-//             break;
-//           case 3:
-//             TL = arrayName[0];
-//             TR = BL = arrayName[1];
-//             BR = arrayName[2];
-//             break;
-//           case 2:
-//             TL = BR = arrayName[0];
-//             TR = BL = arrayName[1];
-//             break;
-//         }
-//       }
-      
-//       let widthsLength = cornerWidths.length;
-//       parseCorners(widthsLength, cornerTLW, cornerTRW, cornerBRW, cornerBLW, cornerWidths);
-      
-
-      
+ 
       switch (widthsLength) {
         case 1:
           cornerTLW = cornerTRW = cornerBRW = cornerBLW = cornerWidths[0];
@@ -118,10 +97,7 @@ class cornerShape {
           cornerTRW = cornerBLW = cornerWidths[1];
           break;
       }
-      
-      // let heightsLength = cornerHeights.length;
-      // parseCorners(heightsLength, cornerTLH, cornerTRH, cornerBRH, cornerBLH, cornerHeights);
-      
+        
       let heightsLength = cornerHeights.length;
       switch (heightsLength) {
         case 1:
@@ -174,14 +150,14 @@ class cornerShape {
     
     ctx.fillStyle = backgroundColor;
     
-  if(borderWidth > 0){
+    if(borderWidth > 0){
        ctx.strokeStyle = borderColor; 
-  }
+    }
 
-      ctx.clip(p1);
-      ctx.lineWidth = borderWidth * 2;
-      ctx.fill(p1);
-      ctx.stroke(p1);
+    ctx.clip(p1);
+    ctx.lineWidth = borderWidth * 2;
+    ctx.fill(p1);
+    ctx.stroke(p1);
   }
 }
 registerPaint("cornerShape", cornerShape);
