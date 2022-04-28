@@ -72,15 +72,177 @@ h1{
   --corner-shapes: scoop;
 }
 
+/* angle */
 .angled{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   --background-color: black;
   --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
   --corner-shapes: angle;
 }
+
+.octagon {
+  background-image: paint(cornerAngle);
+  --background-color: #f00;
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 16px; /* accepts 1-8 values */
+}
+.example-3 {
+  background-image: paint(cornerAngle);
+  --background-color: #d0a85c;
+  --border-color: transparent;
+  --border-width: 0;
+  --corner-sizes: 11px 0; /* accepts 1-8 values */
+  position: relative;
+}
+
+.example-4 {
+  background-color: #11d4f1;
+  position: relative;
+/*   transition: --corner-sizes .5s; */
+}
+.example-4:before{
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  inset: -5px;
+  background-image: paint(cornerAngle);
+  --background-color: transparent;
+  --border-color: #7e9b87;
+  --border-width: 2;
+  --corner-sizes: 20px 0; /* accepts 1-8 values */
+}
+
+.example-4:hover:before{
+  --corner-sizes: 0; /* accepts 1-8 values */
+}
+
+/* @property --corner-sizes {
+  syntax: '<number> | <length>';
+  initial-value: #f00;
+  inherits: false;
+}
+ */
+.dog-ear-mask{
+  mask-image: paint(cornerAngle);
+  background: #fff linear-gradient(#444, #444) no-repeat bottom right / 30px 30px;
+  --background-color: #000;
+  --corner-sizes: 0 0 30 0; /* accepts 1-8 values */
+}
+
+.mario-kart-8{
+  background-image: paint(cornerAngle);
+  --background-color: orange;
+  --border-color: #fff;
+  --border-width: 4;
+  --corner-sizes: 40px; /* accepts 1-8 values */
+}
+
+.diamond {
+  width: 80px;
+  height: 80px;
+  background-image: paint(cornerAngle);
+  --background-color: #f00;
+  --corner-sizes: 40px; /* accepts 1-8 values */
+}
+.triangle-up {
+  width: 80px;
+  height: 80px;
+  background-image: paint(cornerAngle);
+  --background-color: #f00;
+  --corner-sizes: 40px 40px 0 0 / 80px; /* widths / heights */
+}
+
+.triangle-up-right {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1647095745855-e4856b150c48?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODQyMDIxMQ&ixlib=rb-1.2.1&q=85);
+  mask-image: paint(cornerAngle);
+  --background-color: #f00;
+  --corner-sizes: 0 0 0 80px; /* widths / heights */
+}
+.screen {
+  background-image: paint(cornerAngle);
+  --background-color: transparent;
+  --border-color: #fff;
+  animation: rainbow 5s infinite;
+  --border-width: 2;
+  --corner-sizes: 15px / 30px 50px 30px 50px; /* accepts 1-8 values */
+}
+/* @property --border-color {
+  syntax: '<color>';
+  initial-value: #f00;
+  inherits: false;
+}
+
+@keyframes rainbow {
+  from{--border-color: #f00;}
+  33%{--border-color: #0f0;}
+  66%{--border-color: #00f;}
+} */
+.parallelogram {
+  background-image: paint(cornerAngle);
+  --background-color: #000;
+  --border-color: transparent;
+  --corner-sizes: 20 / 80px 0; /* accepts 1-8 values */
+}
+
+.trapezoid{
+    background-image: paint(cornerAngle);
+  --background-color: #000;
+  --border-color: transparent;
+  --corner-sizes: 20 / 80px 80px 0 0; /* accepts 1-8 values */
+}
+
+/* notched */
+
 .notched{
   background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23333333' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
+
+.all-notch {
+  background-image: paint(cornerNotch);
+  --background-color: #724329;
+  --border-color: #bea459;
+  --border-width: 4;
+  --corner-sizes: 8px; /* accepts 1-8 values */
+}
+.all-notch-thin{
+  background-image: paint(cornerNotch);
+  --background-color: transparent;
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 2px; /* accepts 1-8 values */
+}
+.top-right {
+  background-image: paint(cornerNotch);
+  --background-color: #000;
+  --border-color: transparent;
+  --border-width: 0;
+  --corner-sizes: 0 8px 0 0; /* accepts 1-8 values */
+}
+
+.plus {
+  background-image: paint(cornerNotch);
+  --background-color: #000;
+  --border-color: transparent;
+  --border-width: 0;
+  --corner-sizes: 30px; /* accepts 1-8 values */
+  width: 80px;
+  height: 80px;
+}
+.paper-mario {
+  background-image: paint(cornerNotch);
+  --background-color: #fff;
+  --border-color: #000;
+  --border-width: 3;
+  --corner-sizes: 0 56px 0 112px / 8px; /* accepts 1-8 values */
+}
+
+/* scoops */
 
 .scooped{
   mask-image: paint(cornerShape);
@@ -92,12 +254,95 @@ h1{
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cg fill='%23000000' fill-opacity='0.4'%3E%3Cpolygon fill-rule='evenodd' points='8 4 12 6 8 8 6 12 4 8 0 6 4 4 6 0 8 4'/%3E%3C/g%3E%3C/svg%3E");
 }
 
+.all-scoop {
+  background-image: paint(cornerScoop);
+  --background-color: #283c50;
+  --border-color: #647884;
+  --border-width: 4;
+  --corner-sizes: 16; /* accepts 1-8 values */
+}
+
+.top-right {
+  background-image: paint(cornerScoop);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 12px 0 0; /* accepts 1-8 values */
+}
+
+
+.that-super-ellipse{
+  width: 50px;
+  height: 50px;
+  background-image: paint(cornerScoop);
+  --background-color: red;
+  --corner-sizes: 25px; /* accepts 1-8 values */
+}
+.make-room-for-circle{
+  height: 50px;
+    background-image: paint(cornerScoop);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 50px 0 0; /* accepts 1-8 values */
+}
+
+.make-room-for-circle-2{
+  height: 50px;
+    background-image: paint(cornerScoop);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 50 0 0 0; /* accepts 1-8 values */
+}
+
+.scooped-tab{
+  height: 50px;
+    background-image: paint(cornerScoop);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 50 50 0 0; /* accepts 1-8 values */
+}
+
+.arrow-down{
+    width: 50px;
+    background-image: paint(cornerScoop);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 0 25 25 / 0 0 10 10; /* accepts 1-8 values */
+}
+
+.bottom-cut{
+    width: 50px;
+    background-image: paint(cornerScoop);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 0 50 0 / 0 0 15 0; /* accepts 1-8 values */
+}
+
+/* mixed */
+
 .mixed{
   background-image: url("data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8 16c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zm33.414-6l5.95-5.95L45.95.636 40 6.586 34.05.636 32.636 2.05 38.586 8l-5.95 5.95 1.414 1.414L40 9.414l5.95 5.95 1.414-1.414L41.414 8zM40 48c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm0-2c3.314 0 6-2.686 6-6s-2.686-6-6-6-6 2.686-6 6 2.686 6 6 6zM9.414 40l5.95-5.95-1.414-1.414L8 38.586l-5.95-5.95L.636 34.05 6.586 40l-5.95 5.95 1.414 1.414L8 41.414l5.95 5.95 1.414-1.414L9.414 40z' fill='%23333333' fill-opacity='0.38' fill-rule='evenodd'/%3E%3C/svg%3E");
   mask-image: paint(cornerShape);
   --background-color: blue;
   --corner-sizes: 95px 95px 0 0 / 54px 6px 0 0;
   --corner-shapes: notch angle square square;
+}
+
+.right-arrow{
+  --corner-shapes: round angle angle round; /* accepts square, round, angle, notch, scoop */
+  --corner-sizes: 16px 40px 40px 16px; /* accepts 1-8 values */
+}
+.valorant{
+  --corner-shapes: square square notch angle;
+  --corner-sizes: 0 0 20px 40px / 0 0 8px 20px; /* accepts 1-8 values */
+}
+.pokemon-unite{
+  --corner-shapes: square angle round angle;
 }
 
 h2{
