@@ -45,8 +45,6 @@ class cornerShape {
     shapesSorted[2] = shapeBR;
     shapesSorted[3] = shapeBL;
     
-    console.log(shapesSorted)
-    
     let cornerTLW, cornerTLH, cornerTRW, cornerTRH, cornerBRW, cornerBRH, cornerBLW, cornerBLH; 
 
     let inputLength = cornerSizes.length;
@@ -77,6 +75,7 @@ class cornerShape {
       const cornerWidths = cornerSizes.slice(0, indexToSplit);
       const cornerHeights = cornerSizes.slice(indexToSplit + 1);
  
+      let widthsLength = cornerWidths.length;
       switch (widthsLength) {
         case 1:
           cornerTLW = cornerTRW = cornerBRW = cornerBLW = cornerWidths[0];
@@ -120,44 +119,108 @@ class cornerShape {
           break;
       }
     }
-
-    var shapeTopRightX1, shapeTopRightY1, shapeTopRightX2, shapeTopRightY2, shapeTopRightRotation;
-    
-    if(cornerShapes == "scoop"){
-      shapeTopRightX1 = geom.width;
-      shapeTopRightY1 = 0; 
-      shapeTopRightX2 = cornerTRW;
-      shapeTopRightY2 = cornerTRH;
-      shapeTopRightRotation = Math.PI;
-    }
     
     let p1 = new Path2D();
     p1.moveTo(cornerTLW, 0);
 
     p1.lineTo(geom.width - cornerTRW, 0);
-    p1.ellipse(shapeTopRightX1, shapeTopRightY1, shapeTopRightX2, shapeTopRightX2, shapeTopRightRotation, 0, Math.PI * 1.5, true);
     
+      switch (shapesSorted[1]) {
+        case "angle":
+          break;
+        case "square":
+        default:
+          p1.lineTo(geom.width, 0);
+          break;
+        case "notch":
+          p1.lineTo(geom.width - cornerTRW, cornerTRH);
+          break;
+        case "scoop":
+          p1.ellipse(geom.width, 0, cornerTRW, cornerTRH, Math.PI, 0, Math.PI * 1.5, true);
+          break;
+        case "round":
+          p1.ellipse(geom.width - cornerTRW, cornerTRH, cornerTRH, cornerTRW, Math.PI * 1.5, 0, Math.PI / 2);
+
+          break;
+      }
+    p1.lineTo(geom.width, cornerTRH);
     p1.lineTo(geom.width, geom.height - cornerBRH);
-    p1.ellipse(geom.width, geom.height, cornerBRH, cornerBRW, Math.PI * 1.5, 0, Math.PI * 1.5, true);
     
+    switch (shapesSorted[2]) {
+      case "angle":
+        p1.lineTo(geom.width - cornerBRW, geom.height);
+        break;
+      case "square":
+      default:
+        p1.lineTo(geom.width, geom.height);
+        break;
+      case "notch":
+            p1.lineTo(geom.width - cornerBRW, geom.height - cornerBRH);
+    p1.lineTo(geom.width - cornerBRW, geom.height);
+        break;
+      case "scoop":
+        p1.ellipse(geom.width, geom.height, cornerBRH, cornerBRW, Math.PI * 1.5, 0, Math.PI * 1.5, true);
+        break;
+      case "round":
+        p1.ellipse(geom.width - cornerBRW, geom.height - cornerBRH, cornerBRW, cornerBRH, Math.PI * 2, 0, Math.PI / 2);
+        break;
+    }
+    
+    p1.lineTo(geom.width - cornerBRW, geom.height);
     p1.lineTo(cornerBLW, geom.height);
-    p1.ellipse(0, geom.height, cornerBLW, cornerBLH, Math.PI * 2, 0, Math.PI * 1.5, true);
+    
+    switch (shapesSorted[3]) {
+      case "angle":
+        p1.lineTo(0, geom.height - cornerBLH);
+        break;
+      case "square":
+      default:
+        p1.lineTo(0 , geom.height);
+        break;
+      case "notch":
+        p1.lineTo(cornerBLW, geom.height - cornerBLH);
+        p1.lineTo(0, geom.height - cornerBLH);
+        break;
+      case "scoop":
+        p1.ellipse(0, geom.height, cornerBLW, cornerBLH, Math.PI * 2, 0, Math.PI * 1.5, true);
+        break;
+      case "round":
+        p1.ellipse(cornerBLW, geom.height - cornerBLH, cornerBLH, cornerBLW, Math.PI * .5, 0, Math.PI / 2);
+        break;
+    }
 
+    p1.lineTo(0, geom.height - cornerBLH);
     p1.lineTo(0, cornerTLH);
-    p1.ellipse(0, 0, cornerTLH, cornerTLW, Math.PI * .5, 0, Math.PI * 1.5, true);
 
+    switch (shapesSorted[0]) {
+        case "angle":
+          break;
+        case "square":
+        default:
+          p1.lineTo(0,0);
+          break;
+        case "notch":
+          p1.lineTo(cornerTLW, cornerTLH);
+          break;
+        case "scoop":
+          p1.ellipse(0, 0, cornerTLH, cornerTLW, Math.PI * .5, 0, Math.PI * 1.5, true);
+          break;
+        case "round":
+          p1.ellipse(cornerTLW, cornerTLH, cornerTLW, cornerTLH, Math.PI, 0, Math.PI / 2);
+          break;
+      }
     p1.closePath();
     
     ctx.fillStyle = backgroundColor;
     
-    if(borderWidth > 0){
+  if(borderWidth > 0){
        ctx.strokeStyle = borderColor; 
-    }
+  }
 
-    ctx.clip(p1);
-    ctx.lineWidth = borderWidth * 2;
-    ctx.fill(p1);
-    ctx.stroke(p1);
+      ctx.clip(p1);
+      ctx.lineWidth = borderWidth * 2;
+      ctx.fill(p1);
+      ctx.stroke(p1);
   }
 }
 registerPaint("cornerShape", cornerShape);
