@@ -81,14 +81,14 @@ h1{
 }
 
 .octagon {
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: #f00;
   --border-color: #fff;
   --border-width: 2;
   --corner-sizes: 16px; /* accepts 1-8 values */
 }
 .example-3 {
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: #d0a85c;
   --border-color: transparent;
   --border-width: 0;
@@ -108,7 +108,7 @@ h1{
   height: calc(100% + 10px);
   width: calc(100% + 10px);
   inset: -5px;
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: transparent;
   --border-color: #7e9b87;
   --border-width: 2;
@@ -126,14 +126,14 @@ h1{
 }
  */
 .dog-ear-mask{
-  mask-image: paint(cornerAngle);
+  mask-image: paint(cornerShape);
   background: #fff linear-gradient(#444, #444) no-repeat bottom right / 30px 30px;
   --background-color: #000;
   --corner-sizes: 0 0 30 0; /* accepts 1-8 values */
 }
 
 .mario-kart-8{
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: orange;
   --border-color: #fff;
   --border-width: 4;
@@ -143,14 +143,14 @@ h1{
 .diamond {
   width: 80px;
   height: 80px;
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: #f00;
   --corner-sizes: 40px; /* accepts 1-8 values */
 }
 .triangle-up {
   width: 80px;
   height: 80px;
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: #f00;
   --corner-sizes: 40px 40px 0 0 / 80px; /* widths / heights */
 }
@@ -160,12 +160,12 @@ h1{
   height: 80px;
   background-size: cover;
   background-image: url(https://images.unsplash.com/photo-1647095745855-e4856b150c48?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODQyMDIxMQ&ixlib=rb-1.2.1&q=85);
-  mask-image: paint(cornerAngle);
+  mask-image: paint(cornerShape);
   --background-color: #f00;
   --corner-sizes: 0 0 0 80px; /* widths / heights */
 }
 .screen {
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: transparent;
   --border-color: #fff;
   animation: rainbow 5s infinite;
@@ -184,14 +184,14 @@ h1{
   66%{--border-color: #00f;}
 } */
 .parallelogram {
-  background-image: paint(cornerAngle);
+  background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
   --corner-sizes: 20 / 80px 0; /* accepts 1-8 values */
 }
 
 .trapezoid{
-    background-image: paint(cornerAngle);
+    background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
   --corner-sizes: 20 / 80px 80px 0 0; /* accepts 1-8 values */
@@ -204,21 +204,21 @@ h1{
 }
 
 .all-notch {
-  background-image: paint(cornerNotch);
+  background-image: paint(cornerShape);
   --background-color: #724329;
   --border-color: #bea459;
   --border-width: 4;
   --corner-sizes: 8px; /* accepts 1-8 values */
 }
 .all-notch-thin{
-  background-image: paint(cornerNotch);
+  background-image: paint(cornerShape);
   --background-color: transparent;
   --border-color: #fff;
   --border-width: 2;
   --corner-sizes: 2px; /* accepts 1-8 values */
 }
 .top-right {
-  background-image: paint(cornerNotch);
+  background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
   --border-width: 0;
@@ -226,7 +226,7 @@ h1{
 }
 
 .plus {
-  background-image: paint(cornerNotch);
+  background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
   --border-width: 0;
@@ -235,7 +235,7 @@ h1{
   height: 80px;
 }
 .paper-mario {
-  background-image: paint(cornerNotch);
+  background-image: paint(cornerShape);
   --background-color: #fff;
   --border-color: #000;
   --border-width: 3;
@@ -255,7 +255,7 @@ h1{
 }
 
 .all-scoop {
-  background-image: paint(cornerScoop);
+  background-image: paint(cornerShape);
   --background-color: #283c50;
   --border-color: #647884;
   --border-width: 4;
@@ -263,7 +263,7 @@ h1{
 }
 
 .top-right {
-  background-image: paint(cornerScoop);
+  background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
@@ -274,13 +274,13 @@ h1{
 .that-super-ellipse{
   width: 50px;
   height: 50px;
-  background-image: paint(cornerScoop);
+  background-image: paint(cornerShape);
   --background-color: red;
   --corner-sizes: 25px; /* accepts 1-8 values */
 }
 .make-room-for-circle{
   height: 50px;
-    background-image: paint(cornerScoop);
+    background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
@@ -289,7 +289,7 @@ h1{
 
 .make-room-for-circle-2{
   height: 50px;
-    background-image: paint(cornerScoop);
+    background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
@@ -298,7 +298,7 @@ h1{
 
 .scooped-tab{
   height: 50px;
-    background-image: paint(cornerScoop);
+    background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
@@ -307,7 +307,7 @@ h1{
 
 .arrow-down{
     width: 50px;
-    background-image: paint(cornerScoop);
+    background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
@@ -316,7 +316,7 @@ h1{
 
 .bottom-cut{
     width: 50px;
-    background-image: paint(cornerScoop);
+    background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
