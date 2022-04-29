@@ -36,6 +36,14 @@ header{
   margin: 0;
 }
 
+.logo h1{
+  display: grid;
+  place-items: center;
+}
+.logo-css,.logo-corner{
+  grid-area: 1/1;
+}
+
 .jump-links{
   display: grid;
   grid-template-columns: repeat(3, auto);
