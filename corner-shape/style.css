@@ -61,7 +61,7 @@ header{
 }
 
 .category-contain:nth-of-type(odd){
-  background-color: #000;
+  background-color: #ddd;
 }
 
 .examples-contain div{
@@ -71,6 +71,11 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.examples-contain .square{
+  width: 80px;
+  height: 80px;
 }
 
 .bordered{
@@ -97,11 +102,6 @@ header{
 }
 .all-scoop{
   --corner-shapes: scoop;
-}
-
-.square{
-  width: 80px;
-  height: 80px;
 }
 
 /* angle */
