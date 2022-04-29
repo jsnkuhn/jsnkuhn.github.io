@@ -15,14 +15,14 @@ h1, .category-contain{
   margin: 0;
 }
 
-h1{
+.logo{
   text-align: center;
   background-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 146px / 10px;
-  --corer-shapes: angle angle scoop scoop;
+  --corner-sizes: 146px / 15px;
+  --corner-shapes: scoop scoop angle angle;
 }
 
 .jump-links{
@@ -37,15 +37,19 @@ h1{
 
 .jump-links a{
   color: #fff;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 96px;
   height: 30px;
   text-decoration: none;
+  background-color: #f0f;
   background-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
   --corner-sizes: 13px;
+  --corner-shapes: angle;
 }
 
 .category-contain:nth-of-type(odd){
