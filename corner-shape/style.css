@@ -2,7 +2,7 @@
   max-width: 1024px;
   margin-inline: auto;
   color: #fff;
-  background-color: #222;
+  background-color: #323232;
 }
 
 header{
@@ -61,8 +61,7 @@ header{
 }
 
 .category-contain:nth-of-type(odd){
-  background-color: #fff;
-  color: #000;
+  background-color: #212121;
 }
 
 .examples-contain div{
