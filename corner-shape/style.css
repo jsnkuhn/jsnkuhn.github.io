@@ -80,7 +80,7 @@ header{
   --border-color: #fff;
   --border-width: 1;
   --corner-sizes: 13px; /* accepts 1-8 values */
-  --corner-shapes: scoop round notch;
+  --corner-shapes: angle scoop notch round;
 }
 
 .all-square{
@@ -97,6 +97,11 @@ header{
 }
 .all-scoop{
   --corner-shapes: scoop;
+}
+
+.square{
+  width: 80px;
+  height: 80px;
 }
 
 /* angle */
@@ -236,6 +241,7 @@ header{
   --border-color: #bea459;
   --border-width: 4;
   --corner-sizes: 8px; /* accepts 1-8 values */
+  --corner-shapes: notch;
 }
 .all-notch-thin{
   background-image: paint(cornerShape);
@@ -243,6 +249,7 @@ header{
   --border-color: #fff;
   --border-width: 2;
   --corner-sizes: 2px; /* accepts 1-8 values */
+  --corner-shapes: notch;
 }
 .top-right {
   background-image: paint(cornerShape);
@@ -250,6 +257,7 @@ header{
   --border-color: transparent;
   --border-width: 0;
   --corner-sizes: 0 8px 0 0; /* accepts 1-8 values */
+  --corner-shapes: square notch square square;
 }
 
 .plus {
@@ -258,8 +266,7 @@ header{
   --border-color: transparent;
   --border-width: 0;
   --corner-sizes: 30px; /* accepts 1-8 values */
-  width: 80px;
-  height: 80px;
+  --corner-shapes: notch;
 }
 .paper-mario {
   background-image: paint(cornerShape);
@@ -267,6 +274,7 @@ header{
   --border-color: #000;
   --border-width: 3;
   --corner-sizes: 0 56px 0 112px / 8px; /* accepts 1-8 values */
+  --corner-shapes: notch;
 }
 
 /* scoops */
