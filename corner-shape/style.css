@@ -40,8 +40,16 @@ header{
   display: grid;
   place-items: center;
 }
-.logo-css,.logo-corner{
+.logo-css,.logo-corner-shape{
   grid-area: 1/1;
+}
+.logo-css{
+  opacity: .25;
+  font-size: 1.5em;
+  font-family: arial;
+}
+.logo-corner-shape{
+
 }
 
 .jump-links{
