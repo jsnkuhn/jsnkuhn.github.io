@@ -1,8 +1,16 @@
+:root{
+  /* https://colorhunt.co/palette/2121213232320d737714ffec */
+  --black-1: #212121;
+  --black-2: #323232;
+  --dark-blue: #0D7377;
+  --light-blue: #14FFEC;
+}
+
 .contain{
   max-width: 1024px;
   margin-inline: auto;
   color: #fff;
-  background-color: #323232;
+  background-color: #212121;
 }
 
 header{
@@ -61,7 +69,7 @@ header{
 }
 
 .category-contain:nth-of-type(odd){
-  background-color: #212121;
+  background-color: #323232;
 }
 
 .examples-contain div{
@@ -418,6 +426,6 @@ h2{
 }
 
 body{
-  background-color: cadetblue;
+  background-color: #0D7377;
   margin: 0;
 }
