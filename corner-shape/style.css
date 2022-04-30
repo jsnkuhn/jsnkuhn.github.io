@@ -148,6 +148,7 @@ header{
   --border-color: #fff;
   --border-width: 1;
   --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
+  --corner-sizes: 13px;
   --corner-shapes: angle;
 }
 
@@ -346,15 +347,13 @@ header{
   --border-color: #fff;
   --border-width: 2;
   --corner-sizes: 0 12px 0 0; /* accepts 1-8 values */
+  --corner-shapes: scoop;
 }
 
-
 .that-super-ellipse{
-  width: 50px;
-  height: 50px;
   background-image: paint(cornerShape);
   --background-color: red;
-  --corner-sizes: 25px; /* accepts 1-8 values */
+  --corner-sizes: 40px; /* accepts 1-8 values */
 }
 .make-room-for-circle{
   height: 50px;
@@ -389,7 +388,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 0 0 25 25 / 0 0 10 10; /* accepts 1-8 values */
+  --corner-sizes: 0 0 40 40 / 0 0 10 10; /* accepts 1-8 values */
 }
 
 .bottom-cut{
@@ -398,7 +397,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 0 0 50 0 / 0 0 15 0; /* accepts 1-8 values */
+  --corner-sizes: 0 0 80 0 / 0 0 15 0; /* accepts 1-8 values */
 }
 
 /* mixed */
@@ -423,7 +422,7 @@ header{
 }
 .pokemon-unite{
   background-image: paint(cornerShape);
-  --background-color: rgb(0,0,0,.5);
+  --background-color: #f2f8e7;
   --border-color: #f6cc73;
   --border-width: 1;
   --corner-sizes: 18px; /* accepts 1-8 values */
@@ -431,10 +430,10 @@ header{
 }
 .ring-fit{
   -webkit-mask-image: paint(cornerShape);
-  --background-color: #f2b201;
+  --background-color: ##fdcd0e;
   --corner-shapes: angle scoop;
   --corner-sizes: 8px / 40px; /* accepts 1-8 values */
-  background-image: radial-gradient(#fd9f21, #f2b201);
+  background-image: radial-gradient(#fd9f21, #fdcd0e);
 }
 h2{
   font-size: 24px;
