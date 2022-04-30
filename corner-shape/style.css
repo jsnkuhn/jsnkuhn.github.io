@@ -3,7 +3,7 @@
   --black-1: #212121;
   --black-2: #323232;
   --dark-blue: #0D7377;
-  --light-blue: #14FFEC;
+  --highlight: #14FFEC;
 }
 
 .contain{
@@ -28,7 +28,7 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 104px / 24px;
+  --corner-sizes: 117px / 24px;
   --corner-shapes: scoop scoop angle angle;
 }
 
@@ -45,11 +45,10 @@ header{
 }
 .logo-css{
   opacity: .25;
-  font-size: 1.5em;
-  font-family: arial;
+  font-size: 2.5em;
 }
 .logo-corner-shape{
-
+  transform: translateY(-5px);
 }
 
 .jump-links{
@@ -63,13 +62,22 @@ header{
 
 .jump-links li{
   background-image: paint(cornerShape);
-  --background-color: rgb(0,0,0);
-  --border-color: #fff;
+  --background-color: #000;
+  --border-color: transparent;
+  --border-width: 1;
+  --corner-sizes: 6px;
+}
+
+.jump-links li:hover{
+  background-image: paint(cornerShape);
+  --background-color: var(--highlight);
+  --border-color: transparent;
   --border-width: 1;
   --corner-sizes: 6px;
 }
 
 .jump-links a{
+  font-weight: bold;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -77,6 +85,10 @@ header{
   width: 160px;
   height: 30px;
   text-decoration: none;
+}
+
+.jump-links li:hover a{
+  color: #000;
 }
 
 .category-contain{
@@ -135,14 +147,9 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 13px;
-  --corner-shapes: angle;
-}
-/* .angled{
-  --background-color: black;
   --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
   --corner-shapes: angle;
-} */
+}
 
 .octagon {
   background-image: paint(cornerShape);
@@ -430,7 +437,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: #f2b201;
   --corner-shapes: angle scoop;
-  --corner-sizes: 30px / 40px; /* accepts 1-8 values */
+  --corner-sizes: 8px / 40px; /* accepts 1-8 values */
 }
 h2{
   font-size: 24px;
@@ -443,5 +450,6 @@ h2{
 
 body{
   background-color: #0D7377;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
