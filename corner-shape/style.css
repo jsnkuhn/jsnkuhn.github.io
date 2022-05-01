@@ -17,7 +17,8 @@ header{
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  padding-block: 16px;
+  padding: 16px;
+  gap: 16px;
 }
 
 .logo{
