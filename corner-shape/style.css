@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 :root{
   /* https://colorhunt.co/palette/2121213232320d737714ffec */
   --black-1: #212121;
@@ -104,8 +106,9 @@ header{
 }
 
 .examples-contain div{
-  width: 200px;
-  height: 80px;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
 }
