@@ -8,6 +8,10 @@
   --highlight: #14FFEC;
 }
 
+a{
+  color: var(--highlight);
+}
+
 .contain{
   max-width: 1024px;
   margin-inline: auto;
