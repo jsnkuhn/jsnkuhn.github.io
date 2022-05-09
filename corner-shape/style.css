@@ -15,9 +15,11 @@
 
 header{
   padding: 16px;
+  background-image: radial-gradient(rgba(255,255,255,.1), transparent);
 }
 
 .logo{
+  margin: 0 auto 32px;
   width: max-content;
   display: grid;
   gap: 1em;
@@ -52,6 +54,7 @@ header{
 
 .jump-links{
   width: 75%;
+  margin-inline: auto;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr) );
   gap: 16px;
@@ -103,8 +106,6 @@ header{
 .examples-contain div{
   width: 200px;
   height: 80px;
-  margin: 10px;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -114,6 +115,15 @@ header{
   height: 80px;
 }
 
+.examples-contain.angle{
+  gap: 16px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+.octagon{
+  grid-row: span 3;
+}
 .bordered{
   box-sizing: border-box;
   background-image: paint(cornerShape);
@@ -198,13 +208,6 @@ header{
   inherits: false;
 }
  */
-.dog-ear-mask{
-  -webkit-mask-image: paint(cornerShape);
-  mask-image: paint(cornerShape);
-  background: #fff linear-gradient(#444, #444) no-repeat bottom right / 30px 30px;
-  --background-color: #000;
-  --corner-sizes: 0 0 30 0; /* accepts 1-8 values */
-}
 
 .mario-kart-8{
   background-image: paint(cornerShape);
