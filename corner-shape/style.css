@@ -115,7 +115,7 @@ header{
   height: 80px;
 }
 
-.examples-contain.angle{
+#angle .examples-contain{
   gap: 16px;
   display: grid;
   grid-template-columns: 3fr 1fr;
