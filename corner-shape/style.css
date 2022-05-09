@@ -118,7 +118,7 @@ header{
   height: 80px;
 }
 
-#angle .examples-contain{
+.grid-3-1{
   gap: 16px;
   display: grid;
   grid-template-columns: 3fr 1fr;
@@ -168,10 +168,10 @@ header{
 
 .octagon {
   background-image: paint(cornerShape);
-  --background-color: #f00;
+  --background-color: transparent;
   --border-color: #fff;
-  --border-width: 2;
-  --corner-sizes: 16px; /* accepts 1-8 values */
+  --border-width: 2px;
+  --corner-sizes: 16px;
 }
 .example-3 {
   background-image: paint(cornerShape);
