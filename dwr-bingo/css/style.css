@@ -43,7 +43,10 @@ main{
   display: flex;
   flex-wrap: wrap;
   text-align: center;
+  background-color: #9cc610;
+  background-clip: content-box;
   border-style: solid;
+  border-color: #807e5f;
   border-width: 24px 48px 48px 48px;
   border-image: url('../img/border-2.webp') repeat 24 48 48 48;
   box-shadow: 32px 6px 0px -6px rgba(0 0 0 / .25);
